@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-22 11:16:58
+/* Smarty version 3.1.39, created on 2021-03-22 11:49:22
   from 'C:\xampp\htdocs\Entreprise\tpl\pages\inscription.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60586e9a0e8cd6_59705633',
+  'unifunc' => 'content_60587632ba0f71_02324669',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb9793440f4410abd864bdeb97fa96809a9cf362' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\pages\\inscription.tpl',
-      1 => 1616408215,
+      1 => 1616410156,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60586e9a0e8cd6_59705633 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60587632ba0f71_02324669 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
-    <div class="row">
+    <div class="row-titre">
         <h2>Inscription</h2>
     </div>
-    <div class="row">
+    <div class="row-form">
         <form action="">
             <p>Prénom :</p>
             <input type="text" name="prenom">
