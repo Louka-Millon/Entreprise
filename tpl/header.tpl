@@ -12,15 +12,26 @@
 <header>
 
         <div class="container">
-                <div class="items-left">
-                        <h1>{$title}</h1>
+                <div class="row-nav">
+                        <div class="items-left">
+                                <h1>{$title}</h1>
+                        </div>
+                        <div class="items"><a href="#">Home</a></div>
+                        <div class="items"><a href="#">Recherche d'emplois</a></div>
+                        <div class="items"><a href="#">A propos</a></div>
+                        <div class="items"><a href="#">Contact</a></div>
+                        <div class="items"><a href="#">Connexion</a></div>
+                        <div class="items"><a href="#">S'inscrire</a></div>
                 </div>
-                <div class="items">Home</div>
-                <div class="items">Recherche d'emplois</div>
-                <div class="items">A propos</div>
-                <div class="items">Contact</div>
-                <div class="items">Connexion</div>
-                <div class="items">S'inscrire</div>
+                <div class="row-search">
+                        <form action="" method="get">
+                                <input type="text" name="" id="">
+                                <input type="text" name="" id="">
+                                <input type="text" name="" id="">
+                                <input type="submit" value="Rechercher">
+                        </form>
+                </div>
+
         </div>
 
 </header>
