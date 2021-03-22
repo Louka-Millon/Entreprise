@@ -10,9 +10,18 @@
 </head>
 <body>
 <header>
-
+        <div class="bg"></div>
         <div class="container">
+                <a href="#row-nav" id="open" onclick="display();">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34px" height="27px" viewBox="0 0 34 27" enable-background="new 0 0 34 27" xml:space="preserve">
+                                <rect fill="#000" width="34" height="4"/>
+                                <rect y="11" fill="#000" width="34" height="4"/>
+                                <rect y="23" fill="#000" width="34" height="4"/>
+                        </svg>
+                </a>
+               
                 <div class="row-nav">
+                        
                         <div class="items-left">
                                 <h1>{$title}</h1>
                         </div>
@@ -22,16 +31,17 @@
                         <div class="items"><a href="#">Contact</a></div>
                         <div class="items"><a href="#">Connexion</a></div>
                         <div class="items"><a href="#">S'inscrire</a></div>
+                        <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">
-                        <form action="" method="get">
-                                <input type="text" name="" id="">
-                                <input type="text" name="" id="">
-                                <input type="text" name="" id="">
+                        <form action="search.php" method="get">
+                                <input type="text" name="offre"  placeholder="Offre...">
+                                <input type="text" name="competence"  placeholder="Compétence...">
+                                <input type="text" name="lieu"  placeholder="Lieu...">
                                 <input type="submit" value="Rechercher">
                         </form>
                 </div>
 
         </div>
-
+        <script src="../core/js/navbar.js"></script>
 </header>

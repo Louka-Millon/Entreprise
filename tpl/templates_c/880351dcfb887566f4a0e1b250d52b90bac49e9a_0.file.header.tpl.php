@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-22 11:43:13
+/* Smarty version 3.1.39, created on 2021-03-22 15:57:43
   from 'C:\xamp\htdocs\Entreprise\tpl\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605874c149b182_81826031',
+  'unifunc' => 'content_6058b067b50904_06098702',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '880351dcfb887566f4a0e1b250d52b90bac49e9a' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\header.tpl',
-      1 => 1616409698,
+      1 => 1616425055,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605874c149b182_81826031 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6058b067b50904_06098702 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -36,9 +36,18 @@ function content_605874c149b182_81826031 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 <header>
-
+        <div class="bg"></div>
         <div class="container">
+                <a href="#row-nav" id="open" onclick="display();">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34px" height="27px" viewBox="0 0 34 27" enable-background="new 0 0 34 27" xml:space="preserve">
+                                <rect fill="#000" width="34" height="4"/>
+                                <rect y="11" fill="#000" width="34" height="4"/>
+                                <rect y="23" fill="#000" width="34" height="4"/>
+                        </svg>
+                </a>
+               
                 <div class="row-nav">
+                        
                         <div class="items-left">
                                 <h1><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </h1>
@@ -49,17 +58,20 @@ function content_605874c149b182_81826031 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="items"><a href="#">Contact</a></div>
                         <div class="items"><a href="#">Connexion</a></div>
                         <div class="items"><a href="#">S'inscrire</a></div>
+                        <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">
                         <form action="" method="get">
-                                <input type="text" name="" id="">
-                                <input type="text" name="" id="">
-                                <input type="text" name="" id="">
+                                <input type="text" name="offre" id="" placeholder="Offre...">
+                                <input type="text" name="competence" id="" placeholder="Compétence...">
+                                <input type="text" name="lieu" id="" placeholder="Lieu...">
                                 <input type="submit" value="Rechercher">
                         </form>
                 </div>
 
         </div>
-
+        <?php echo '<script'; ?>
+ src="../core/js/navbar.js"><?php echo '</script'; ?>
+>
 </header><?php }
 }
