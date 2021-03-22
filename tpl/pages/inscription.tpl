@@ -9,14 +9,14 @@
             <p>Nom :</p>
             <input type="text" name="nom">
             <p>E-mail :</p>
-            <input type="email" name="email">
+            <input type="email" name="mail">
             <p>Statut :</p>
             <input type="text" name="statut">
             <p>Mot de passe :</p>
-            <input type="text" name="pass">
+            <input type="password" name="pass">
             <p>Confirmez le mot de passe :</p>
-            <input type="text" name="confirmpass"><br>
-            <input type="submit" value="S'inscrire"><br>
+            <input type="password" name="confirmpass"><br>
+            <input type="submit" value="S'inscrire" id="btn_inscription">
         </form>
     </div>
 </div>

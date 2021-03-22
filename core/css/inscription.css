@@ -1,0 +1,39 @@
+/*Elements principaux*/
+body{
+    margin:0px;
+    padding:0px;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #E8EBF5;
+    border-radius: 50px 0px 50px 0px;
+    width:50%;
+    margin:auto;
+    padding:15px;
+}
+
+.row{
+    display: block;
+    margin:auto;
+    width: 80%;
+}
+
+/*Formulaire*/
+.row>form>input{
+    border: none;
+    width:90%;
+    justify-self: center;
+}
+
+.row>h2{
+    text-align: center;
+}
+
+/*Bouton d'inscription*/
+#btn_inscription{
+    
+}
