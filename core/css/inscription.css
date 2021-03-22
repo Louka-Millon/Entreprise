@@ -19,7 +19,7 @@ body{
 .row-titre, .row-form{
     display: block;
     margin:auto;
-    width: 80%;
+    width: 70%;
 }
 /*Fin éléments principaux*/
 /*- - - - - -*/
@@ -51,6 +51,34 @@ body{
     width:100px;
     height: 30px;
     margin: auto;
+    transition-duration: 0.3s;
+}
+#btn_inscription:hover{
+    background-color: #3eb2e4;
 }
 /*Fin bouton d'inscription*/
+/*- - - - - -*/
+/*Gestion du media*/
+/*  --Tablette--  */
+@media only screen and (min-width:420px) and (max-width:770px){
+    .container{
+        width: 70%;
+    }
+
+    .row-titre, .row-form{
+        width: 80%;
+    }
+}
+
+/*  --Smartphone--  */
+@media only screen and (max-width:420px){
+    .container{
+        width: 80%;
+    }
+
+    .row-titre, .row-form{
+        width: 90%;
+    }
+}
+/*Fin gestion du media*/
 /*- - - - - -*/

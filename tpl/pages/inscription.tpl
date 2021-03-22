@@ -14,7 +14,7 @@
             <input type="text" name="statut">
             <p>Mot de passe :</p>
             <input type="password" name="pass">
-            <p>Confirmez le mot de passe :</p>
+            <p>Confirmation du mot de passe :</p>
             <input type="password" name="confirmpass"><br>
             <input type="submit" value="S'inscrire" id="btn_inscription">
         </form>
