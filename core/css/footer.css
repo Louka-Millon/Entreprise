@@ -4,7 +4,7 @@ body{
     padding:0px;
 }
 
-.footer{
+footer{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -17,7 +17,7 @@ body{
     bottom: 0px;
 }
 
-.footer>.footer-block{
+footer>.footer-block{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -25,7 +25,7 @@ body{
     justify-content: space-evenly;
 }
 
-.footer>.footer-block>span, .footer>.footer-block>a{
+footer>.footer-block>span, footer>.footer-block>a{
     text-decoration: none;
     text-align: center;
     color:#ffffff;
@@ -36,10 +36,14 @@ body{
 .popup-cookies{
     z-index: 1;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     position: fixed;
     bottom: 0px;
     width: 100%;
     height: 75px;
+    margin: 0;
+    padding: 15px;
     background-color: #3a3a3a;
     justify-content: space-evenly;
     align-items: center;
@@ -69,11 +73,35 @@ body{
         background-color: blue;
     }
     
+    /*Popup cookies*/
+    .popup-cookies{
+        height: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popup-cookies>.popup-mention{
+        text-align: center;
+    }
+    /*Fin popup cookies*/
 }
 
 @media only screen and (max-width: 420px){
     body{
         background-color: red;
     }
+
+    /*Footer*/
+    footer>.footer-block{
+        
+    }
+
+    /*Fin footer*/
+    /*- - - - -*/
+    /*Popup cookies*/
+    .popup-cookies{
+        display: none;
+    }
+    /*Fin popup cookies*/
 }
 /*Fin gestion du media*/
