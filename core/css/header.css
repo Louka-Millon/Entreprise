@@ -149,9 +149,7 @@ a{
         width:100%;
         text-align: center;
     }
-    h2 < .row-search{
-        flex-direction: unset;
-    }
+    
 }
 @media(max-width:900px){
     #open {
