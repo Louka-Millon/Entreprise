@@ -3,7 +3,7 @@
         <h2>Inscription</h2>
     </div>
     <div class="row-form">
-        <form action="">
+        <form action="inscription.php">
             <p>Prénom :</p>
             <input type="text" name="prenom">
             <p>Nom :</p>
