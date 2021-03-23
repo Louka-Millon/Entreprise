@@ -37,7 +37,7 @@
                         <form action="search.php" method="get">
                                 <input type="text" name="offre"  placeholder="Offre...">
                                 <input type="text" name="competence"  placeholder="Compétence...">
-                                <input type="text" name="lieu"  placeholder="Lieu...">
+                                <input type="text" name="lieu" id="last_input"  placeholder="Lieu...">
                                 <input type="submit" value="Rechercher">
                         </form>
                 </div>

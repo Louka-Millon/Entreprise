@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-22 15:57:43
+/* Smarty version 3.1.39, created on 2021-03-23 09:55:15
   from 'C:\xamp\htdocs\Entreprise\tpl\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6058b067b50904_06098702',
+  'unifunc' => 'content_6059acf30faf62_37403352',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '880351dcfb887566f4a0e1b250d52b90bac49e9a' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\header.tpl',
-      1 => 1616425055,
+      1 => 1616489702,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6058b067b50904_06098702 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6059acf30faf62_37403352 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -61,10 +61,10 @@ function content_6058b067b50904_06098702 (Smarty_Internal_Template $_smarty_tpl)
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">
-                        <form action="" method="get">
-                                <input type="text" name="offre" id="" placeholder="Offre...">
-                                <input type="text" name="competence" id="" placeholder="Compétence...">
-                                <input type="text" name="lieu" id="" placeholder="Lieu...">
+                        <form action="search.php" method="get">
+                                <input type="text" name="offre"  placeholder="Offre...">
+                                <input type="text" name="competence"  placeholder="Compétence...">
+                                <input type="text" name="lieu" id="last_input"  placeholder="Lieu...">
                                 <input type="submit" value="Rechercher">
                         </form>
                 </div>
