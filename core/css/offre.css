@@ -4,6 +4,49 @@ body{
     padding:0px;
 }
 
+.offre-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.offre-container>.offre-row{
+    background-color: #E8EBF5;
+    border-radius: 50px 0 50px 0;
+    margin: 5px;
+    padding: 15px;
+}
+
+.offre-container>.offre-row>p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.offre-container>.infos{
+    width: 300px;
+}
+
+.offre-container>.details{
+    width: 1000px;
+}
+.offre-container>.offre-row>.offre-avatar, .offre-container>.offre-row>h2{
+    text-align: center;
+}
+.offre-container>.offre-row>.offre-avatar>img{
+    width: 150px;
+}
 /*Fin éléments principaux*/
+/*- - - - - -*/
+/*Gestion du media*/
+/*  --Tablette--  */
+@media only screen and (min-width:420px) and (max-width:770px){
+    
+}
+
+/*  --Smartphone--  */
+@media only screen and (max-width:420px){
+    
+}
+/*Fin gestion du media*/
 /*- - - - - -*/
