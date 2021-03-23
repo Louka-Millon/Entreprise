@@ -3,7 +3,9 @@ html body{
     padding:0;
 }
 /*header*/
-
+#titre{
+    font-size:50px;
+}
 .bg{
     background-image:url("../images/background-header.png");
     position: absolute;
@@ -142,6 +144,13 @@ a{
     }
     #last_input{
         border-radius: 0px 0px 30px 30px;
+    }
+    h2{
+        width:100%;
+        text-align: center;
+    }
+    h2 < .row-search{
+        flex-direction: unset;
     }
 }
 @media(max-width:900px){
