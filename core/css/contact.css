@@ -4,7 +4,8 @@ form {
     width: 400px;
     padding: 1em;
     border: 1px solid #CCC;
-    border-radius: 1em;
+    border-radius: 50px 0px 50px 0px;
+    background-color: rgb(194, 208, 214);
   }
   
   form div + div {
@@ -39,13 +40,30 @@ form {
 
     height: 5em;
   }
-  
-  .button {
-
-    padding-left: 90px; 
+  h2{
+    color: white;
   }
-  
-  button {
 
-    margin-left: .5em;
-  }
+.button{
+    margin-left: 50%;
+    
+}
+
+/*tablette*/
+
+@media screen and (max-width: 770px) and (min-width: 420px)
+{
+    .container{
+        width: 70%;
+    }
+}
+/*Smartphone*/
+
+@media screen and (max-width: 420px)
+{
+    .container{
+        width: 80%;
+    }
+}
+
+  

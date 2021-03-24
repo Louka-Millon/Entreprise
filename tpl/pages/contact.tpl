@@ -1,9 +1,10 @@
 
-    <div class= "header">
-    <h2>Contactez-nous </h2>
-    </div>
+ 
     <form action="page-de-contact" method="post">
         <div>
+            <div class= "header">
+                <h2 style="text-align: center;">Contactez-nous </h2>
+                </div>
             <label for="name">Nom :</label>
             <input style = "text-align: center"type ="nom" id="name" name="user_name" placeholder="Entrer votre nom" required>
         </div>
