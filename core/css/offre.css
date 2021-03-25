@@ -24,16 +24,22 @@ body{
 }
 
 .offre-container>.infos{
-    width: 300px;
+    width: 250px;
 }
 
 .offre-container>.details{
-    width: 1000px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.offre-container>.offre-row>.offre-avatar, .offre-container>.offre-row>h2{
+
+.offre-row>.offre-avatar, .offre-row>.details-texte>h2{
     text-align: center;
 }
-.offre-container>.offre-row>.offre-avatar>img{
+
+.offre-row>.offre-avatar>img{
     width: 150px;
 }
 /*Fin éléments principaux*/
@@ -55,7 +61,7 @@ body{
 
 #btn_postuler{
     background-color: #4AC9FF;
-    width:100px;
+    width:80px;
     border: none;
 }
 
@@ -67,13 +73,17 @@ body{
 /*- - - - - -*/
 /*Gestion du media*/
 /*  --Tablette--  */
-@media only screen and (min-width:420px) and (max-width:770px){
-    
+@media only screen and (min-width:420px) and (max-width:929px){
+    .offre-container>.offre-row{
+        width: 80%;
+    }
 }
 
 /*  --Smartphone--  */
 @media only screen and (max-width:420px){
-    
+    .offre-container>.offre-row{
+        width: 80%;
+    }
 }
 /*Fin gestion du media*/
 /*- - - - - -*/
