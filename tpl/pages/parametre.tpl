@@ -10,13 +10,12 @@
                 <input type="file" name="img" >
             </div>
             <div class="items inputbox">
-                <label for="">Prénom</label><input type="text" name="" id="">
-                <label for="">Nom</label><input type="text" name="" id="">
-                <label for="">Mot de passe</label><input type="text" name="" id="">
-                <br>
-                <label for="">Centre</label><input type="text" name="" id="">
-                <label for="">Promotion</label><input type="text" name="" id="">
-                <label for="">E-mail</label><input type="text" name="" id="">
+                <label for="">Prénom</label><input type="text" name="prenom" >
+                <label for="">Nom</label><input type="text" name="nom" >
+                <label for="">Mot de passe</label><input type="text" name="mot_de_passe">
+                <label for="">Centre</label><input type="text" name="centre">
+                <label for="">Promotion</label><input type="text" name="promotion">
+                <label for="">E-mail</label><input type="text" name="email">
                 
             </div>
             <div class="items">
