@@ -38,6 +38,33 @@ body{
 }
 /*Fin éléments principaux*/
 /*- - - - - -*/
+/*Boutons + logo coeur*/
+#btn_wishlist, #btn_postuler{
+    display: inline-block;
+    height: 35px;
+    border-radius: 10px;
+    outline: 0;
+    margin: auto;
+    transition-duration: 0.3s;
+}
+
+#btn_wishlist{
+    background: none;
+    border: 2px solid #4AC9FF;
+}
+
+#btn_postuler{
+    background-color: #4AC9FF;
+    width:100px;
+    border: none;
+}
+
+#btn_postuler:hover, #btn_wishlist:hover{
+    background-color: #3eb2e4;
+    border: 2px solid #3eb2e4;
+}
+/*Fin boutons + logo coeur*/
+/*- - - - - -*/
 /*Gestion du media*/
 /*  --Tablette--  */
 @media only screen and (min-width:420px) and (max-width:770px){

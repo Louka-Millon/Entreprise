@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-23 17:43:54
+/* Smarty version 3.1.39, created on 2021-03-25 10:43:29
   from 'C:\xampp\htdocs\Entreprise\tpl\pages\offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605a1acae30951_02741800',
+  'unifunc' => 'content_605c5b410ab274_89441303',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fe84582451a153e2b9310acadfd11660ab80035b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\pages\\offre.tpl',
-      1 => 1616517833,
+      1 => 1616665407,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605a1acae30951_02741800 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605c5b410ab274_89441303 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="offre-container">
     <div class="offre-row infos">
         <div class="offre-avatar">
@@ -46,7 +46,8 @@ function content_605a1acae30951_02741800 (Smarty_Internal_Template $_smarty_tpl)
         <h2>TITRE DE L'OFFRE</h2>
         <p>Détails de l'offre, durée de l'offre, compétences recherchées, etc...</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum odio id veritatis nam facere voluptate adipisci aut dolorem dolor! Beatae necessitatibus facilis quasi, repellendus error ipsa provident atque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nihil, adipisci autem dolorem nulla quibusdam quaerat labore ut at! Commodi tempora minus, hic nesciunt vero error. Quisquam ab odio deleniti?</p>
-        <button>Postuler</button>
+        <button id="btn_wishlist">Ajouter à la wishlist</button>
+        <button id="btn_postuler">Postuler</button>
     </div>
 </div><?php }
 }

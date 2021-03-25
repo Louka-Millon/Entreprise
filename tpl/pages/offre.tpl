@@ -23,6 +23,7 @@
         <h2>TITRE DE L'OFFRE</h2>
         <p>Détails de l'offre, durée de l'offre, compétences recherchées, etc...</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum odio id veritatis nam facere voluptate adipisci aut dolorem dolor! Beatae necessitatibus facilis quasi, repellendus error ipsa provident atque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nihil, adipisci autem dolorem nulla quibusdam quaerat labore ut at! Commodi tempora minus, hic nesciunt vero error. Quisquam ab odio deleniti?</p>
-        <button>Postuler</button>
+        <button id="btn_wishlist">Ajouter à la wishlist</button>
+        <button id="btn_postuler">Postuler</button>
     </div>
 </div>
