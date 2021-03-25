@@ -17,14 +17,16 @@
     </div>
     <div class = "container">
     <form method="POST" action="connexion.php">
-        <fieldset>
+       
         <p style="text-align: center;"> Veuillez vous connectez avec votre compte:</p>
      <label><p style="text-align: center;">E-mail:</p></label> 
      <input style="text-align: center" type="E-mail" placeholder="Entrer votre e-mail" name="username" required>
      <label><p>Password:</p></label>
      <input style="text-align: center" type="Password" placeholder="Entrer votre password" name="password" required>
-    <p style="text-align: center;"> <input type="submit" id="submit" value="Connexion"> </p>
-     </fieldset>
+     <div class="button">
+        <button type="submit">Connexion</button>
+    </div>
+  
 
     </form>
     </div>

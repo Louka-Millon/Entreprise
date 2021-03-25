@@ -11,20 +11,18 @@ body {
     padding:15px;
 }
 
-fieldset{
-    border-radius: 50px 0px 50px 0px;
-}
+
 div{
     align-content: center;
 }
 
-input[type=submit] {
+/*input[type=submit] {
     background-color: #05beec;
     color: white;
   
-    /*border: none;*/
+    /*border: none;
     cursor: pointer;
-}
+}*/
 
 
 .header h2{
@@ -76,3 +74,21 @@ label{
     }
 }
 
+
+.button {
+    background-color: #7cf6ff;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+input[type=submit]{
+    background-color: turquoise;
+    color: black
+}
