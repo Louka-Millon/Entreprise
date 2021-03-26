@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 15:13:36
+/* Smarty version 3.1.39, created on 2021-03-26 17:48:29
   from 'C:\xampp\htdocs\Entreprise\tpl\pages\HomeSite.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605dec108245f2_68956362',
+  'unifunc' => 'content_605e105d5b3666_27932311',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9bf1684959e870fc2744e66f3640e5f726dd838c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\pages\\HomeSite.tpl',
-      1 => 1616768013,
+      1 => 1616777266,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605dec108245f2_68956362 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605e105d5b3666_27932311 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="header">
     <h2> Les domaines les plus recherchés</h2>
 </div>
@@ -42,23 +42,33 @@ function content_605dec108245f2_68956362 (Smarty_Internal_Template $_smarty_tpl)
   
 <h2>Propositions selon votre domaines</h2>
 <fieldset>
-    <p>Nom du stage</p> <br>
-    <p>Localisation &nbsp; &nbsp; Rémunération </p>
+    <p style="margin-left: 5%;">Nom du stage</p>
+    <p>Localisation &nbsp; &nbsp; Rémunération  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domaine</p>
+    <div class="bouton">
+        <button id="btn_accéder">Allez à</button>
+    </div>
 </fieldset>
 
 <fieldset>
-    <p>Nom du stage</p> <br>
-    <p>Localisation &nbsp; Rémunération</p>
+    <p style="margin-left: 5%;">Nom du stage</p>
+    <p>Localisation &nbsp; Rémunération &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domaine</p>
+    <div class="bouton">
+        <button id="btn_accéder">Allez à</button>
+    </div>
 </fieldset>
 
 <fieldset>
-    <p>Nom du stage</p> <br>
-    <p>Localisation &nbsp; Rémunération</p>
+    <p style="margin-left: 5%;">Nom du stage</p>
+    <p>Localisation &nbsp; Rémunération &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domaine</p>
+    <div class="bouton">
+        <button id="btn_accéder">Allez à</button>
+    </div>
 </fieldset>
 
 <fieldset>
-    <p>Nom du stage</p> <br>
-    <p>Localisation &nbsp; Rémunération</p>
+    <p style="margin-left: 5%;" >Nom du stage</p>
+    <p>Localisation &nbsp; Rémunération &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domaine</p>
+    <p> <input type="submit" value="Allez à"> </p>
 </fieldset>
   
 <?php }

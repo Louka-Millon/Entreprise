@@ -19,22 +19,32 @@
   
 <h2>Propositions selon votre domaines</h2>
 <fieldset>
-    <p>Nom du stage</p> <br>
-    <p>Localisation &nbsp; &nbsp; Rémunération </p>
+    <p style="margin-left: 5%;">Nom du stage</p>
+    <p>Localisation &nbsp; &nbsp; Rémunération  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domaine</p>
+    <div class="bouton">
+        <button id="btn_accéder">Allez à</button>
+    </div>
 </fieldset>
 
 <fieldset>
-    <p>Nom du stage</p> <br>
-    <p>Localisation &nbsp; Rémunération</p>
+    <p style="margin-left: 5%;">Nom du stage</p>
+    <p>Localisation &nbsp; Rémunération &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domaine</p>
+    <div class="bouton">
+        <button id="btn_accéder">Allez à</button>
+    </div>
 </fieldset>
 
 <fieldset>
-    <p>Nom du stage</p> <br>
-    <p>Localisation &nbsp; Rémunération</p>
+    <p style="margin-left: 5%;">Nom du stage</p>
+    <p>Localisation &nbsp; Rémunération &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domaine</p>
+    <div class="bouton">
+        <button id="btn_accéder">Allez à</button>
+    </div>
 </fieldset>
 
 <fieldset>
-    <p>Nom du stage</p> <br>
-    <p>Localisation &nbsp; Rémunération</p>
+    <p style="margin-left: 5%;" >Nom du stage</p>
+    <p>Localisation &nbsp; Rémunération &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domaine</p>
+    <p> <input type="submit" value="Allez à"> </p>
 </fieldset>
   

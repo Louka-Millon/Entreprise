@@ -5,6 +5,16 @@
     justify-content:space-around;
 
 }
-h2{
+.header h2{
     text-align: center;
+}
+
+input[type=submit]
+{
+	background-color: rgb(144, 217, 226);
+	color: white;
+}
+
+fieldset{
+    padding-top: 10%;
 }
