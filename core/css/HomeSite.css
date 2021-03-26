@@ -3,18 +3,41 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content:space-around;
+    align-content: center;
 
 }
-.header h2{
-    text-align: center;
+
+
+.header{
+    text-decoration: underline;
+    text-decoration: blue;
 }
 
-input[type=submit]
-{
-	background-color: rgb(144, 217, 226);
-	color: white;
-}
 
 fieldset{
     padding-top: 10%;
+}
+
+@media screen and (max-width: 770px) and (min-width: 420px)
+{
+    .main{
+        width: 70%;
+
+    }
+    .domaine{
+        width: 70%;
+    }
+        
+    
+}
+/*Smartphone*/
+
+@media screen and (max-width: 420px)
+{
+    .mail{
+        width: 80%;
+    }
+    .domaine{
+        width: 80%;
+    }
 }
