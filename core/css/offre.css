@@ -44,7 +44,7 @@ body{
 }
 /*Fin éléments principaux*/
 /*- - - - - -*/
-/*Boutons + logo coeur*/
+/*Boutons*/
 #btn_wishlist, #btn_postuler{
     display: inline-block;
     height: 35px;
@@ -69,7 +69,7 @@ body{
     background-color: #3eb2e4;
     border: 2px solid #3eb2e4;
 }
-/*Fin boutons + logo coeur*/
+/*Fin boutons*/
 /*- - - - - -*/
 /*Gestion du media*/
 /*  --Tablette--  */

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-25 10:58:56
+/* Smarty version 3.1.39, created on 2021-03-26 09:29:16
   from 'C:\xampp\htdocs\Entreprise\tpl\pages\offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605c5ee0d5e358_87759250',
+  'unifunc' => 'content_605d9b5c59ef14_09405053',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fe84582451a153e2b9310acadfd11660ab80035b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\pages\\offre.tpl',
-      1 => 1616666303,
+      1 => 1616668358,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605c5ee0d5e358_87759250 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605d9b5c59ef14_09405053 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="offre-container">
+    <!--Barre de droite avec les informations propres de l'entreprise-->
     <div class="offre-row infos">
         <div class="offre-avatar">
             <img src="https://w.wallhaven.cc/full/j3/wallhaven-j3339m.jpg" alt="IMAGE">
@@ -42,6 +43,7 @@ function content_605c5ee0d5e358_87759250 (Smarty_Internal_Template $_smarty_tpl)
         <p>Nombre d’élèves du CESI ayant été pris en stage dans cette entreprise :</p>
         <span>NOMBRE</span>
     </div>
+    <!--Détails de l'offre et description des attendus-->
     <div class="offre-row details">
         <div class="details-texte">
             <h2>TITRE DE L'OFFRE</h2>

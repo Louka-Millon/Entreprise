@@ -1,4 +1,5 @@
 <div class="offre-container">
+    <!--Barre de droite avec les informations propres de l'entreprise-->
     <div class="offre-row infos">
         <div class="offre-avatar">
             <img src="https://w.wallhaven.cc/full/j3/wallhaven-j3339m.jpg" alt="IMAGE">
@@ -19,6 +20,7 @@
         <p>Nombre d’élèves du CESI ayant été pris en stage dans cette entreprise :</p>
         <span>NOMBRE</span>
     </div>
+    <!--Détails de l'offre et description des attendus-->
     <div class="offre-row details">
         <div class="details-texte">
             <h2>TITRE DE L'OFFRE</h2>
