@@ -1,16 +1,17 @@
 
- 
+    
+     
     <form action="page-de-contact" method="post">
         <div>
             <div class= "header">
                 <h2 style="text-align: center;">Contactez-nous </h2>
                 </div>
             <label for="name">Nom :</label>
-            <input style = "text-align: center"type ="nom" id="name" name="user_name" placeholder="Entrer votre nom" required>
+            <input style = "text-align: center" type ="text" id="name" name="user_name" placeholder="Entrer votre nom" required>
         </div>
         <div>
             <label for="titre">Titre :</label>
-            <input style="text-align: center;" type="titre" placeholder="Entrer votre Titre" id="titre" name="Titre" required >
+            <input style="text-align: center;" type="text" placeholder="Entrer votre Titre" id="titre" name="Titre" required >
         </div>
 
         <div>
@@ -22,6 +23,6 @@
             <button type="submit">Envoyer</button>
         </div>
     </form>
-    
-</body>
-</html>
+
+ 
+  
