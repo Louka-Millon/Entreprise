@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="connexion.css">
     <title>Connexion</title>
 </head>
-<header>
-    <img src="projetphoto.png">
 
-</header>
 <body>
     <div class= "header">
     <h2>Connectez-vous </h2>
@@ -19,9 +16,9 @@
     <form method="POST" action="connexion.php">
         <fieldset>
         <p style="text-align: center;"> Veuillez vous connectez avec votre compte:</p>
-     <label><p style="text-align: center;">E-mail:</p></label> 
-     <input style="text-align: center" type="E-mail" placeholder="Entrer votre e-mail" name="username" required>
-     <label><p style="text-align: center">Password:</p></label>
+    <label style="text-align: center;">E-mail:</label> 
+     <input style="text-align: center" type="text" placeholder="Entrer votre e-mail" name="username" required> <br> <br> <br> <br> <br>
+     <label style="text-align: center;">Password:</label>
      <input style="text-align: center" type="Password" placeholder="Entrer votre password" name="password" required>
     <p style="text-align: center;"> <input type="submit" id="submit" value="Connexion"> </p>
      </fieldset>
