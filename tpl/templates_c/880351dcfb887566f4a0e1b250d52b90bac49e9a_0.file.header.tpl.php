@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-27 15:41:27
+/* Smarty version 3.1.39, created on 2021-03-27 16:25:56
   from 'C:\xamp\htdocs\Entreprise\tpl\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605f4417b7aa68_05759041',
+  'unifunc' => 'content_605f4e846939c3_03542808',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '880351dcfb887566f4a0e1b250d52b90bac49e9a' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\header.tpl',
-      1 => 1616856086,
+      1 => 1616857752,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605f4417b7aa68_05759041 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605f4e846939c3_03542808 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -41,7 +41,7 @@ function content_605f4417b7aa68_05759041 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 <header>
         <div class="bg"></div>
-        <div class="container">
+        <div class="container-head">
                 <a href="#row-nav" id="open" onclick="display();">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34px" height="27px" viewBox="0 0 34 27" enable-background="new 0 0 34 27" xml:space="preserve">
                                 <rect fill="#000" width="34" height="4"/>

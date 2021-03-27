@@ -1,4 +1,4 @@
-{include file='header_other.tpl'}
+{include file='header.tpl'}
 <div class="container">
     <div class="row-recherche">
         <div class="items titre-entreprise">

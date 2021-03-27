@@ -1,28 +1,28 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-27 16:24:39
+/* Smarty version 3.1.39, created on 2021-03-27 16:25:56
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\recherche.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605f4e376ad6e9_47218587',
+  'unifunc' => 'content_605f4e845ecba1_41236842',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4d3b9c7cfaefaffb2ea5a829aaabdb4d2d32ab82' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\recherche.tpl',
-      1 => 1616858528,
+      1 => 1616858753,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:header_other.tpl' => 1,
+    'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_605f4e376ad6e9_47218587 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_605f4e845ecba1_41236842 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="container">
     <div class="row-recherche">
