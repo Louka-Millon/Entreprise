@@ -1,0 +1,89 @@
+/*Éléments principaux*/
+body{
+    margin:0px;
+    padding:0px;
+}
+
+.offre-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.offre-container>.offre-row{
+    background-color: #E8EBF5;
+    border-radius: 50px 0 50px 0;
+    margin: 5px;
+    padding: 15px;
+}
+
+.offre-container>.offre-row>p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.offre-container>.infos{
+    width: 250px;
+}
+
+.offre-container>.details{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.offre-row>.offre-avatar, .offre-row>.details-texte>h2{
+    text-align: center;
+}
+
+.offre-row>.offre-avatar>img{
+    width: 150px;
+}
+/*Fin éléments principaux*/
+/*- - - - - -*/
+/*Boutons*/
+#btn_wishlist, #btn_postuler{
+    display: inline-block;
+    height: 35px;
+    border-radius: 10px;
+    outline: 0;
+    margin: auto;
+    transition-duration: 0.3s;
+}
+
+#btn_wishlist{
+    background: none;
+    border: 2px solid #4AC9FF;
+}
+
+#btn_postuler{
+    background-color: #4AC9FF;
+    width:80px;
+    border: none;
+}
+
+#btn_postuler:hover, #btn_wishlist:hover{
+    background-color: #3eb2e4;
+    border: 2px solid #3eb2e4;
+}
+/*Fin boutons*/
+/*- - - - - -*/
+/*Gestion du media*/
+/*  --Tablette--  */
+@media only screen and (min-width:420px) and (max-width:929px){
+    .offre-container>.offre-row{
+        width: 80%;
+    }
+}
+
+/*  --Smartphone--  */
+@media only screen and (max-width:420px){
+    .offre-container>.offre-row{
+        width: 80%;
+    }
+}
+/*Fin gestion du media*/
+/*- - - - - -*/

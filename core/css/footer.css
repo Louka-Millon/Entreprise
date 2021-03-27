@@ -1,0 +1,96 @@
+/*Footer*/
+body{
+    margin:0px;
+    padding:0px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #a4a4a4;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+footer>.footer-block{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 5px;
+    justify-content: space-evenly;
+}
+
+footer>.footer-block>span, footer>.footer-block>a{
+    text-decoration: none;
+    text-align: center;
+    color:#ffffff;
+}
+/*Fin footer*/
+/*- - - - -*/
+/*Popup cookies*/
+.popup-cookies{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #3a3a3a;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.popup-cookies>.popup-mention{
+    text-align: center;
+}
+
+.popup-cookies>.popup-mention>*, .popup-cookies>.popup-bouton>*{
+    color: white;
+}
+
+.popup-cookies>.popup-bouton>button{
+    background-color: #3a3a3a;
+    border-radius: 20px;
+    border-color: #686868;
+    border-width: 3px;
+    height: 40px;
+    transition-duration: 0.2s;
+}
+
+.popup-cookies>.popup-bouton>button:hover{
+    background-color: #686868;
+}
+/*Fin popup cookies*/
+/*- - - - -*/
+/*Gestion du media*/
+@media only screen and (max-width: 840px) and (min-width: 420px){
+    /*Popup cookies*/
+    .popup-cookies{
+        flex-direction: column;
+        align-items: center;
+    }
+    /*Fin popup cookies*/
+}
+
+@media only screen and (max-width: 420px){
+    /*Popup cookies*/
+    .popup-cookies{
+        flex-direction: column;
+        align-items: center;
+    }
+    /*Fin popup cookies*/
+}
+/*Fin gestion du media*/

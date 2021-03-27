@@ -62,7 +62,7 @@ h1{
 .row-nav>:nth-child(1){
     margin-right: auto;
 }
-.items,.items-left{
+.row-nav>.items,.row-nav>.items-left{
     padding:15px 10px;
     transition: background-color 0.4s, color 0.4s;
 }
@@ -73,7 +73,7 @@ a{
 
 }
 
-.items:hover,.items-left:hover{
+.row-nav>.items:hover,.row-nav>.items-left:hover{
     
     background-color: rgb(40,40,40);
 }
