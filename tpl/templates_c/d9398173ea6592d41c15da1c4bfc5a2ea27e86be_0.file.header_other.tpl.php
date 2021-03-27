@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-27 16:48:52
+/* Smarty version 3.1.39, created on 2021-03-27 17:22:17
   from 'C:\xamp\htdocs\Entreprise\tpl\header_other.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605f53e4113fa0_24127332',
+  'unifunc' => 'content_605f5bb9540ae8_77675531',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd9398173ea6592d41c15da1c4bfc5a2ea27e86be' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\header_other.tpl',
-      1 => 1616860131,
+      1 => 1616862117,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605f53e4113fa0_24127332 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605f5bb9540ae8_77675531 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -30,7 +30,7 @@ function content_605f53e4113fa0_24127332 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="../core/css/header.css" media="screen" />
         <link rel="stylesheet" href="../core/css/footer.css" media="screen" />
         <link rel="stylesheet" href="../core/css/inscription.css" media="screen" />
-        <link rel="stylesheet" href="../core/css/connexion.css" media="screen" />
+        <!--<link rel="stylesheet" href="../core/css/connexion.css" media="screen" />-->
         <!--<link rel="stylesheet" href="../core/css/parametre.css" media="screen" />
         <link rel="stylesheet" href="../core/css/recherche.css" media="screen" />
         <link rel="stylesheet" href="../core/css/profil.css" media="screen" />-->

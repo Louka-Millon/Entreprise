@@ -6,9 +6,9 @@
         <link rel="stylesheet" href="../core/css/header.css" media="screen" />
         <link rel="stylesheet" href="../core/css/footer.css" media="screen" />
         <link rel="stylesheet" href="../core/css/inscription.css" media="screen" />
-        <link rel="stylesheet" href="../core/css/connexion.css" media="screen" />
+        <!--<link rel="stylesheet" href="../core/css/connexion.css" media="screen" />-->
         <!--<link rel="stylesheet" href="../core/css/parametre.css" media="screen" />
-        <link rel="stylesheet" href="../core/css/recherche.css" media="screen" />
+        
         <link rel="stylesheet" href="../core/css/profil.css" media="screen" />-->
         <link rel="shortcut icon" href="images/favicon.ico" />
         <!-- On importe jQuery -->

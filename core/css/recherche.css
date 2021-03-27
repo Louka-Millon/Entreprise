@@ -8,6 +8,11 @@
 
 }
 
+.container-recherche{
+    margin-top: 550px;
+    display:flex;
+}
+
 .row-recherche>.items{
     width: 320px;
     height: 400px;

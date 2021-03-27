@@ -5,8 +5,9 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" href="../core/css/header.css" media="screen" />
         <link rel="stylesheet" href="../core/css/footer.css" media="screen" />
-        <link rel="stylesheet" href="../core/css/home.css" media="screen" />
-        <link rel="stylesheet" href="../core/css/offre.css" media="screen" />
+        <!--<link rel="stylesheet" href="../core/css/home.css" media="screen" />
+        <link rel="stylesheet" href="../core/css/offre.css" media="screen" />-->
+        <link rel="stylesheet" href="../core/css/recherche.css" media="screen" />
         <link rel="shortcut icon" href="images/favicon.ico" />
         <!-- On importe jQuery -->
         
