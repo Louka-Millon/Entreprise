@@ -6,7 +6,7 @@
             <h4>Total</h4>
             <h5>Description de l'offre</h5>
             <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat in maxime placeat quia numquam optio, corporis doloremque perspiciatis et ducimus fugiat quibusdam dicta aspernatur. Voluptatem error voluptatibus repellendus qui quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eligendi accusantium ad dicta ea? Tempora aperiam, voluptatum expedita modi voluptatem quidem incidunt fuga amet minima ullam aut mollitia perspiciatis tenetur.</p>
-            <a href="#" class="bot"><button>Favori</button></a><a href="#" class="bot"><button>Voir l'offre</button></a>
+            <a href="#" class="bot"><button>Favori</button></a><a href="index.php?page=offre&offre=Total" class="bot"><button>Voir l'offre</button></a>
         </div>
         
        

@@ -4,7 +4,7 @@
     <div class="offre-row infos">
         <div class="offre-avatar">
             <img src="https://w.wallhaven.cc/full/j3/wallhaven-j3339m.jpg" alt="IMAGE">
-            <h3>Nom de l'entreprise</h3>
+            <h3>{$entreprise}</h3>
         </div>
         <p>Localisation</p>
         <p>Coordonnées</p>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-27 17:25:10
+/* Smarty version 3.1.39, created on 2021-03-27 17:44:16
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\recherche.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605f5c664710f2_19268625',
+  'unifunc' => 'content_605f60e0466e27_53916582',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4d3b9c7cfaefaffb2ea5a829aaabdb4d2d32ab82' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\recherche.tpl',
-      1 => 1616862293,
+      1 => 1616863365,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_605f5c664710f2_19268625 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605f60e0466e27_53916582 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="container-recherche">
@@ -31,7 +31,7 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
             <h4>Total</h4>
             <h5>Description de l'offre</h5>
             <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat in maxime placeat quia numquam optio, corporis doloremque perspiciatis et ducimus fugiat quibusdam dicta aspernatur. Voluptatem error voluptatibus repellendus qui quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eligendi accusantium ad dicta ea? Tempora aperiam, voluptatum expedita modi voluptatem quidem incidunt fuga amet minima ullam aut mollitia perspiciatis tenetur.</p>
-            <a href="#" class="bot"><button>Favori</button></a><a href="#" class="bot"><button>Voir l'offre</button></a>
+            <a href="#" class="bot"><button>Favori</button></a><a href="index.php?page=offre&offre=Total" class="bot"><button>Voir l'offre</button></a>
         </div>
         
        

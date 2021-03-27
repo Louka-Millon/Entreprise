@@ -9,6 +9,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top:550px;
 }
 
 .offre-container>.offre-row{
