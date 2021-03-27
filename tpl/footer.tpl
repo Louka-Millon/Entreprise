@@ -3,8 +3,8 @@
               <p>Ce site utilise des cookies. Pour plus d'informations, consultez notre politique de confidentialité.</p>
        </div>
        <div class="popup-bouton">
-              <button>Accepter</button>
-              <button>En savoir plus</button>
+              <button onclick="removecookie()">Accepter</button>
+              <button onclick="redirectcookie()">En savoir plus</button>
        </div>
 </div>
 <footer>
@@ -17,5 +17,8 @@
               <span>Ce site a été développé par Lucile BRIAND, Nissrine ESSAHLAOUI et Louka MILLON.</span>
        </div> 
 </footer>
+
+<script src="../core/js/footer.js"></script>
+
 </body>
 </html>

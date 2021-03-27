@@ -7,9 +7,9 @@
         <link rel="stylesheet" href="../core/css/footer.css" media="screen" />
         <link rel="stylesheet" href="../core/css/inscription.css" media="screen" />
         <link rel="stylesheet" href="../core/css/connexion.css" media="screen" />
-        <link rel="stylesheet" href="../core/css/parametre.css" media="screen" />
+        <!--<link rel="stylesheet" href="../core/css/parametre.css" media="screen" />
         <link rel="stylesheet" href="../core/css/recherche.css" media="screen" />
-        <link rel="stylesheet" href="../core/css/profil.css" media="screen" />
+        <link rel="stylesheet" href="../core/css/profil.css" media="screen" />-->
         <link rel="shortcut icon" href="images/favicon.ico" />
         <!-- On importe jQuery -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
@@ -31,12 +31,11 @@
                         <div class="items-left">
                                 <h1>{$title}</h1>
                         </div>
-                        <div class="items"><a href="#">Home</a></div>
-                        <div class="items"><a href="#">Recherche d'emplois</a></div>
-                        <div class="items"><a href="#">A propos</a></div>
-                        <div class="items"><a href="#">Contact</a></div>
-                        <div class="items"><a href="#">Connexion</a></div>
-                        <div class="items"><a href="#">S'inscrire</a></div>
+                        <div class="items"><a href="?page=home">Home</a></div>
+                        <div class="items"><a href="?page=recherche">Recherche d'emplois</a></div>
+                        <div class="items"><a href="?page=contact">Contact</a></div>
+                        <div class="items"><a href="?page=connexion">Connexion</a></div>
+                        <div class="items"><a href="?page=inscription">S'inscrire</a></div>
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">

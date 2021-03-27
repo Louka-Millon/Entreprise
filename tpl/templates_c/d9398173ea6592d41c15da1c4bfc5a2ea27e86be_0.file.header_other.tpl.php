@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-27 16:23:33
+/* Smarty version 3.1.39, created on 2021-03-27 16:48:52
   from 'C:\xamp\htdocs\Entreprise\tpl\header_other.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605f4df56e9051_79141732',
+  'unifunc' => 'content_605f53e4113fa0_24127332',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd9398173ea6592d41c15da1c4bfc5a2ea27e86be' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\header_other.tpl',
-      1 => 1616858612,
+      1 => 1616860131,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605f4df56e9051_79141732 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605f53e4113fa0_24127332 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -31,9 +31,9 @@ function content_605f4df56e9051_79141732 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="../core/css/footer.css" media="screen" />
         <link rel="stylesheet" href="../core/css/inscription.css" media="screen" />
         <link rel="stylesheet" href="../core/css/connexion.css" media="screen" />
-        <link rel="stylesheet" href="../core/css/parametre.css" media="screen" />
+        <!--<link rel="stylesheet" href="../core/css/parametre.css" media="screen" />
         <link rel="stylesheet" href="../core/css/recherche.css" media="screen" />
-        <link rel="stylesheet" href="../core/css/profil.css" media="screen" />
+        <link rel="stylesheet" href="../core/css/profil.css" media="screen" />-->
         <link rel="shortcut icon" href="images/favicon.ico" />
         <!-- On importe jQuery -->
         <?php echo '<script'; ?>
@@ -58,12 +58,11 @@ function content_605f4df56e9051_79141732 (Smarty_Internal_Template $_smarty_tpl)
                                 <h1><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </h1>
                         </div>
-                        <div class="items"><a href="#">Home</a></div>
-                        <div class="items"><a href="#">Recherche d'emplois</a></div>
-                        <div class="items"><a href="#">A propos</a></div>
-                        <div class="items"><a href="#">Contact</a></div>
-                        <div class="items"><a href="#">Connexion</a></div>
-                        <div class="items"><a href="#">S'inscrire</a></div>
+                        <div class="items"><a href="?page=home">Home</a></div>
+                        <div class="items"><a href="?page=recherche">Recherche d'emplois</a></div>
+                        <div class="items"><a href="?page=contact">Contact</a></div>
+                        <div class="items"><a href="?page=connexion">Connexion</a></div>
+                        <div class="items"><a href="?page=inscription">S'inscrire</a></div>
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">

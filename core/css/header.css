@@ -157,6 +157,8 @@ a{
         display: flex;
         margin-top:10px;
         position: fixed;
+        top:10px;
+        left:10px;
     
     
     }

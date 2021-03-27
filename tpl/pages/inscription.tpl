@@ -1,5 +1,5 @@
 {include file='header_other.tpl'}
-<div class="container">
+<div class="container-inscription">
     <div class="row-titre">
         <h2>Inscription</h2>
     </div>

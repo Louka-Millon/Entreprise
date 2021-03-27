@@ -15,8 +15,8 @@ footer{
     box-sizing: border-box;
     justify-content: space-evenly;
     align-items: center;
-    position: absolute;
     bottom: 0px;
+    margin-top: 20px;
 }
 
 footer>.footer-block{

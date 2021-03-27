@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-27 15:34:48
+/* Smarty version 3.1.39, created on 2021-03-27 16:50:06
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\inscription.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605f4288863033_41575955',
+  'unifunc' => 'content_605f542ee87e31_64017111',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b5b06bc8635beb172ae0bbbdf9fa64f84a0bee9d' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\inscription.tpl',
-      1 => 1616855686,
+      1 => 1616860204,
       2 => 'file',
     ),
   ),
@@ -21,10 +21,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header_other.tpl' => 1,
   ),
 ),false)) {
-function content_605f4288863033_41575955 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605f542ee87e31_64017111 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<div class="container">
+<div class="container-inscription">
     <div class="row-titre">
         <h2>Inscription</h2>
     </div>
