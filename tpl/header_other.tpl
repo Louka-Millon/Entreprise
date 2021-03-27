@@ -34,12 +34,7 @@
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">
-                        <form action="search.php" method="get">
-                                <input type="text" name="offre"  placeholder="Offre...">
-                                <input type="text" name="competence"  placeholder="Compétence...">
-                                <input type="text" name="lieu" id="last_input"  placeholder="Lieu...">
-                                <input type="submit" value="Rechercher">
-                        </form>
+                        <h2 id="titre">{$page_name}</h2>
                 </div>
 
         </div>

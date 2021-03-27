@@ -14,7 +14,7 @@ else
 
 
 // Affichage des templates
-$smarty->display(_TPL_ . 'header.tpl');
+
 
 if (isset($_GET['page']) && file_exists(_TPL_.'pages/'.str_replace('.', '', $_GET['page']).'.tpl'))
     $smarty->display(_TPL_.'pages/'.$_GET['page'].'.tpl');
