@@ -33,7 +33,7 @@
     margin-top: 5px;
     width:250px;
     max-height: 125px;
-    object-fit: cover;
+    object-fit: scale-down;
 }
 .titre-entreprise>h4{
     margin:auto;
