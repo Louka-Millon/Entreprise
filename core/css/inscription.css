@@ -76,6 +76,17 @@ body{
 #btn_mail:hover{
     background-color: #3eb2e4;
 }
+#btn_connexion{
+    display: block;
+    background-color: #4AC9FF;
+    width:100px;
+    height: 30px;
+    margin: auto;
+    transition-duration: 0.3s;
+}
+#btn_connexion:hover{
+    background-color: #3eb2e4;
+}
 /*Fin bouton d'inscription*/
 /*- - - - - -*/
 /*Gestion du media*/
