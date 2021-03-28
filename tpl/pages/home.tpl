@@ -1,5 +1,130 @@
 {include file='header.tpl'}
 
+<section>
+      <article>
+            
+            <div class="container-home">
+                  <div class="row-home">
+                        <h3 class="sectionname text-center">Les domaines les plus recherchés</h3></br>
+                  </div>
+                  <div class="row-home">
+                        
+                        <div class="items-home"></div>
+                        <div class="items-home"></div>
+                        <div class="items-home"></div>
+                        <div class="items-home"></div>
+                        <div class="items-home"></div>
+                  </div>
+            </div>
+      </article>
+      <article>
+            <div class="container-suggestion">
+                  <div class="row-suggestion">
+                        <h3 class="sectionname text-center">Propositions selon votre domaines</h3></br>
+                  </div>
+                  <div class="row-suggestion">
+                        <div class="items-suggest">
+                              <div class="left-square">
+                                    <div class="top-square">
+                                          <h4 class="text-center nameentreprise">Total</h4>
+                                    </div>
+                                    <div class="bottom-square">
+                                          <div class="sub-square">
+                                                <p class="text-center">Localisation</p>
+                                          </div>
+                                          <div class="sub-square">
+                                                <p class="text-center">Domaine</p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="main-right">
+                                    <div class="right-square removable">
+                                          <p class="center">Remunération</p>
+                                    </div>
+                                    <div class="right-square button">
+                                          <button class="button-offre"> Voir l'offre</button>
+                                    </div>
+                              </div>
+                              
+                        </div>
+                        <div class="items-suggest">
+                              <div class="left-square">
+                                    <div class="top-square">
+                                          <h4 class="text-center nameentreprise">Total</h4>
+                                    </div>
+                                    <div class="bottom-square">
+                                          <div class="sub-square">
+                                                <p class="text-center">Localisation</p>
+                                          </div>
+                                          <div class="sub-square">
+                                                <p class="text-center">Domaine</p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="main-right">
+                                    <div class="right-square removable">
+                                          <p class="center">Remunération</p>
+                                    </div>
+                                    <div class="right-square button">
+                                          <button class="button-offre"> Voir l'offre</button>
+                                    </div>
+                              </div>
+                              
+                        </div>
+                        <div class="items-suggest">
+                              <div class="left-square">
+                                    <div class="top-square">
+                                          <h4 class="text-center nameentreprise">Total</h4>
+                                    </div>
+                                    <div class="bottom-square">
+                                          <div class="sub-square">
+                                                <p class="text-center">Localisation</p>
+                                          </div>
+                                          <div class="sub-square">
+                                                <p class="text-center">Domaine</p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="main-right">
+                                    <div class="right-square removable">
+                                          <p class="center">Remunération</p>
+                                    </div>
+                                    <div class="right-square button">
+                                          <button class="button-offre"> Voir l'offre</button>
+                                    </div>
+                              </div>
+                              
+                        </div>
+                        <div class="items-suggest">
+                              <div class="left-square">
+                                    <div class="top-square">
+                                          <h4 class="text-center nameentreprise">Total</h4>
+                                    </div>
+                                    <div class="bottom-square">
+                                          <div class="sub-square">
+                                                <p class="text-center">Localisation</p>
+                                          </div>
+                                          <div class="sub-square">
+                                                <p class="text-center">Domaine</p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="main-right">
+                                    <div class="right-square removable">
+                                          <p class="center">Remunération</p>
+                                    </div>
+                                    <div class="right-square button">
+                                          <button class="button-offre"> Voir l'offre</button>
+                                    </div>
+                              </div>
+                              
+                        </div>
+
+                  </div>
+            </div>
+      </article>
+</section>
+<!--
       <div class="header">
         <h2> Les domaines les plus recherchés</h2>
       </div>
@@ -44,3 +169,4 @@
             <div style= "position: absolute; margin-left: 90%; background-color: aqua; top: 124%" class="bouton"> <input type="submit" value="Allez à"> </div>
       
       </fieldset>
+-->

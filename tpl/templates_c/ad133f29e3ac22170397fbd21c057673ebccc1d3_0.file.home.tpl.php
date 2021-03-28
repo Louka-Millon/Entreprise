@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-27 14:28:37
+/* Smarty version 3.1.39, created on 2021-03-28 12:22:40
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605f33051f7c30_78797985',
+  'unifunc' => 'content_606058f05ecd34_56784312',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ad133f29e3ac22170397fbd21c057673ebccc1d3' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\home.tpl',
-      1 => 1616851711,
+      1 => 1616926959,
       2 => 'file',
     ),
   ),
@@ -21,10 +21,135 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_605f33051f7c30_78797985 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606058f05ecd34_56784312 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
+<section>
+      <article>
+            
+            <div class="container-home">
+                  <div class="row-home">
+                        <h3 class="sectionname text-center">Les domaines les plus recherchés</h3></br>
+                  </div>
+                  <div class="row-home">
+                        
+                        <div class="items-home"></div>
+                        <div class="items-home"></div>
+                        <div class="items-home"></div>
+                        <div class="items-home"></div>
+                        <div class="items-home"></div>
+                  </div>
+            </div>
+      </article>
+      <article>
+            <div class="container-suggestion">
+                  <div class="row-suggestion">
+                        <h3 class="sectionname text-center">Propositions selon votre domaines</h3></br>
+                  </div>
+                  <div class="row-suggestion">
+                        <div class="items-suggest">
+                              <div class="left-square">
+                                    <div class="top-square">
+                                          <h4 class="text-center nameentreprise">Total</h4>
+                                    </div>
+                                    <div class="bottom-square">
+                                          <div class="sub-square">
+                                                <p class="text-center">Localisation</p>
+                                          </div>
+                                          <div class="sub-square">
+                                                <p class="text-center">Domaine</p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="main-right">
+                                    <div class="right-square removable">
+                                          <p class="center">Remunération</p>
+                                    </div>
+                                    <div class="right-square button">
+                                          <button class="button-offre"> Voir l'offre</button>
+                                    </div>
+                              </div>
+                              
+                        </div>
+                        <div class="items-suggest">
+                              <div class="left-square">
+                                    <div class="top-square">
+                                          <h4 class="text-center nameentreprise">Total</h4>
+                                    </div>
+                                    <div class="bottom-square">
+                                          <div class="sub-square">
+                                                <p class="text-center">Localisation</p>
+                                          </div>
+                                          <div class="sub-square">
+                                                <p class="text-center">Domaine</p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="main-right">
+                                    <div class="right-square removable">
+                                          <p class="center">Remunération</p>
+                                    </div>
+                                    <div class="right-square button">
+                                          <button class="button-offre"> Voir l'offre</button>
+                                    </div>
+                              </div>
+                              
+                        </div>
+                        <div class="items-suggest">
+                              <div class="left-square">
+                                    <div class="top-square">
+                                          <h4 class="text-center nameentreprise">Total</h4>
+                                    </div>
+                                    <div class="bottom-square">
+                                          <div class="sub-square">
+                                                <p class="text-center">Localisation</p>
+                                          </div>
+                                          <div class="sub-square">
+                                                <p class="text-center">Domaine</p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="main-right">
+                                    <div class="right-square removable">
+                                          <p class="center">Remunération</p>
+                                    </div>
+                                    <div class="right-square button">
+                                          <button class="button-offre"> Voir l'offre</button>
+                                    </div>
+                              </div>
+                              
+                        </div>
+                        <div class="items-suggest">
+                              <div class="left-square">
+                                    <div class="top-square">
+                                          <h4 class="text-center nameentreprise">Total</h4>
+                                    </div>
+                                    <div class="bottom-square">
+                                          <div class="sub-square">
+                                                <p class="text-center">Localisation</p>
+                                          </div>
+                                          <div class="sub-square">
+                                                <p class="text-center">Domaine</p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="main-right">
+                                    <div class="right-square removable">
+                                          <p class="center">Remunération</p>
+                                    </div>
+                                    <div class="right-square button">
+                                          <button class="button-offre"> Voir l'offre</button>
+                                    </div>
+                              </div>
+                              
+                        </div>
+
+                  </div>
+            </div>
+      </article>
+</section>
+<!--
       <div class="header">
         <h2> Les domaines les plus recherchés</h2>
       </div>
@@ -69,5 +194,5 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
             <div style= "position: absolute; margin-left: 90%; background-color: aqua; top: 124%" class="bouton"> <input type="submit" value="Allez à"> </div>
       
       </fieldset>
-<?php }
+--><?php }
 }

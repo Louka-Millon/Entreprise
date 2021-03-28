@@ -11,6 +11,7 @@
 .container-recherche{
     margin-top: 550px;
     display:flex;
+    
 }
 
 .row-recherche>.items{

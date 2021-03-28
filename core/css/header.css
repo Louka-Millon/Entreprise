@@ -180,7 +180,6 @@ a{
         margin: 0;
         display: flex;
         color: #FFF;
-        position: absolute;
         flex-direction: column;
         width:100%;
         height: 100%;
@@ -189,6 +188,7 @@ a{
         border-radius: 0px;
         z-index:10;
         transition: transform .4s cubic-bezier(.25, .1, .25, 1), left .4s, width .4s, top .4s, flex-direction .4s;
+        position: fixed;
     }
     .row-nav>*{
         margin:auto;

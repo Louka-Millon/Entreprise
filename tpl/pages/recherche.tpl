@@ -9,6 +9,7 @@
             <a href="#" class="bot"><button>Favori</button></a><a href="index.php?page=offre&offre=Total" class="bot"><button>Voir l'offre</button></a>
         </div>
         
+        
        
         
         

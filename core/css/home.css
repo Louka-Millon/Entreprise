@@ -1,43 +1,139 @@
-.main{
+.container-home{
+    margin-top: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-home{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content:space-around;
-    align-content: center;
-
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width:100%;
 }
 
-
-.header{
-    text-decoration: underline;
-    text-decoration: blue;
+.items-home{
+    width:320px;
+    height:400px;
+    background: lightcoral;
+    margin:10px;
 }
 
+.bloc{
+    display: block;
 
-fieldset{
-    padding-top: 10%;
+}
+.text-center{
+    text-align: center;
+}
+.sectionname{
+    width:100%;
 }
 
-@media screen and (max-width: 770px) and (min-width: 420px)
-{
-    .main{
-        width: 70%;
+.container-suggestion{
+    display: flex;
+    flex-direction: column;
+}
 
-    }
-    .domaine{
-        width: 70%;
-    }
-        
+.row-suggestion{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.items-suggest{
+    display: flex;
+    flex-direction: row;
+    width:90%;
+    height:100px;
+    background: cornflowerblue;
+    margin:auto;
+    margin-top: 20px;
+}
+.left-square{
+    width:30%;
+    height: 100%;
+    background: crimson;
+}
+.main-right{
+    width:30%;
+    height: 100%;
+    background:fuchsia;
+    position: relative;
+    margin-left:auto;
+    margin-right:0px;
+}
+.right-square{
+    width:50%;
+    height: 100%;
+    float: left;
+    background: royalblue;
     
 }
-/*Smartphone*/
 
-@media screen and (max-width: 420px)
-{
-    .mail{
-        width: 80%;
-    }
-    .domaine{
-        width: 80%;
-    }
+.text-center{
+    text-align: center;
 }
+
+.top-square, .bottom-square{
+    width:100%;
+    height:50%;
+    
+}
+.top-square{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-square{
+    display: flex;
+    flex-direction: row;
+}
+
+h4{
+    padding: 0px;
+    margin:0px;
+}
+
+
+.sub-square{
+    width:50%;
+    height: 100%;
+    background:forestgreen;
+}
+
+.center{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0px;
+    margin:0px;
+}
+.button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+@media(max-width:900px){
+    .left-square{
+        width:70%;
+    }
+
+    .removable{
+        display: none;
+    }
+    .right-square{
+        width:100%;
+    }
+
+
+}
+
