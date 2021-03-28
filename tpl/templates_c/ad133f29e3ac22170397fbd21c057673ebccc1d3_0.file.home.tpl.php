@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-28 12:22:40
+/* Smarty version 3.1.39, created on 2021-03-28 12:38:50
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_606058f05ecd34_56784312',
+  'unifunc' => 'content_60605cba9d9fc7_28251119',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ad133f29e3ac22170397fbd21c057673ebccc1d3' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\home.tpl',
-      1 => 1616926959,
+      1 => 1616927929,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_606058f05ecd34_56784312 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60605cba9d9fc7_28251119 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -66,7 +66,7 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
                                     <div class="right-square removable">
                                           <p class="center">Remunération</p>
                                     </div>
-                                    <div class="right-square button">
+                                    <div class="right-square button-container">
                                           <button class="button-offre"> Voir l'offre</button>
                                     </div>
                               </div>
@@ -90,7 +90,7 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
                                     <div class="right-square removable">
                                           <p class="center">Remunération</p>
                                     </div>
-                                    <div class="right-square button">
+                                    <div class="right-square button-container">
                                           <button class="button-offre"> Voir l'offre</button>
                                     </div>
                               </div>
@@ -114,7 +114,7 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
                                     <div class="right-square removable">
                                           <p class="center">Remunération</p>
                                     </div>
-                                    <div class="right-square button">
+                                    <div class="right-square button-container">
                                           <button class="button-offre"> Voir l'offre</button>
                                     </div>
                               </div>
@@ -138,7 +138,7 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
                                     <div class="right-square removable">
                                           <p class="center">Remunération</p>
                                     </div>
-                                    <div class="right-square button">
+                                    <div class="right-square button-container">
                                           <button class="button-offre"> Voir l'offre</button>
                                     </div>
                               </div>

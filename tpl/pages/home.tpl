@@ -41,7 +41,7 @@
                                     <div class="right-square removable">
                                           <p class="center">Remunération</p>
                                     </div>
-                                    <div class="right-square button">
+                                    <div class="right-square button-container">
                                           <button class="button-offre"> Voir l'offre</button>
                                     </div>
                               </div>
@@ -65,7 +65,7 @@
                                     <div class="right-square removable">
                                           <p class="center">Remunération</p>
                                     </div>
-                                    <div class="right-square button">
+                                    <div class="right-square button-container">
                                           <button class="button-offre"> Voir l'offre</button>
                                     </div>
                               </div>
@@ -89,7 +89,7 @@
                                     <div class="right-square removable">
                                           <p class="center">Remunération</p>
                                     </div>
-                                    <div class="right-square button">
+                                    <div class="right-square button-container">
                                           <button class="button-offre"> Voir l'offre</button>
                                     </div>
                               </div>
@@ -113,7 +113,7 @@
                                     <div class="right-square removable">
                                           <p class="center">Remunération</p>
                                     </div>
-                                    <div class="right-square button">
+                                    <div class="right-square button-container">
                                           <button class="button-offre"> Voir l'offre</button>
                                     </div>
                               </div>

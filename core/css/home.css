@@ -46,19 +46,19 @@
     flex-direction: row;
     width:90%;
     height:100px;
-    background: cornflowerblue;
     margin:auto;
     margin-top: 20px;
+    border-radius: 5px;
+    border:1px solid #000;
 }
 .left-square{
     width:30%;
     height: 100%;
-    background: crimson;
+    
 }
 .main-right{
     width:30%;
     height: 100%;
-    background:fuchsia;
     position: relative;
     margin-left:auto;
     margin-right:0px;
@@ -67,7 +67,6 @@
     width:50%;
     height: 100%;
     float: left;
-    background: royalblue;
     
 }
 
@@ -100,7 +99,6 @@ h4{
 .sub-square{
     width:50%;
     height: 100%;
-    background:forestgreen;
 }
 
 .center{
@@ -113,13 +111,19 @@ h4{
     padding: 0px;
     margin:0px;
 }
-.button{
+.button-container{
     display:flex;
     align-items: center;
     justify-content: center;
 
 }
 
+.button-offre{
+    width:100px;
+    height: 30px;
+    background: #E8EBF5;
+    border:0px solid #FFF;
+}
 
 
 @media(max-width:900px){
