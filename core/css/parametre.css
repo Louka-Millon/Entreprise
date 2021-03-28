@@ -1,9 +1,13 @@
 .row-param{
     width: 90%;
     height:600px;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin:auto;
+}
+.container-param{
+    margin-top:550px;
 }
 .row-param>form>.titre-items{
     vertical-align: middle;
@@ -19,8 +23,9 @@
     font-size: 20px;
 }
 
-.row-param>.items{
+.row-form>form>.items-param{
     text-align: center;
+    margin-bottom: 10px;
 }
 .inputbox{
     width: 30%;
@@ -37,4 +42,19 @@
     border-radius: 30px;
     border:0px solid transparent;
 
+}
+.text-center{
+    text-align: center;
+}
+
+.parametre{
+    display: inline-block;
+    height: 35px;
+    border-radius: 10px;
+    outline: 0;
+    margin: auto;
+    transition-duration: 0.3s;
+    background: none;
+    border: 2px solid #4AC9FF;
+    margin-top: 10px;
 }

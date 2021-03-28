@@ -1,16 +1,16 @@
 {include file='header_other.tpl'}
-<div class="container-param">
-    <div class="row-param">
+<div class="container-inscription">
+    <div class="row-form">
         <form action="../../controllers/index.php" method="get">
-            <div class="items titre-items">
+            <div class="items-param titre-items">
                 <h3>Information</h3>
             </div>
             <br>
-            <div class="items">
-                <img src="https://www.presse-citron.net/app/uploads/2019/12/avatarsuite.jpg" alt="avatar" width="144px" height="144px" style="object-fit:cover"><br>
+            <div class="items-param text-center">
+                <img  src="https://www.presse-citron.net/app/uploads/2019/12/avatarsuite.jpg" alt="avatar" width="144px" height="144px" style="object-fit:cover"><br>
                 <input type="file" name="img" >
             </div>
-            <div class="items inputbox">
+            <div class="items-param inputbox">
                 <label for="">Prénom</label><input type="text" name="prenom" >
                 <label for="">Nom</label><input type="text" name="nom" >
                 <label for="">Mot de passe</label><input type="text" name="mot_de_passe">
@@ -19,12 +19,12 @@
                 <label for="">E-mail</label><input type="text" name="email">
                 
             </div>
-            <div class="items">
+            <div class="items-param text-center">
                 <input type="file" name="CV" >
                 <input type="file" name="LM" >
             </div>
-            <div class="items">
-                <input type="submit" value="Changer">
+            <div class="items text-center">
+                <input class="parametre" type="submit" value="Changer">
             </div>
         </form>
     </div>
