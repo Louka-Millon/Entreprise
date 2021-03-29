@@ -53,6 +53,19 @@ body{
 }
 /*Fin formulaire*/
 /*- - - - - -*/
+/*Select*/
+#select-statut{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+
+/*Fin select*/
+/*- - - - - -*/
 /*Bouton d'inscription*/
 #btn_inscription{
     display: block;

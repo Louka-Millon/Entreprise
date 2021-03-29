@@ -1,4 +1,29 @@
-{include file='header_other.tpl'}
+<?php
+/* Smarty version 3.1.39, created on 2021-03-29 09:20:16
+  from 'C:\xampp\htdocs\Entreprise\tpl\pages\inscription.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_60617fb0446546_95500687',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'fb9793440f4410abd864bdeb97fa96809a9cf362' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\pages\\inscription.tpl',
+      1 => 1617002382,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header_other.tpl' => 1,
+  ),
+),false)) {
+function content_60617fb0446546_95500687 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 <section>
     <article>
         <div class="container-inscription">
@@ -31,4 +56,5 @@
             </div>
         </div>
     </article>
-</section>
+</section><?php }
+}
