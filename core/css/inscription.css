@@ -24,6 +24,19 @@ body{
 }
 /*Fin éléments principaux*/
 /*- - - - - -*/
+/*Select*/
+#select-statut{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+
+/*Fin select*/
+/*- - - - - -*/
 /*Formulaire*/
 .row-form>form>input{
     border: none;

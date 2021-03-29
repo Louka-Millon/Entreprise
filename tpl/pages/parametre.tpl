@@ -15,7 +15,6 @@
                     <div class="items-param inputbox">
                         <label for="">Prénom</label><input type="text" name="prenom" >
                         <label for="">Nom</label><input type="text" name="nom" >
-                        <label for="">Mot de passe</label><input type="text" name="mot_de_passe">
                         <label for="">Centre</label><input type="text" name="centre">
                         <label for="">Promotion</label><input type="text" name="promotion">
                         <label for="">E-mail</label><input type="text" name="email">

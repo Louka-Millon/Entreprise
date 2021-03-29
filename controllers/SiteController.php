@@ -19,6 +19,17 @@ class SiteController{
             VALUES (?, ?, ?, ?, ?);');
         $req->execute([$prenom,$nom,$mail,$pass,$statut]);
     }
+    
+    /* login part */
+    public function login($email){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT * FROM `personne` 
+        INNER JOIN `promotion` ON `personne`.`id_promo` = `promotion`.`id_promo`
+        WHERE `mail`= ?');
+        $req->execute([$email]);
+        $posts = $req->fetch();
+        return $posts;
+    }
 
 
     /*show entreprise part */
@@ -109,4 +120,5 @@ class SiteController{
         $posts = $req->fetchAll();
         return $posts;
     }
+    
 }

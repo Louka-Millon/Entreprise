@@ -6,7 +6,7 @@
                 <h2>Connexion</h2>
             </div>
             <div class="row-form">
-                <form action="connexion.php">
+                <form action="../controllers/login.php" method="POST">
                     <p>E-mail :</p>
                     <input type="email" name="mail">
                     <p>Mot de passe :</p>
