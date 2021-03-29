@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-28 23:37:13
+/* Smarty version 3.1.39, created on 2021-03-29 15:15:43
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6060f7094e8e10_37200741',
+  'unifunc' => 'content_6061d2ffd11830_47916846',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ad133f29e3ac22170397fbd21c057673ebccc1d3' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\home.tpl',
-      1 => 1616967425,
+      1 => 1617023713,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_6060f7094e8e10_37200741 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6061d2ffd11830_47916846 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -33,12 +33,18 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
                         <h3 class="sectionname text-center">Les domaines les plus recherchés</h3></br>
                   </div>
                   <div class="row-home">
-                        
-                        <div class="items-home"></div>
-                        <div class="items-home"></div>
-                        <div class="items-home"></div>
-                        <div class="items-home"></div>
-                        <div class="items-home"></div>
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['secteur']->value, 'top');
+$_smarty_tpl->tpl_vars['top']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['top']->value) {
+$_smarty_tpl->tpl_vars['top']->do_else = false;
+?>
+                        <div class="items-home" style="background:url('../core/image/secteur/<?php echo $_smarty_tpl->tpl_vars['top']->value['secteur_activite'];?>
+.jpg');background-position: 50% 50%;background-size: cover;"><div class="centered"><?php echo $_smarty_tpl->tpl_vars['top']->value['secteur_activite'];?>
+</div></div>
+                        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                   </div>
             </div>
       </article>

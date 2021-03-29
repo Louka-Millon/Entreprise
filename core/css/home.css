@@ -15,8 +15,18 @@
 .items-home{
     width:320px;
     height:400px;
-    background: lightcoral;
+    background: grey;
     margin:10px;
+    position: relative;
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
 }
 
 .bloc{

@@ -8,12 +8,9 @@
                         <h3 class="sectionname text-center">Les domaines les plus recherchés</h3></br>
                   </div>
                   <div class="row-home">
-                        
-                        <div class="items-home"></div>
-                        <div class="items-home"></div>
-                        <div class="items-home"></div>
-                        <div class="items-home"></div>
-                        <div class="items-home"></div>
+                        {foreach from=$secteur item=top}
+                        <div class="items-home" style="background:url('../core/image/secteur/{$top.secteur_activite}.jpg');background-position: 50% 50%;background-size: cover;"><div class="centered">{$top.secteur_activite}</div></div>
+                        {/foreach}
                   </div>
             </div>
       </article>

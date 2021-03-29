@@ -2,6 +2,26 @@
 require "BDConnect.php";
 
 class SiteController{
+    /*sign in part  */
+    public function verifiexistence(string $prenom, string $nom, string $mail){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT * FROM `personne` 
+            WHERE `prenom`= ? AND `nom`= ? AND `mail`= ?;');
+        $req->execute([$prenom,$nom,$mail]);
+        $posts = $req->fetch();
+        return $posts;
+    }
+
+    public function inscriptioncompte(string $prenom, string $nom, string $mail, string $pass, int $statut){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('INSERT INTO 
+            `personne`(`prenom`,`nom`,`mail`,`password`,`id_statut`) 
+            VALUES (?, ?, ?, ?, ?);');
+        $req->execute([$prenom,$nom,$mail,$pass,$statut]);
+    }
+
+
+    /*show entreprise part */
     public function showentreprisebyname(string $name){
 
         $bdd = new DBConnection('entreprise', 'localhost', 'root', '');
@@ -71,6 +91,21 @@ class SiteController{
             GROUP BY `entreprise`.`nom_entreprise`"
         );
         $req->execute([$offre, $competence, $lieu]);
+        $posts = $req->fetchAll();
+        return $posts;
+    }
+
+    public function showtopsecteur(){
+        $bdd = new DBConnection('entreprise', 'localhost', 'root', '');
+        $req = $bdd->getPDO()->prepare(
+            "SELECT `secteur`.`secteur_activite`, COUNT(`secteur_activite`) AS `nombre_secteur`
+            FROM `entreprise`
+            INNER JOIN `vise` ON `vise`.`id_entreprise` = `entreprise`.`id_entreprise`
+            INNER JOIN `secteur` ON `secteur`.`id_secteur` = `vise`.`id_secteur`
+            GROUP BY `secteur`.`secteur_activite`
+            ORDER BY `nombre_secteur` DESC LIMIT 4;"
+        );
+        $req->execute([]);
         $posts = $req->fetchAll();
         return $posts;
     }

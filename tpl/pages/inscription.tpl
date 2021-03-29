@@ -6,7 +6,7 @@
                 <h2>Inscription</h2>
             </div>
             <div class="row-form">
-                <form action="../controllers/inscription.php" method="GET">
+                <form method="GET" action="../controllers/signin.php">
                     <p>Prénom :</p>
                     <input type="text" name="prenom">
                     <p>Nom :</p>
@@ -14,13 +14,20 @@
                     <p>E-mail :</p>
                     <input type="email" name="mail">
                     <p>Statut :</p>
-                    <input type="text" name="statut">
+                    <select name="select-statut" id="select-statut">
+                        <option value="" selected>-- Sélectionnez un statut --</option>
+                        <option value="student">Élève</option>
+                        <option value="representative">Délégué</option>
+                        <option value="tutor">Pilote</option>
+                        <option value="company">Entreprise</option>
+                    </select>
                     <p>Mot de passe :</p>
                     <input type="password" name="pass">
                     <p>Confirmation du mot de passe :</p>
                     <input type="password" name="confirmpass"><br>
                     <input type="submit" value="S'inscrire" id="btn_inscription">
                 </form>
+                <p>{$erreurinsc}</p>
             </div>
         </div>
     </article>

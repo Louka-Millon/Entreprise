@@ -20,6 +20,21 @@ if(isset($_GET['page'])){
 
 
 
+if(!isset($_GET["erreur"])){
+    $erreur = "";
+}else{
+    $erreur = htmlspecialchars($_GET["erreur"]);
+}
+$smarty->assign("erreurinsc", $erreur);
+
+
+
+$entreprisebyname = $siteC->showentreprisebyname($entreprise);
+$entreprisedetails = $siteC->showentreprisebydetails();
+$competence = $siteC->showcompetence($entreprise);
+$competences = $siteC->showcompetences();
+$topsecteur = $siteC->showtopsecteur();
+
 
 
 
@@ -27,15 +42,12 @@ $smarty->assign("title", "Injob");
 $smarty->assign("page_name", $page_n);
 $smarty->assign("entreprise", $entreprise);
 
-$entreprisebyname = $siteC->showentreprisebyname($entreprise);
-$entreprisedetails = $siteC->showentreprisebydetails();
-$competence = $siteC->showcompetence($entreprise);
-$competences = $siteC->showcompetences();
+
 
 $smarty->assign("competences", $competences);
 $smarty->assign("competence", $competence);
 $smarty->assign("entreprisedetails", $entreprisedetails);
 $smarty->assign("entreprisebyname", $entreprisebyname);
-
+$smarty->assign("secteur", $topsecteur);
 
 
