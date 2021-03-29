@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-28 23:14:10
+/* Smarty version 3.1.39, created on 2021-03-29 23:08:19
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6060f1a2970b95_49532224',
+  'unifunc' => 'content_606241c34526c2_15174502',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cf46749fef3ed758b87374d5bd03a7248c0aa2ef' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\offre.tpl',
-      1 => 1616966047,
+      1 => 1617052097,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_6060f1a2970b95_49532224 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606241c34526c2_15174502 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <section>
@@ -69,7 +69,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </p>
                 </div>
                 <div class="details-boutons">
-                    <button id="btn_wishlist">Ajouter à la wishlist</button>
+                    <a href="../controllers/favori.php?offre=<?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['id_offre'];?>
+"><button id="btn_wishlist">Ajouter à la wishlist</button></a>
                     <button id="btn_postuler">Postuler</button>
                 </div>
             </div>

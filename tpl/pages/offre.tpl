@@ -30,7 +30,7 @@
                     <p>{$entreprisebyname.description}</p>
                 </div>
                 <div class="details-boutons">
-                    <button id="btn_wishlist">Ajouter à la wishlist</button>
+                    <a href="../controllers/favori.php?offre={$entreprisebyname.id_offre}"><button id="btn_wishlist">Ajouter à la wishlist</button></a>
                     <button id="btn_postuler">Postuler</button>
                 </div>
             </div>

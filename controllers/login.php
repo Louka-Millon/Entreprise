@@ -17,10 +17,12 @@ if (isset( $_POST['mail']) && isset( $_POST['pass']))
             
             if($val["password"] == $pass)
             {
+                $_SESSION["id"] = $val["id_personne"];
                 $_SESSION["prenom"] = $val["prenom"];
                 $_SESSION["nom"] = $val["nom"];
                 $_SESSION["centre"] = $val["centre"];
                 $_SESSION["promotion"] = $val["promo"];
+                $_SESSION["statut"] = $val["statut"];
                 $_SESSION["email"] = $val["mail"];
                 header("Location:../tpl/index.php");
                 exit;

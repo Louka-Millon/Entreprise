@@ -11,7 +11,7 @@
                     <h4>{$entreprise.nom_entreprise}</h4>
                     <h5>Description de l'offre</h5>
                     <p class="description">{$entreprise.description}</p>
-                    <a href="#" class="bot"><button>Favori</button></a><a href="index.php?page=offre&offre={$entreprise.nom_entreprise}" class="bot"><button>Voir l'offre</button></a>
+                    <a href="../controllers/favori.php?offre={$entreprise.id_offre}" class="bot"><button>Favori</button></a><a href="index.php?page=offre&offre={$entreprise.id_offre}" class="bot"><button>Voir l'offre</button></a>
                 </div>
             {/foreach}    
                 

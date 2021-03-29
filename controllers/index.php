@@ -28,6 +28,11 @@ if(isset($_SESSION['prenom'])){
     $smarty->assign("fieldconnexionlink", "index.php?page=profil");
     $smarty->assign("fieldinscription", "Déconnexion");
     $smarty->assign("fieldinscriptionlink", "../controllers/disconnect.php");
+    $smarty->assign("favori", $siteC->showfavori($_SESSION["id"]));
+
+    $smarty->assign("pseudo", $_SESSION["prenom"]. " " . $_SESSION["nom"]);
+    $smarty->assign("statut", $_SESSION["statut"]);
+
 }else{
     $smarty->assign("fieldconnexion", "Connexion");
     $smarty->assign("fieldconnexionlink", "index.php?page=connexion");
@@ -56,7 +61,7 @@ $topsecteur = $siteC->showtopsecteur();
 
 $smarty->assign("title", "Injob");
 $smarty->assign("page_name", $page_n);
-$smarty->assign("entreprise", $entreprise);
+
 
 
 
