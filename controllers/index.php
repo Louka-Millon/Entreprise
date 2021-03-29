@@ -11,7 +11,7 @@ if(isset($_GET['page'])){
         if(isset($_GET['offre'])){
             $entreprise = $_GET["offre"];
         }else{
-            header("location:?page=recherche");
+            header("location:index.php?page=recherche");
         }
     }
 }else{
@@ -21,11 +21,21 @@ if(isset($_GET['page'])){
 
 
 
+
+
 $smarty->assign("title", "Injob");
 $smarty->assign("page_name", $page_n);
 $smarty->assign("entreprise", $entreprise);
-$val = $siteC->showentreprise();
 
-$smarty->assign("enliste", $val);
+$entreprisebyname = $siteC->showentreprisebyname($entreprise);
+$entreprisedetails = $siteC->showentreprisebydetails();
+$competence = $siteC->showcompetence($entreprise);
+$competences = $siteC->showcompetences();
+
+$smarty->assign("competences", $competences);
+$smarty->assign("competence", $competence);
+$smarty->assign("entreprisedetails", $entreprisedetails);
+$smarty->assign("entreprisebyname", $entreprisebyname);
+
 
 

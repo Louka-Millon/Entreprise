@@ -5,30 +5,29 @@
             <!--Barre de droite avec les informations propres de l'entreprise-->
             <div class="offre-row infos">
                 <div class="offre-avatar">
-                    <img src="https://w.wallhaven.cc/full/j3/wallhaven-j3339m.jpg" alt="IMAGE">
-                    <h3>{$entreprise}</h3>
+                    <img src="{$entreprisebyname.pathimage}" alt="IMAGE">
+                    <h3>{$entreprisebyname.nom_entreprise}</h3>
                 </div>
-                <p>Localisation</p>
-                <p>Coordonnées</p>
+                <p>{$entreprisebyname.localisation}</p>
+                <p>{$entreprisebyname.telephone}</p>
                 <p>Secteur(s) d'activité :</p>
                 <ul>
-                    <li>Secteur 1</li>
-                    <li>Secteur 2</li>
-                    <li>Secteur 3</li>
+                {foreach from=$competence item=skill}
+                    <li>{$skill.competence_recherchee}</li>
+                {/foreach}
                 </ul>
                 <p>Évaluation des stagiaires :</p>
                 <span>NOMBRE</span>
                 <p>Évaluation des pilotes :</p>
                 <span>NOMBRE</span>
                 <p>Nombre d’élèves du CESI ayant été pris en stage dans cette entreprise :</p>
-                <span>NOMBRE</span>
+                <span>{$entreprisebyname.nombre_stagiaires}</span>
             </div>
             <!--Détails de l'offre et description des attendus-->
             <div class="offre-row details">
                 <div class="details-texte">
                     <h2>TITRE DE L'OFFRE</h2>
-                    <p>Détails de l'offre, durée de l'offre, compétences recherchées, etc...</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum odio id veritatis nam facere voluptate adipisci aut dolorem dolor! Beatae necessitatibus facilis quasi, repellendus error ipsa provident atque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nihil, adipisci autem dolorem nulla quibusdam quaerat labore ut at! Commodi tempora minus, hic nesciunt vero error. Quisquam ab odio deleniti?</p>
+                    <p>{$entreprisebyname.description}</p>
                 </div>
                 <div class="details-boutons">
                     <button id="btn_wishlist">Ajouter à la wishlist</button>

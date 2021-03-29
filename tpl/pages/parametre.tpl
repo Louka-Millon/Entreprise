@@ -3,7 +3,7 @@
     <article>
         <div class="container-inscription">
             <div class="row-form">
-                <form action="../../controllers/index.php" method="get">
+                <form enctype="multipart/form-data" action="../controllers/administratifgestion.php" method="POST">
                     <div class="items-param titre-items">
                         <h3>Information</h3>
                     </div>
@@ -22,6 +22,7 @@
                         
                     </div>
                     <div class="items-param text-center">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
                         <input type="file" name="CV" >
                         <input type="file" name="LM" >
                     </div>

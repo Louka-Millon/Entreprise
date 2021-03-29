@@ -6,7 +6,7 @@
                 <h2>Inscription</h2>
             </div>
             <div class="row-form">
-                <form action="inscription.php">
+                <form action="../controllers/inscription.php" method="GET">
                     <p>Prénom :</p>
                     <input type="text" name="prenom">
                     <p>Nom :</p>

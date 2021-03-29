@@ -23,23 +23,33 @@
                         <h3 class="sectionname text-center">Propositions selon votre domaines</h3></br>
                   </div>
                   <div class="row-suggestion">
+
+                        {foreach from=$entreprisedetails item=details}
+                              
+                        
                         <div class="items-suggest">
                               <div class="left-square">
                                     <div class="top-square">
-                                          <h4 class="text-center nameentreprise">Total</h4>
+                                          <h4 class="text-center nameentreprise">{$details.nom_entreprise}</h4>
                                     </div>
                                     <div class="bottom-square">
                                           <div class="sub-square">
-                                                <p class="text-center">Localisation</p>
+                                                <p class="text-center">{$details.localisation}</p>
                                           </div>
                                           <div class="sub-square">
-                                                <p class="text-center">Domaine</p>
+                                                <p class="text-center">
+                                                      {foreach from=$competences item=skills name=comp}
+                                                            {if $skills.nom_entreprise eq $details.nom_entreprise}
+                                                                  <span>{$skills.competence_recherchee}{if $smarty.foreach.comp.last}.{else},{/if}</span>
+                                                            {/if}
+                                                            
+                                                      {/foreach}</p>
                                           </div>
                                     </div>
                               </div>
                               <div class="main-right">
                                     <div class="right-square removable">
-                                          <p class="center">Remunération</p>
+                                          <p class="center">{$details.remuneration} €</p>
                                     </div>
                                     <div class="right-square button-container">
                                           <button class="button-offre"> Voir l'offre</button>
@@ -47,78 +57,8 @@
                               </div>
                               
                         </div>
-                        <div class="items-suggest">
-                              <div class="left-square">
-                                    <div class="top-square">
-                                          <h4 class="text-center nameentreprise">Total</h4>
-                                    </div>
-                                    <div class="bottom-square">
-                                          <div class="sub-square">
-                                                <p class="text-center">Localisation</p>
-                                          </div>
-                                          <div class="sub-square">
-                                                <p class="text-center">Domaine</p>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="main-right">
-                                    <div class="right-square removable">
-                                          <p class="center">Remunération</p>
-                                    </div>
-                                    <div class="right-square button-container">
-                                          <button class="button-offre"> Voir l'offre</button>
-                                    </div>
-                              </div>
-                              
-                        </div>
-                        <div class="items-suggest">
-                              <div class="left-square">
-                                    <div class="top-square">
-                                          <h4 class="text-center nameentreprise">Total</h4>
-                                    </div>
-                                    <div class="bottom-square">
-                                          <div class="sub-square">
-                                                <p class="text-center">Localisation</p>
-                                          </div>
-                                          <div class="sub-square">
-                                                <p class="text-center">Domaine</p>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="main-right">
-                                    <div class="right-square removable">
-                                          <p class="center">Remunération</p>
-                                    </div>
-                                    <div class="right-square button-container">
-                                          <button class="button-offre"> Voir l'offre</button>
-                                    </div>
-                              </div>
-                              
-                        </div>
-                        <div class="items-suggest">
-                              <div class="left-square">
-                                    <div class="top-square">
-                                          <h4 class="text-center nameentreprise">Total</h4>
-                                    </div>
-                                    <div class="bottom-square">
-                                          <div class="sub-square">
-                                                <p class="text-center">Localisation</p>
-                                          </div>
-                                          <div class="sub-square">
-                                                <p class="text-center">Domaine</p>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="main-right">
-                                    <div class="right-square removable">
-                                          <p class="center">Remunération</p>
-                                    </div>
-                                    <div class="right-square button-container">
-                                          <button class="button-offre"> Voir l'offre</button>
-                                    </div>
-                              </div>
-                              
-                        </div>
+                        {/foreach}
+                        
 
                   </div>
             </div>

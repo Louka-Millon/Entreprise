@@ -38,11 +38,12 @@
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">
-                        <form action="search.php" method="get">
-                                <input type="text" name="offre"  placeholder="Offre...">
+                        <form action="index.php" method="get">
+                                <input type="hidden" name="page" value="recherche">
+                                <input type="text" name="offre" id="premier" placeholder="Offre...">
                                 <input type="text" name="competence"  placeholder="Compétence...">
                                 <input type="text" name="lieu" id="last_input"  placeholder="Lieu...">
-                                <input type="submit" value="Rechercher">
+                                <input type="submit" name="rechercher" value="Rechercher">
                         </form>
                 </div>
 

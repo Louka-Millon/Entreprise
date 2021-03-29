@@ -26,9 +26,11 @@
     var desc = document.getElementsByClassName("description");
     window.onload = function(){
         taille = desc.length;
-        for(let i = 0; i < taille; i++){
-            str = desc[i].innerHTML;
-            desc[i].innerHTML = str.substr(0,300) + "...";
+        if(taille > 300){
+            for(let i = 0; i < taille; i++){
+                str = desc[i].innerHTML;
+                desc[i].innerHTML = str.substr(0,300) + "...";
+            }
         }
     };
 </script>

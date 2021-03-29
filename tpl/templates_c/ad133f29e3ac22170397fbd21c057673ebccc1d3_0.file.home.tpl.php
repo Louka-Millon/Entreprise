@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-28 12:38:50
+/* Smarty version 3.1.39, created on 2021-03-28 23:37:13
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60605cba9d9fc7_28251119',
+  'unifunc' => 'content_6060f7094e8e10_37200741',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ad133f29e3ac22170397fbd21c057673ebccc1d3' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\home.tpl',
-      1 => 1616927929,
+      1 => 1616967425,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_60605cba9d9fc7_28251119 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6060f7094e8e10_37200741 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -48,23 +48,55 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
                         <h3 class="sectionname text-center">Propositions selon votre domaines</h3></br>
                   </div>
                   <div class="row-suggestion">
+
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['entreprisedetails']->value, 'details');
+$_smarty_tpl->tpl_vars['details']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['details']->value) {
+$_smarty_tpl->tpl_vars['details']->do_else = false;
+?>
+                              
+                        
                         <div class="items-suggest">
                               <div class="left-square">
                                     <div class="top-square">
-                                          <h4 class="text-center nameentreprise">Total</h4>
+                                          <h4 class="text-center nameentreprise"><?php echo $_smarty_tpl->tpl_vars['details']->value['nom_entreprise'];?>
+</h4>
                                     </div>
                                     <div class="bottom-square">
                                           <div class="sub-square">
-                                                <p class="text-center">Localisation</p>
+                                                <p class="text-center"><?php echo $_smarty_tpl->tpl_vars['details']->value['localisation'];?>
+</p>
                                           </div>
                                           <div class="sub-square">
-                                                <p class="text-center">Domaine</p>
+                                                <p class="text-center">
+                                                      <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['competences']->value, 'skills', false, NULL, 'comp', array (
+  'last' => true,
+  'iteration' => true,
+  'total' => true,
+));
+$_smarty_tpl->tpl_vars['skills']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['skills']->value) {
+$_smarty_tpl->tpl_vars['skills']->do_else = false;
+$_smarty_tpl->tpl_vars['__smarty_foreach_comp']->value['iteration']++;
+$_smarty_tpl->tpl_vars['__smarty_foreach_comp']->value['last'] = $_smarty_tpl->tpl_vars['__smarty_foreach_comp']->value['iteration'] === $_smarty_tpl->tpl_vars['__smarty_foreach_comp']->value['total'];
+?>
+                                                            <?php if ($_smarty_tpl->tpl_vars['skills']->value['nom_entreprise'] == $_smarty_tpl->tpl_vars['details']->value['nom_entreprise']) {?>
+                                                                  <span><?php echo $_smarty_tpl->tpl_vars['skills']->value['competence_recherchee'];
+if ((isset($_smarty_tpl->tpl_vars['__smarty_foreach_comp']->value['last']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_comp']->value['last'] : null)) {?>.<?php } else { ?>,<?php }?></span>
+                                                            <?php }?>
+                                                            
+                                                      <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?></p>
                                           </div>
                                     </div>
                               </div>
                               <div class="main-right">
                                     <div class="right-square removable">
-                                          <p class="center">Remunération</p>
+                                          <p class="center"><?php echo $_smarty_tpl->tpl_vars['details']->value['remuneration'];?>
+ €</p>
                                     </div>
                                     <div class="right-square button-container">
                                           <button class="button-offre"> Voir l'offre</button>
@@ -72,78 +104,10 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
                               </div>
                               
                         </div>
-                        <div class="items-suggest">
-                              <div class="left-square">
-                                    <div class="top-square">
-                                          <h4 class="text-center nameentreprise">Total</h4>
-                                    </div>
-                                    <div class="bottom-square">
-                                          <div class="sub-square">
-                                                <p class="text-center">Localisation</p>
-                                          </div>
-                                          <div class="sub-square">
-                                                <p class="text-center">Domaine</p>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="main-right">
-                                    <div class="right-square removable">
-                                          <p class="center">Remunération</p>
-                                    </div>
-                                    <div class="right-square button-container">
-                                          <button class="button-offre"> Voir l'offre</button>
-                                    </div>
-                              </div>
-                              
-                        </div>
-                        <div class="items-suggest">
-                              <div class="left-square">
-                                    <div class="top-square">
-                                          <h4 class="text-center nameentreprise">Total</h4>
-                                    </div>
-                                    <div class="bottom-square">
-                                          <div class="sub-square">
-                                                <p class="text-center">Localisation</p>
-                                          </div>
-                                          <div class="sub-square">
-                                                <p class="text-center">Domaine</p>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="main-right">
-                                    <div class="right-square removable">
-                                          <p class="center">Remunération</p>
-                                    </div>
-                                    <div class="right-square button-container">
-                                          <button class="button-offre"> Voir l'offre</button>
-                                    </div>
-                              </div>
-                              
-                        </div>
-                        <div class="items-suggest">
-                              <div class="left-square">
-                                    <div class="top-square">
-                                          <h4 class="text-center nameentreprise">Total</h4>
-                                    </div>
-                                    <div class="bottom-square">
-                                          <div class="sub-square">
-                                                <p class="text-center">Localisation</p>
-                                          </div>
-                                          <div class="sub-square">
-                                                <p class="text-center">Domaine</p>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="main-right">
-                                    <div class="right-square removable">
-                                          <p class="center">Remunération</p>
-                                    </div>
-                                    <div class="right-square button-container">
-                                          <button class="button-offre"> Voir l'offre</button>
-                                    </div>
-                              </div>
-                              
-                        </div>
+                        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                        
 
                   </div>
             </div>
