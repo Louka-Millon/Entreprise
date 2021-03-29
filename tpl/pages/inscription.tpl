@@ -20,7 +20,6 @@
                         <option value="representative">Délégué</option>
                         <option value="tutor">Pilote</option>
                         <option value="company">Entreprise</option>
-                        <option value="admin">Administrateur</option>
                     </select>
                     <p>Mot de passe :</p>
                     <input type="password" name="pass">
@@ -28,6 +27,7 @@
                     <input type="password" name="confirmpass"><br>
                     <input type="submit" value="S'inscrire" id="btn_inscription">
                 </form>
+                <p>{$erreurinsc}</p>
             </div>
         </div>
     </article>

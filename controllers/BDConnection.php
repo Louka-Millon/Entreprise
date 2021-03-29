@@ -22,7 +22,8 @@ class DBConnection{
             PDO::ATTR_ORACLE_NULLS => PDO::NULL_EMPTY_STRING,
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET CHARACTER SET UTF8'
         ];
-        return $this->pdo ?? $this->pdo = new PDO("mysql:dbname={$this->dbname};host={$this->host}", $this->username, $this->password, $options);
+        return $this->pdo ?? $this->pdo = new PDO("mysql:dbname={$this->dbname};
+            host={$this->host}", $this->username, $this->password, $options);
     }
     
 }

@@ -16,3 +16,10 @@ if(isset($_GET['page'])){
 $smarty->assign("title", "Injob");
 $smarty->assign("page_name", $page_n);
 $smarty->assign("entreprise", $entreprise);
+
+if(!isset($_GET["erreur"])){
+    $erreur = "";
+}else{
+    $erreur = htmlspecialchars($_GET["erreur"]);
+}
+$smarty->assign("erreurinsc", $erreur);
