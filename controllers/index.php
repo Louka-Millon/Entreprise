@@ -1,4 +1,6 @@
+
 <?php 
+require_once "../tpl/config/config_init.php";
 $entreprise = "";
 if(isset($_GET['page'])){
     $page_n = $_GET["page"];
@@ -16,3 +18,5 @@ if(isset($_GET['page'])){
 $smarty->assign("title", "Injob");
 $smarty->assign("page_name", $page_n);
 $smarty->assign("entreprise", $entreprise);
+
+?>

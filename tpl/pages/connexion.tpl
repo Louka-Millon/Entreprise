@@ -1,4 +1,5 @@
 {include file='header_other.tpl'}
+
 <section>
     <article>
         <div class="container-inscription">
@@ -6,12 +7,12 @@
                 <h2>Connexion</h2>
             </div>
             <div class="row-form">
-                <form action="connexion.php">
+                <form action="../controllers/connexionback.php" method="POST">
                     <p>E-mail :</p>
                     <input type="email" name="mail">
                     <p>Mot de passe :</p>
                     <input type="password" name="pass">
-                    <input type="submit" value="Connexion" id="btn_connexion">
+                    <input type="submit" value="Connexion" id="btn_connexion" name="formlogin">
                 </form>
             </div>
         </div>
