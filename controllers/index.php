@@ -15,6 +15,9 @@ if(isset($_GET['page'])){
             header("location:index.php?page=recherche");
         }
     }
+    if($_GET["page"] == "profil" && !isset($_SESSION["prenom"])){
+        header("Location:index.php?page=connexion");
+    }
 }else{
     $page_n = "Accueil";
 }

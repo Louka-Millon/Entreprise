@@ -25,7 +25,7 @@ body{
 /*Fin éléments principaux*/
 /*- - - - - -*/
 /*Select*/
-#select-statut{
+.select{
     width: 100%;
     border: none;
     border-radius: 10px;

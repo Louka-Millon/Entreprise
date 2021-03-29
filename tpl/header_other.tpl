@@ -33,8 +33,8 @@
                         <div class="items"><a href="?page=home">Home</a></div>
                         <div class="items"><a href="?page=recherche">Recherche d'emplois</a></div>
                         <div class="items"><a href="?page=contact">Contact</a></div>
-                        <div class="items"><a href="?page=connexion">Connexion</a></div>
-                        <div class="items"><a href="?page=inscription">S'inscrire</a></div>
+                        <div class="items"><a href="{$fieldconnexionlink}">{$fieldconnexion}</a></div>
+                        <div class="items"><a href="{$fieldinscriptionlink}">{$fieldinscription}</a></div>
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">

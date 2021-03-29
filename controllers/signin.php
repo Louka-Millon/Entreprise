@@ -19,7 +19,7 @@ if(isset($_GET["prenom"]) && isset($_GET["nom"]) && isset($_GET["mail"]) &&
     $confirmpass = htmlspecialchars($_GET["confirmpass"]);
 
     //Transformation du statut en id
-    $dictionnary = array("student" => 5, "representive" => 6, "tutor" => 7, "company" => 9);
+    $dictionnary = array("student" => 5, "company" => 9);
     $idstatut = $dictionnary[$statut];
     var_dump($idstatut);
 

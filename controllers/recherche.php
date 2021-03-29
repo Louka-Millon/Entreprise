@@ -1,6 +1,6 @@
 <?php 
 require "SiteController.php";
-
+session_start();
 
 $siteC = new siteController();
 
@@ -18,7 +18,18 @@ if(isset($_GET['page'])){
     $page_n = "Accueil";
 }
 
-
+/*complétion des champs la connexion et l'inscription */
+if(isset($_SESSION['prenom'])){
+    $smarty->assign("fieldconnexion", $_SESSION["prenom"]);
+    $smarty->assign("fieldconnexionlink", "index.php?page=profil");
+    $smarty->assign("fieldinscription", "Déconnexion");
+    $smarty->assign("fieldinscriptionlink", "../controllers/disconnect.php");
+}else{
+    $smarty->assign("fieldconnexion", "Connexion");
+    $smarty->assign("fieldconnexionlink", "index.php?page=connexion");
+    $smarty->assign("fieldinscription", "S'inscrire");
+    $smarty->assign("fieldinscriptionlink", "index.php?page=inscription");
+}
 
 
 
