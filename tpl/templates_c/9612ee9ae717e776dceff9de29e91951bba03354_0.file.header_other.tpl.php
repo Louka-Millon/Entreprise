@@ -1,7 +1,31 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.39, created on 2021-03-30 17:52:19
+  from 'C:\xampp\htdocs\Entreprise\tpl\header_other.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_60634933b72229_17993664',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '9612ee9ae717e776dceff9de29e91951bba03354' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\header_other.tpl',
+      1 => 1617119514,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_60634933b72229_17993664 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="fr">
 <head>
-        <title>{$title}</title>
+        <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" href="../core/css/header.css" media="screen" />
         <link rel="stylesheet" href="../core/css/footer.css" media="screen" />
@@ -11,7 +35,9 @@
         <link rel="stylesheet" href="../core/css/profil.css" media="screen" />
         <link rel="shortcut icon" href="images/favicon.ico" />
         <!-- On importe jQuery -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <?php echo '<script'; ?>
+ src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"><?php echo '</script'; ?>
+>
 </head>
 <body>
 <header>
@@ -28,19 +54,28 @@
                 <div class="row-nav">
                         
                         <div class="items-left">
-                                <h1>{$title}</h1>
+                                <h1><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</h1>
                         </div>
                         <div class="items"><a href="?page=home">Home</a></div>
                         <div class="items"><a href="?page=recherche">Recherche d'emplois</a></div>
                         <div class="items"><a href="?page=contact">Contact</a></div>
-                        <div class="items"><a href="{$fieldconnexionlink}">{$fieldconnexion}</a></div>
-                        <div class="items"><a href="{$fieldinscriptionlink}">{$fieldinscription}</a></div>
+                        <div class="items"><a href="<?php echo $_smarty_tpl->tpl_vars['fieldconnexionlink']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['fieldconnexion']->value;?>
+</a></div>
+                        <div class="items"><a href="<?php echo $_smarty_tpl->tpl_vars['fieldinscriptionlink']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['fieldinscription']->value;?>
+</a></div>
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">
-                        <h2 id="titre">{$page_name}</h2>
+                        <h2 id="titre"><?php echo $_smarty_tpl->tpl_vars['page_name']->value;?>
+</h2>
                 </div>
 
         </div>
-        <script src="../core/js/navbar.js"></script>
-</header>
+        <?php echo '<script'; ?>
+ src="../core/js/navbar.js"><?php echo '</script'; ?>
+>
+</header><?php }
+}

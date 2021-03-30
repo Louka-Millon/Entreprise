@@ -1,0 +1,45 @@
+/*Éléments principaux*/
+.container-gestion {
+    margin-top: 550px;
+}
+
+.row-gestion {
+    width: 80%;
+    min-height: 500px;
+    margin: auto;
+    padding: 15px;
+    background: #E8EBF5;
+    border-radius: 50px 0 50px 0;
+}
+/*Fin éléments principaux*/
+/*- - - - - -*/
+/*Style tableau*/
+#table-gestion {
+    width: 80%;
+    margin: auto;
+}
+
+#table-gestion td, #table-gestion th {
+    padding: 8px;
+}
+
+#table-gestion tr:nth-child(even) {
+    background-color: white;
+}
+
+#table-gestion tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+#table-gestion tr:hover {
+    background-color: #eaeaea;
+}
+
+#table-gestion th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3eb2e4;
+    color: white;
+}
+/*Fin style tableau*/
