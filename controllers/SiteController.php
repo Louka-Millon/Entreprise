@@ -15,8 +15,8 @@ class SiteController{
     public function inscriptioncompte(string $prenom, string $nom, string $mail, string $pass, int $statut){
         $bdd = new DBConnection('entreprise', 'localhost', "root", "");
         $req = $bdd->getPDO()->prepare('INSERT INTO 
-            `personne`(`prenom`,`nom`,`mail`,`password`,`id_statut`) 
-            VALUES (?, ?, ?, ?, ?);');
+            `personne`(`prenom`,`nom`,`mail`,`password`,`id_statut`, `id_promo`) 
+            VALUES (?, ?, ?, ?, ?, 3);');
         $req->execute([$prenom,$nom,$mail,$pass,$statut]);
     }
     
@@ -29,6 +29,7 @@ class SiteController{
         WHERE `mail`= ?');
         $req->execute([$email]);
         $posts = $req->fetch();
+        var_dump($posts);
         return $posts;
     }
 
@@ -217,6 +218,48 @@ class SiteController{
     public function testetudiantvote($idoffre, $idpersonne){
         $bdd = new DBConnection('entreprise', 'localhost', "root", "");
         $req = $bdd->getPDO()->prepare('SELECT * FROM `eleve` INNER JOIN `evalue` ON `evalue`.`id_eval_stagiaire` = `eleve`.`id_eval_stagiaire` WHERE `evalue`.`id_entreprise` = (SELECT `id_entreprise` FROM `offre` WHERE `id_offre` = ? LIMIT 1) and `eleve`.`id_personne` = ? ');
+        $req->execute([$idoffre, $idpersonne]);
+        $posts = $req->fetch();
+        return $posts;
+    }
+
+
+
+
+
+    public function addnotetuteur($note, $idpersonne){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('INSERT INTO `pilote`(`confiance_pilote`, `id_personne`) 
+            VALUES (?,?)');
+        $req->execute([$note, $idpersonne]);
+        
+        
+    }
+
+    public function liaisontuteur($idoffre){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT `id_entreprise` FROM `offre` WHERE `id_offre` = ?');
+        $req->execute([$idoffre]);
+        $posts = $req->fetch();
+        $requ = $bdd->getPDO()->prepare('SELECT `id_confiance_pilote` FROM `pilote` ORDER BY `id_confiance_pilote` DESC LIMIT 1');
+        $requ->execute([]);
+        $post = $requ->fetch();
+        $send = $bdd->getPDO()->prepare('INSERT INTO `attribue`(`id_confiance_pilote`, `id_entreprise`) VALUES (?,?)');
+        $send->execute([$post["id_confiance_pilote"],$posts["id_entreprise"]]);
+    }
+
+    public function moyennetuteur($idoffre){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT AVG(`confiance_pilote`) as moyenne, COUNT(`confiance_pilote`) as compte FROM `pilote` 
+        INNER JOIN `attribue` ON `attribue`.`id_confiance_pilote` = `pilote`.`id_confiance_pilote`
+        WHERE `attribue`.`id_entreprise` = (SELECT `id_entreprise` FROM `offre` WHERE `id_offre` = ? LIMIT 1)');
+        $req->execute([$idoffre]);
+        $posts = $req->fetch();
+        return $posts;
+    }
+    public function testtuteurvote($idoffre, $idpersonne){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT * FROM `pilote` INNER JOIN `attribue` ON `attribue`.`id_confiance_pilote` = `pilote`.`id_confiance_pilote` WHERE `attribue`.`id_entreprise` = (SELECT `id_entreprise` FROM `offre` WHERE `id_offre` = ? LIMIT 1) and `pilote`.`id_personne` = ? ');
         $req->execute([$idoffre, $idpersonne]);
         $posts = $req->fetch();
         return $posts;

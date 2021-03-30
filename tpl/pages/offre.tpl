@@ -25,7 +25,7 @@
                 {/if}
                 <p>Évaluation des pilotes :</p>
 
-                <span>NOTE / 5 : nombre de votant : 10</span>
+                <span>{$moyennetuteur.moyenne|string_format:"%.1f"} / 5 : nombre de votant : {$moyennetuteur.compte}</span>
                 {if $statut == "Tutor"}
                 {if $votetp == "yes"}
                 <form method="POST" action="../controllers/notepilote.php?offre={$entreprisebyname.id_offre}"><input type="number" name="notepilote" min="0" max="5" value="0"><input type="submit" value="Notez"></form>

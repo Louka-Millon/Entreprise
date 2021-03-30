@@ -16,14 +16,30 @@ if(isset($_GET['page'])){
         }else{
             $smarty->assign("moyenneetudiant", "Pas d'évaluation");
         }
+        $moyennetuteur = $siteC->moyennetuteur($getoffre);
+        if(isset($moyennetuteur)){
+            $smarty->assign("moyennetuteur", $moyennetuteur);
+        }else{
+            $smarty->assign("moyennetuteur", "Pas d'évaluation");
+        }
         $evote = $siteC->testetudiantvote($getoffre, $_SESSION["id"]);
         
-        if($evote["id_personne"] == $_SESSION['id']){
+        if(!empty($evote["id_personne"])){
             $smarty->assign("voteep", "non");
             
         }else{
             $smarty->assign("voteep", "yes");
         }
+        
+        $tvote = $siteC->testtuteurvote($getoffre, $_SESSION["id"]);
+
+        if(!empty($tvote["id_personne"])){
+            $smarty->assign("votetp", "non");
+            
+        }else{
+            $smarty->assign("votetp", "yes");
+        }
+
 
         if(isset($_GET['offre'])){
             $entreprise = $_GET["offre"];

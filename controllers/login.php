@@ -9,6 +9,7 @@ if (isset( $_POST['mail']) && isset( $_POST['pass']))
     $pass = crypt(htmlspecialchars($_POST['pass']), '$6$453654$securitedemotdepasse$');
 
     $val = $siteC->login($mail);
+    var_dump($val);
     echo $pass. "<br>" . $val["password"];
     if($val)
     {
@@ -40,7 +41,7 @@ if (isset( $_POST['mail']) && isset( $_POST['pass']))
     }
     else 
     {
-        header('Location:index.php?login_err=already');
+        //header('Location:index.php?login_err=already');
     }
 
 }

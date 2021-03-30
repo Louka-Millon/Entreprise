@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-30 15:04:43
+/* Smarty version 3.1.39, created on 2021-03-30 15:35:40
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_606321eb6e0c92_70933658',
+  'unifunc' => 'content_6063292cdcaf76_55301244',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cf46749fef3ed758b87374d5bd03a7248c0aa2ef' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\offre.tpl',
-      1 => 1617109482,
+      1 => 1617111312,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_606321eb6e0c92_70933658 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6063292cdcaf76_55301244 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <section>
@@ -65,10 +65,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <?php }?>
                 <p>Évaluation des pilotes :</p>
 
-                <span>NOTE / 5 : nombre de votant : 10</span>
+                <span><?php echo sprintf("%.1f",$_smarty_tpl->tpl_vars['moyennetuteur']->value['moyenne']);?>
+ / 5 : nombre de votant : <?php echo $_smarty_tpl->tpl_vars['moyennetuteur']->value['compte'];?>
+</span>
                 <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Tutor") {?>
+                <?php if ($_smarty_tpl->tpl_vars['votetp']->value == "yes") {?>
                 <form method="POST" action="../controllers/notepilote.php?offre=<?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['id_offre'];?>
 "><input type="number" name="notepilote" min="0" max="5" value="0"><input type="submit" value="Notez"></form>
+                <?php }?>
                 <?php }?>
                 <p>Nombre d’élèves du CESI ayant été pris en stage dans cette entreprise :</p>
                 <span><?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['nombre_stagiaires'];?>
