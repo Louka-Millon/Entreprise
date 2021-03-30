@@ -1,6 +1,6 @@
 /*Éléments principaux*/
 .container-gestion {
-    margin-top: 550px;
+    margin-top:550px;
 }
 
 .row-gestion {
@@ -15,8 +15,16 @@
 /*- - - - - -*/
 /*Style tableau*/
 #table-gestion {
-    width: 80%;
+    width: 100%;
     margin: auto;
+}
+
+#table-gestion th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3eb2e4;
+    color: white;
 }
 
 #table-gestion td, #table-gestion th {
@@ -34,12 +42,49 @@
 #table-gestion tr:hover {
     background-color: #eaeaea;
 }
-
-#table-gestion th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #3eb2e4;
-    color: white;
-}
 /*Fin style tableau*/
+/*- - - - - -*/
+/*Bouton enregistrer*/
+#btn_gestion{
+    display: block;
+    background-color: #4AC9FF;
+    width:100px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+
+#btn_gestion:hover{
+    background-color: #3eb2e4;
+}
+/*Fin bouton enregistrer*/
+/*- - - - - -*/
+/*Select*/
+#select-gestion{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    height: 30px;
+}
+/*Fin select*/
+/*- - - - - -*/
+/*Gestion du media*/
+/*  --Tablette--  */
+@media only screen and (min-width:420px) and (max-width:770px){
+    .container-gestion{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/*  --Smartphone--  */
+@media only screen and (max-width:420px){
+    .container-gestion{
+        width: 90%;
+        margin: auto;
+    }
+}
+/*Fin gestion du media*/
+/*- - - - - -*/
