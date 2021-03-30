@@ -182,4 +182,44 @@ class SiteController{
         return $posts;
         
     }
+
+    /* note etudiant et tuteur */
+    public function addnoteetudiant($note, $idpersonne){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('INSERT INTO `eleve`(`evaluation_stagiaire`, `id_personne`) 
+            VALUES (?,?)');
+        $req->execute([$note, $idpersonne]);
+        
+        
+    }
+
+    public function liaisonetudiant($idoffre){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT `id_entreprise` FROM `offre` WHERE `id_offre` = ?');
+        $req->execute([$idoffre]);
+        $posts = $req->fetch();
+        $requ = $bdd->getPDO()->prepare('SELECT `id_eval_stagiaire` FROM `eleve` ORDER BY `id_eval_stagiaire` DESC LIMIT 1');
+        $requ->execute([]);
+        $post = $requ->fetch();
+        $send = $bdd->getPDO()->prepare('INSERT INTO `evalue`(`id_eval_stagiaire`, `id_entreprise`) VALUES (?,?)');
+        $send->execute([$post["id_eval_stagiaire"],$posts["id_entreprise"]]);
+    }
+
+    public function moyenneetudiant($idoffre){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT AVG(`evaluation_stagiaire`) as moyenne, COUNT(`evaluation_stagiaire`) as compte FROM `eleve` 
+        INNER JOIN `evalue` ON `evalue`.`id_eval_stagiaire` = `eleve`.`id_eval_stagiaire`
+        WHERE `evalue`.`id_entreprise` = (SELECT `id_entreprise` FROM `offre` WHERE `id_offre` = ? LIMIT 1)');
+        $req->execute([$idoffre]);
+        $posts = $req->fetch();
+        return $posts;
+    }
+    public function testetudiantvote($idoffre, $idpersonne){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT * FROM `eleve` INNER JOIN `evalue` ON `evalue`.`id_eval_stagiaire` = `eleve`.`id_eval_stagiaire` WHERE `evalue`.`id_entreprise` = (SELECT `id_entreprise` FROM `offre` WHERE `id_offre` = ? LIMIT 1) and `eleve`.`id_personne` = ? ');
+        $req->execute([$idoffre, $idpersonne]);
+        $posts = $req->fetch();
+        return $posts;
+    }
+
 }

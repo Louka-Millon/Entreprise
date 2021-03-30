@@ -14,7 +14,7 @@
                     <p>E-mail :</p>
                     <input type="email" name="mail">
                     <p>Statut :</p>
-                    <select name="select-statut" class="select-statut">
+                    <select name="select-statut" class="select">
                         <option value="" selected>-- Sélectionnez un statut --</option>
                         <option value="student">Élève</option>
                         <option value="company">Entreprise</option>

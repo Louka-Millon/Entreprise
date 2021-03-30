@@ -17,9 +17,20 @@
                 {/foreach}
                 </ul>
                 <p>Évaluation des stagiaires :</p>
-                <span>NOMBRE</span>
+                <span>{$moyenneetudiant.moyenne|string_format:"%.1f"} / 5 : nombre de votant : {$moyenneetudiant.compte}</span>
+                {if $statut == "student" || $statut == "representative"}
+                {if $voteep == "yes"}
+                <form method="POST" action="../controllers/noteetudiant.php?offre={$entreprisebyname.id_offre}"><input type="number" name="noteeleve" min="0" max="5" value="0"><input type="submit" value="Notez"></form>
+                {/if}
+                {/if}
                 <p>Évaluation des pilotes :</p>
-                <span>NOMBRE</span>
+
+                <span>NOTE / 5 : nombre de votant : 10</span>
+                {if $statut == "Tutor"}
+                {if $votetp == "yes"}
+                <form method="POST" action="../controllers/notepilote.php?offre={$entreprisebyname.id_offre}"><input type="number" name="notepilote" min="0" max="5" value="0"><input type="submit" value="Notez"></form>
+                {/if}
+                {/if}
                 <p>Nombre d’élèves du CESI ayant été pris en stage dans cette entreprise :</p>
                 <span>{$entreprisebyname.nombre_stagiaires}</span>
             </div>

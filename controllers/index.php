@@ -9,6 +9,22 @@ $entreprise = "";
 if(isset($_GET['page'])){
     $page_n = $_GET["page"];
     if($_GET['page'] == "offre"){
+        $getoffre = htmlspecialchars($_GET["offre"]);
+        $moyenneetudiant = $siteC->moyenneetudiant($getoffre);
+        if(isset($moyenneetudiant)){
+            $smarty->assign("moyenneetudiant", $moyenneetudiant);
+        }else{
+            $smarty->assign("moyenneetudiant", "Pas d'évaluation");
+        }
+        $evote = $siteC->testetudiantvote($getoffre, $_SESSION["id"]);
+        
+        if($evote["id_personne"] == $_SESSION['id']){
+            $smarty->assign("voteep", "non");
+            
+        }else{
+            $smarty->assign("voteep", "yes");
+        }
+
         if(isset($_GET['offre'])){
             $entreprise = $_GET["offre"];
         }else{
@@ -38,6 +54,7 @@ if(isset($_GET['page'])){
             }
         }
     }
+
 }else{
     $page_n = "Accueil";
 }
