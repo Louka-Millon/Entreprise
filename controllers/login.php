@@ -31,7 +31,7 @@ if (isset( $_POST['mail']) && isset( $_POST['pass']))
             }
             else 
             {
-                //header('Location:index.php?login_err=password');
+                header('Location:index.php?login_err=password');
             }
         }else 
         {
