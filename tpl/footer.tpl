@@ -9,9 +9,8 @@
 </div>
 <footer>
        <div class="footer-block">
-              <a class="footer-item" href="#">Home</a>
-              <a class="footer-item" href="#">Contact</a>
-              <a class="footer-item" href="#">Mentions légales</a>
+              <a class="footer-item" href="/index.php">Home</a>
+              <a class="footer-item" href="index.php?page=mentions">Mentions légales</a>
        </div>
        <div class="footer-block">
               <span>Ce site a été développé par Lucile BRIAND, Nissrine ESSAHLAOUI et Louka MILLON.</span>
