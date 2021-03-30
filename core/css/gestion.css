@@ -61,7 +61,7 @@
 /*Fin bouton enregistrer*/
 /*- - - - - -*/
 /*Select*/
-#select-gestion{
+#select-role, #select-centre{
     width: 100%;
     border: none;
     border-radius: 10px;

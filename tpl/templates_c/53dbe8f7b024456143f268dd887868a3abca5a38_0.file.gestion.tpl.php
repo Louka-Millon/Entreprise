@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-30 21:24:18
+/* Smarty version 3.1.39, created on 2021-03-30 21:48:42
   from 'C:\xampp\htdocs\Entreprise\tpl\pages\gestion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60637ae29ebcb5_72889227',
+  'unifunc' => 'content_6063809a297f35_14032397',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53dbe8f7b024456143f268dd887868a3abca5a38' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\pages\\gestion.tpl',
-      1 => 1617132220,
+      1 => 1617133718,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header_other.tpl' => 1,
   ),
 ),false)) {
-function content_60637ae29ebcb5_72889227 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6063809a297f35_14032397 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <section>
@@ -40,9 +40,17 @@ $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id
                     <tr>
                         <td>Nom + prénom</td>
                         <td>test@test.com</td>
-                        <td>Centre test</td>
                         <td>
-                            <select name="select-gestion" id="select-gestion">
+                            <select name="select-centre" id="select-centre">
+                                <option value="arras">Arras</option>
+                                <option value="brest">Brest</option>
+                                <option value="nanterre">Nanterre</option>
+                                <option value="rouens">Rouens</option>
+                                <option value="saint-nazaire">Saint-Nazaire</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="select-role" id="select-role">
                                 <option value="student">Étudiant</option>
                                 <option value="representative">Délégué</option>
                                 <option value="tutor">Pilote</option>
