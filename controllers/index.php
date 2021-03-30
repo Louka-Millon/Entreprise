@@ -14,9 +14,29 @@ if(isset($_GET['page'])){
         }else{
             header("location:index.php?page=recherche");
         }
+        
     }
     if($_GET["page"] == "profil" && !isset($_SESSION["prenom"])){
         header("Location:index.php?page=connexion");
+    }
+    if($_GET["page"] == "connexion" && isset($_COOKIE["user_id"])){
+        $cookies = $siteC->checkcookies();
+        foreach($cookies as $value){
+            if($value["password"] == $_COOKIE["user_id"]){
+                $idpersonne = $value["id_personne"];
+                $val = $siteC->login($idpersonne);
+                $_SESSION["id"] = $value["id_personne"];
+                $_SESSION["prenom"] = $value["prenom"];
+                $_SESSION["nom"] = $value["nom"];
+                $_SESSION["centre"] = $value["centre"];
+                $_SESSION["promotion"] = $value["promo"];
+                $_SESSION["statut"] = $value["statut"];
+                $_SESSION["email"] = $value["mail"];
+                header("Location:../tpl/index.php");
+                exit;
+                var_dump($_SESSION);
+            }
+        }
     }
 }else{
     $page_n = "Accueil";

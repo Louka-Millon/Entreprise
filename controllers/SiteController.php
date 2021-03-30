@@ -159,5 +159,27 @@ class SiteController{
         $posts = $req->fetch();
         return $posts;
     }
-    
+    /* get value for cookies */
+    public function checkcookies(){
+        $bdd = new DBConnection('entreprise', 'localhost', 'root', '');
+        $req = $bdd->getPDO()->prepare(
+            "SELECT * FROM `personne` 
+            INNER JOIN `promotion` ON `personne`.`id_promo` = `promotion`.`id_promo`
+            INNER JOIN `acces` ON `acces`.`id_statut` = `personne`.`id_statut`"
+        );
+        $req->execute([]);
+        $posts = $req->fetchAll();
+        return $posts;
+    }
+    public function logincookies(){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT * FROM `personne` 
+        INNER JOIN `promotion` ON `personne`.`id_promo` = `promotion`.`id_promo`
+        INNER JOIN `acces` ON `acces`.`id_statut` = `personne`.`id_statut`
+        WHERE `id_personne`= ?');
+        $req->execute([$id]);
+        $posts = $req->fetch();
+        return $posts;
+        
+    }
 }
