@@ -5,7 +5,7 @@ if (!isset($_SERVER['DOCUMENT_ROOT']))
     die();
 
 // Define de la racine du site
-define('_PATH_', $_SERVER['DOCUMENT_ROOT'].'/Entreprise/');
+define('_PATH_', $_SERVER['DOCUMENT_ROOT']."/");
 
 // Define du dossier Coeur
 define('_CORE_', _PATH_ . 'core/');
