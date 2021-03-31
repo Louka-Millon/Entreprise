@@ -21,7 +21,7 @@ if(isset($_GET['page'])){
 /*complétion des champs la connexion et l'inscription */
 if(isset($_SESSION['prenom'])){
     $smarty->assign("fieldconnexion", $_SESSION["prenom"]);
-    $smarty->assign("fieldconnexionlink", "index.php?page=profil");
+    $smarty->assign("fieldconnexionlink", "index.php?page=profil&id=".$_SESSION['id']);
     $smarty->assign("fieldinscription", "Déconnexion");
     $smarty->assign("fieldinscriptionlink", "../controllers/disconnect.php");
 }else{

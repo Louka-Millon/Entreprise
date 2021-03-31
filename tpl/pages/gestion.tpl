@@ -6,17 +6,18 @@
                 <h3>Gestion des informations</h3>
                 <table id="table-gestion">
                      <!-- Tuteur -->
-                    {if $statut == "Administrator" || $statut == "Tutor" || $statut == "Representative" || $statut == "Student"}
+                    {if $statut == "company" || $statut == "Administrator" || $statut == "Tutor" || $statut == "Representative" || $statut == "Student"}
                     <tr>
                         <th>Nom complet</th>
                         <th>E-mail</th>
                         <th>Centre</th>
                         <th>Statut</th>
                         <th>Gestion</th>
+                        <th>Voir</th>
                     </tr>
                     {/if}
                     {foreach from=$studentdisp item=student}
-                    {if $statut == "Student" && $userid != $student.id_personne}
+                    {if $statut == "company" || ($statut == "Student" && $userid != $student.id_personne)}
                     
                     
                     <tr>
@@ -34,6 +35,9 @@
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion">Enregistrer</button>
+                        </td>
+                        <td>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id={$student.id_personne}">Allez</a></button>
                         </td>
                     
                     </tr>
@@ -70,6 +74,9 @@
                         <td>
                             <button type="submit" name="student" id="btn_gestion">Enregistrer</button>
                         </td>
+                        <td>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id={$student.id_personne}">Allez</a></button>
+                        </td>
                         </form>
                     </tr>
                     
@@ -85,7 +92,7 @@
                 <!-- Délégué -->
                    
                     {foreach from=$representativedisp item=repre}
-                    {if $statut == "Representative" && $userid != $repre.id_personne}
+                    {if $statut == "company" || ($statut == "Representative" && $userid != $repre.id_personne)}
                     
                     
                     <tr>
@@ -103,6 +110,9 @@
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion">Enregistrer</button>
+                        </td>
+                        <td>
+                            <button  id="btn_gestion"><a href="index.php?page=profil&id={$repre.id_personne}">Allez</a></button>
                         </td>
                     
                     </tr>
@@ -138,6 +148,9 @@
                         <td>
                             <button type="submit" name="repre" id="btn_gestion">Enregistrer</button>
                         </td>
+                        <td>
+                            <button  id="btn_gestion"><a href="index.php?page=profil&id={$repre.id_personne}">Allez</a></button>
+                        </td>
                         </form>
                     </tr>
                     
@@ -158,6 +171,7 @@
                         <th>Centre</th>
                         <th>Statut</th>
                         <th>Gestion</th>
+                        <th>Voir</th>
                     </tr>
                     {/if}
                     {foreach from=$tutordisp item=tutor}
@@ -179,6 +193,9 @@
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion">Enregistrer</button>
+                        </td>
+                        <td>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id={$tutor.id_personne}">Allez</a></button>
                         </td>
                     
                     </tr>
@@ -213,6 +230,9 @@
                         <td>
                             <button type="submit" name="tutor" id="btn_gestion">Enregistrer</button>
                         </td>
+                        <td>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id={$tutor.id_personne}">Allez</a></button>
+                        </td>
                         </form>
                     </tr>
                     
@@ -237,6 +257,7 @@
                         <th>Centre</th>
                         <th>Statut</th>
                         <th>Gestion</th>
+                        <th>Voir<th>
                     </tr>
                     {/if}
                     {foreach from=$companydisp item=company}
@@ -258,6 +279,9 @@
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion">Enregistrer</button>
+                        </td>
+                        <td>
+                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id={$company.id_personne}">Allez</a></button>
                         </td>
                     
                     </tr>
@@ -292,6 +316,9 @@
                         <td>
                             <button type="submit" name="company" id="btn_gestion">Enregistrer</button>
                         </td>
+                        <td>
+                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id={$company.id_personne}">Allez</a></button>
+                        </td>
                         </form>
                     </tr>
                     
@@ -307,6 +334,7 @@
                         <th>Centre</th>
                         <th>Statut</th>
                         <th>Gestion</th>
+                        <th>Voir</th>
                     </tr>
                     {foreach from=$admindisp item=admin}
                     <tr>
@@ -332,6 +360,9 @@
                         </td>
                         <td>
                             <button type="submit" name="admin" name="admin" id="btn_gestion">Enregistrer</button>
+                        </td>
+                        <td>
+                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id={$admin.id_personne}">Allez</a></button>
                         </td>
                         </form>
                     </tr>

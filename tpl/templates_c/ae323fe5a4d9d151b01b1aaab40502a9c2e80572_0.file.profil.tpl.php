@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-31 08:49:29
+/* Smarty version 3.1.39, created on 2021-03-31 15:23:24
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\profil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60641b79a57da6_66978471',
+  'unifunc' => 'content_606477cc6ea649_46929874',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ae323fe5a4d9d151b01b1aaab40502a9c2e80572' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\profil.tpl',
-      1 => 1617173276,
+      1 => 1617197002,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header_other.tpl' => 1,
   ),
 ),false)) {
-function content_60641b79a57da6_66978471 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606477cc6ea649_46929874 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <section>
@@ -29,16 +29,18 @@ $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id
         <div class="container-profil">
             <div class="row-profil">
                 <!--<img src="../core/images/background-header.png" alt="Profil">-->
-                <h3><?php echo $_smarty_tpl->tpl_vars['pseudo']->value;?>
+                <h3><?php echo $_smarty_tpl->tpl_vars['profile']->value['prenom'];?>
+ <?php echo $_smarty_tpl->tpl_vars['profile']->value['nom'];?>
 </h3>
-                <p><?php echo $_smarty_tpl->tpl_vars['statut']->value;?>
+                <p><?php echo $_smarty_tpl->tpl_vars['profile']->value['statut'];?>
 </p>
 
                 <p>Voici ci-joint mon CV</p>
                 <p>Voici ci-joint ma Lettre de motivation</p>
                 <p>Voici nos offres d'emplois</p>
                 
-                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "company") {?>
+                <?php if ($_smarty_tpl->tpl_vars['profile']->value['statut'] == "company") {?>
+                <?php if ($_smarty_tpl->tpl_vars['profile']->value['id_personne'] == $_smarty_tpl->tpl_vars['userid']->value) {?>
                 <button id="btn_creation_offre" onclick="document.getElementById('modal').style.display='block'">Ajouter une offre</button>
                 <table id="customers">
                     <tr>
@@ -134,6 +136,46 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <table id="customers">
                     <tr>
                         <th>Nom de l'offre</th>
+                        <th>description de l'offre</th>
+                        <th>date de l'offre</th>
+                        <th>Durée de l'offre</th>
+                        <th>Nombre de places</th>
+                        <th>rémunération</th>
+                        <th>Type d'offre</th>
+                    </tr>
+                      <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeoffre']->value, 'offre');
+$_smarty_tpl->tpl_vars['offre']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['offre']->value) {
+$_smarty_tpl->tpl_vars['offre']->do_else = false;
+?>
+                    <tr>
+                        
+                        <td><?php echo $_smarty_tpl->tpl_vars['offre']->value['titre_offre'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['offre']->value['desc_offre'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['offre']->value['date_offre'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['offre']->value['duree_offre'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['offre']->value['nombre_places'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['offre']->value['remuneration'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['offre']->value['type_offre'];?>
+</td>
+                    </tr>
+                      <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </table>
+                <?php }?>
+                <?php } elseif ($_smarty_tpl->tpl_vars['profile']->value['statut'] == "Student" || $_smarty_tpl->tpl_vars['profile']->value['statut'] == "Representative") {?>
+                <?php if ($_smarty_tpl->tpl_vars['profile']->value['id_personne'] == $_smarty_tpl->tpl_vars['userid']->value) {?>
+                <table id="customers">
+                    <tr>
+                        <th>Nom de l'offre</th>
                         <th>Suppression</th>
                       </tr>
                       <?php
@@ -144,7 +186,7 @@ $_smarty_tpl->tpl_vars['favorie']->do_else = false;
 ?>
                     <tr>
                         <td><a style="color:black;" href="index.php?page=offre&offre=<?php echo $_smarty_tpl->tpl_vars['favorie']->value['id_offre'];?>
-"><?php echo $_smarty_tpl->tpl_vars['favorie']->value['nom_entreprise'];?>
+"><?php echo $_smarty_tpl->tpl_vars['favorie']->value['titre_offre'];?>
 </a></td>
                         <td><a style="color:black;" href="../Controllers/delfavori.php?offre=<?php echo $_smarty_tpl->tpl_vars['favorie']->value['id_offre'];?>
 ">supprimer</a></td>
@@ -153,6 +195,27 @@ $_smarty_tpl->tpl_vars['favorie']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </table>
+                <?php } else { ?>
+                <table id="customers">
+                    <tr>
+                        <th>Nom de l'offre</th>
+                      </tr>
+                      <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['favori']->value, 'favorie');
+$_smarty_tpl->tpl_vars['favorie']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['favorie']->value) {
+$_smarty_tpl->tpl_vars['favorie']->do_else = false;
+?>
+                    <tr>
+                        <td><a style="color:black;" href="index.php?page=offre&offre=<?php echo $_smarty_tpl->tpl_vars['favorie']->value['id_offre'];?>
+"><?php echo $_smarty_tpl->tpl_vars['favorie']->value['titre_offre'];?>
+</a></td>
+                    </tr>
+                      <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </table>
+                <?php }?>
                 <?php }?>
             </div>
             

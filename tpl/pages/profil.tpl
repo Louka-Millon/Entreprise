@@ -4,14 +4,15 @@
         <div class="container-profil">
             <div class="row-profil">
                 <!--<img src="../core/images/background-header.png" alt="Profil">-->
-                <h3>{$pseudo}</h3>
-                <p>{$statut}</p>
+                <h3>{$profile.prenom} {$profile.nom}</h3>
+                <p>{$profile.statut}</p>
 
                 <p>Voici ci-joint mon CV</p>
                 <p>Voici ci-joint ma Lettre de motivation</p>
                 <p>Voici nos offres d'emplois</p>
                 
-                {if $statut == "company"}
+                {if $profile.statut == "company"}
+                {if $profile.id_personne == $userid}
                 <button id="btn_creation_offre" onclick="document.getElementById('modal').style.display='block'">Ajouter une offre</button>
                 <table id="customers">
                     <tr>
@@ -91,15 +92,53 @@
                 <table id="customers">
                     <tr>
                         <th>Nom de l'offre</th>
+                        <th>description de l'offre</th>
+                        <th>date de l'offre</th>
+                        <th>Durée de l'offre</th>
+                        <th>Nombre de places</th>
+                        <th>rémunération</th>
+                        <th>Type d'offre</th>
+                    </tr>
+                      {foreach from=$listeoffre item=offre}
+                    <tr>
+                        
+                        <td>{$offre.titre_offre}</td>
+                        <td>{$offre.desc_offre}</td>
+                        <td>{$offre.date_offre}</td>
+                        <td>{$offre.duree_offre}</td>
+                        <td>{$offre.nombre_places}</td>
+                        <td>{$offre.remuneration}</td>
+                        <td>{$offre.type_offre}</td>
+                    </tr>
+                      {/foreach}
+                </table>
+                {/if}
+                {elseif $profile.statut == "Student" || $profile.statut == "Representative"}
+                {if $profile.id_personne == $userid}
+                <table id="customers">
+                    <tr>
+                        <th>Nom de l'offre</th>
                         <th>Suppression</th>
                       </tr>
                       {foreach from=$favori item=favorie}
                     <tr>
-                        <td><a style="color:black;" href="index.php?page=offre&offre={$favorie.id_offre}">{$favorie.nom_entreprise}</a></td>
+                        <td><a style="color:black;" href="index.php?page=offre&offre={$favorie.id_offre}">{$favorie.titre_offre}</a></td>
                         <td><a style="color:black;" href="../Controllers/delfavori.php?offre={$favorie.id_offre}">supprimer</a></td>
                     </tr>
                       {/foreach}
                 </table>
+                {else}
+                <table id="customers">
+                    <tr>
+                        <th>Nom de l'offre</th>
+                      </tr>
+                      {foreach from=$favori item=favorie}
+                    <tr>
+                        <td><a style="color:black;" href="index.php?page=offre&offre={$favorie.id_offre}">{$favorie.titre_offre}</a></td>
+                    </tr>
+                      {/foreach}
+                </table>
+                {/if}
                 {/if}
             </div>
             

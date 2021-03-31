@@ -27,7 +27,7 @@
                         <div class="items-suggest">
                               <div class="left-square">
                                     <div class="top-square">
-                                          <h4 class="text-center nameentreprise">{$details.nom_entreprise}</h4>
+                                          <h4 class="text-center nameentreprise">{$details.titre_offre}</h4>
                                     </div>
                                     <div class="bottom-square">
                                           <div class="sub-square">
@@ -49,7 +49,7 @@
                                           <p class="center">{$details.remuneration} €</p>
                                     </div>
                                     <div class="right-square button-container">
-                                          <button class="button-offre"> Voir l'offre</button>
+                                          <button class="button-offre"><a style="color:black;" href="index.php?page=offre&offre={$details.id_offre}">Voir l'offre</a></button>
                                     </div>
                               </div>
                               

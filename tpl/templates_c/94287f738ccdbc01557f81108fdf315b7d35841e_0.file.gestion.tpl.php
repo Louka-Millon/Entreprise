@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-31 14:03:52
+/* Smarty version 3.1.39, created on 2021-03-31 15:34:02
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\gestion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60646528b1de91_36989833',
+  'unifunc' => 'content_60647a4a690d69_64817560',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '94287f738ccdbc01557f81108fdf315b7d35841e' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\gestion.tpl',
-      1 => 1617191148,
+      1 => 1617197639,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header_other.tpl' => 1,
   ),
 ),false)) {
-function content_60646528b1de91_36989833 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60647a4a690d69_64817560 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <section>
@@ -31,13 +31,14 @@ $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id
                 <h3>Gestion des informations</h3>
                 <table id="table-gestion">
                      <!-- Tuteur -->
-                    <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor" || $_smarty_tpl->tpl_vars['statut']->value == "Representative" || $_smarty_tpl->tpl_vars['statut']->value == "Student") {?>
+                    <?php if ($_smarty_tpl->tpl_vars['statut']->value == "company" || $_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor" || $_smarty_tpl->tpl_vars['statut']->value == "Representative" || $_smarty_tpl->tpl_vars['statut']->value == "Student") {?>
                     <tr>
                         <th>Nom complet</th>
                         <th>E-mail</th>
                         <th>Centre</th>
                         <th>Statut</th>
                         <th>Gestion</th>
+                        <th>Voir</th>
                     </tr>
                     <?php }?>
                     <?php
@@ -46,7 +47,7 @@ $_smarty_tpl->tpl_vars['student']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['student']->value) {
 $_smarty_tpl->tpl_vars['student']->do_else = false;
 ?>
-                    <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Student" && $_smarty_tpl->tpl_vars['userid']->value != $_smarty_tpl->tpl_vars['student']->value['id_personne']) {?>
+                    <?php if ($_smarty_tpl->tpl_vars['statut']->value == "company" || ($_smarty_tpl->tpl_vars['statut']->value == "Student" && $_smarty_tpl->tpl_vars['userid']->value != $_smarty_tpl->tpl_vars['student']->value['id_personne'])) {?>
                     
                     
                     <tr>
@@ -69,6 +70,10 @@ $_smarty_tpl->tpl_vars['student']->do_else = false;
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion">Enregistrer</button>
+                        </td>
+                        <td>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['student']->value['id_personne'];?>
+">Allez</a></button>
                         </td>
                     
                     </tr>
@@ -111,6 +116,10 @@ $_smarty_tpl->tpl_vars['student']->do_else = false;
                         <td>
                             <button type="submit" name="student" id="btn_gestion">Enregistrer</button>
                         </td>
+                        <td>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['student']->value['id_personne'];?>
+">Allez</a></button>
+                        </td>
                         </form>
                     </tr>
                     
@@ -133,7 +142,7 @@ $_smarty_tpl->tpl_vars['repre']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['repre']->value) {
 $_smarty_tpl->tpl_vars['repre']->do_else = false;
 ?>
-                    <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Representative" && $_smarty_tpl->tpl_vars['userid']->value != $_smarty_tpl->tpl_vars['repre']->value['id_personne']) {?>
+                    <?php if ($_smarty_tpl->tpl_vars['statut']->value == "company" || ($_smarty_tpl->tpl_vars['statut']->value == "Representative" && $_smarty_tpl->tpl_vars['userid']->value != $_smarty_tpl->tpl_vars['repre']->value['id_personne'])) {?>
                     
                     
                     <tr>
@@ -156,6 +165,10 @@ $_smarty_tpl->tpl_vars['repre']->do_else = false;
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion">Enregistrer</button>
+                        </td>
+                        <td>
+                            <button  id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['repre']->value['id_personne'];?>
+">Allez</a></button>
                         </td>
                     
                     </tr>
@@ -197,6 +210,10 @@ $_smarty_tpl->tpl_vars['repre']->do_else = false;
                         <td>
                             <button type="submit" name="repre" id="btn_gestion">Enregistrer</button>
                         </td>
+                        <td>
+                            <button  id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['repre']->value['id_personne'];?>
+">Allez</a></button>
+                        </td>
                         </form>
                     </tr>
                     
@@ -219,6 +236,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <th>Centre</th>
                         <th>Statut</th>
                         <th>Gestion</th>
+                        <th>Voir</th>
                     </tr>
                     <?php }?>
                     <?php
@@ -250,6 +268,10 @@ $_smarty_tpl->tpl_vars['tutor']->do_else = false;
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion">Enregistrer</button>
+                        </td>
+                        <td>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['tutor']->value['id_personne'];?>
+">Allez</a></button>
                         </td>
                     
                     </tr>
@@ -290,6 +312,10 @@ $_smarty_tpl->tpl_vars['tutor']->do_else = false;
                         <td>
                             <button type="submit" name="tutor" id="btn_gestion">Enregistrer</button>
                         </td>
+                        <td>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['tutor']->value['id_personne'];?>
+">Allez</a></button>
+                        </td>
                         </form>
                     </tr>
                     
@@ -316,6 +342,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <th>Centre</th>
                         <th>Statut</th>
                         <th>Gestion</th>
+                        <th>Voir<th>
                     </tr>
                     <?php }?>
                     <?php
@@ -347,6 +374,10 @@ $_smarty_tpl->tpl_vars['company']->do_else = false;
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion">Enregistrer</button>
+                        </td>
+                        <td>
+                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['company']->value['id_personne'];?>
+">Allez</a></button>
                         </td>
                     
                     </tr>
@@ -387,6 +418,10 @@ $_smarty_tpl->tpl_vars['company']->do_else = false;
                         <td>
                             <button type="submit" name="company" id="btn_gestion">Enregistrer</button>
                         </td>
+                        <td>
+                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['company']->value['id_personne'];?>
+">Allez</a></button>
+                        </td>
                         </form>
                     </tr>
                     
@@ -404,6 +439,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <th>Centre</th>
                         <th>Statut</th>
                         <th>Gestion</th>
+                        <th>Voir</th>
                     </tr>
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['admindisp']->value, 'admin');
@@ -440,6 +476,10 @@ $_smarty_tpl->tpl_vars['admin']->do_else = false;
                         </td>
                         <td>
                             <button type="submit" name="admin" name="admin" id="btn_gestion">Enregistrer</button>
+                        </td>
+                        <td>
+                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['admin']->value['id_personne'];?>
+">Allez</a></button>
                         </td>
                         </form>
                     </tr>

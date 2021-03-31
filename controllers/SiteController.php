@@ -318,7 +318,8 @@ class SiteController{
         $req = $bdd->getPDO()->prepare('SELECT * FROM `personne` 
         INNER JOIN `promotion` ON `personne`.`id_promo` = `promotion`.`id_promo`
         INNER JOIN `acces` ON `acces`.`id_statut` = `personne`.`id_statut`
-        WHERE `acces`.`statut` = ?');
+        WHERE `acces`.`statut` = ?
+        ORDER BY `nom`,`prenom` ASC');
         $req->execute([$access]);
         $posts = $req->fetchAll();
         return $posts;
@@ -330,6 +331,16 @@ class SiteController{
             `prenom`= ?,`nom`= ?,`mail`= ?,`centre`= ?,`id_statut`= ? 
             WHERE `id_personne` = ?');
         $req->execute([$prenom, $nom, $mail, $centre, $role, $iduser]);
+    }
+
+    public function getinfobyid($id){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT * FROM `personne`
+        INNER JOIN `acces` ON `acces`.`id_statut` = `personne`.`id_statut`
+        WHERE `id_personne` = ?');
+        $req->execute([$id]);
+        $posts = $req->fetch();
+        return $posts;
     }
 
 }
