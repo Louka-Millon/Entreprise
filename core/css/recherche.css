@@ -5,14 +5,11 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
-    
-
 }
 
 .container-recherche{
     margin-top: 550px;
     display:flex;
-    
 }
 
 .row-recherche>.items{
@@ -28,7 +25,6 @@
 /*Contenu*/
 .titre-entreprise{
     text-align: center;
-    
 }
 
 .titre-entreprise>img{
@@ -37,6 +33,7 @@
     max-height: 125px;
     object-fit: scale-down;
 }
+
 .titre-entreprise>h4{
     margin:auto;
 }
@@ -44,8 +41,8 @@
 .description{
     text-align: justify;
     margin:10px;
-    
 }
+
 .bot{
     position: relative;
     bottom: 0px;
@@ -53,6 +50,28 @@
 /*Fin contenu*/
 /*- - - - - -*/
 /*Boutons pagination*/
+.pagination{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 250px;
+    margin: auto;
+}
 
+#btn_previous, #btn_next{
+    display: block;
+    background-color:transparent;
+    border: 3px solid #4AC9FF;
+    width:100px;
+    height: 30px;
+    margin: auto;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+#btn_previous:hover, #btn_next:hover{
+    border: 3px solid #3eb2e4;
+    background-color: #3eb2e4;
+}
 /*Fin boutons pagination*/
 /*- - - - - -*/
