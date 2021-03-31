@@ -52,7 +52,8 @@ if(isset($_GET['page'])){
         header("Location:index.php?page=connexion");
     }
     if($_GET["page"] == "profil"){
-        $listoffre = $siteC->getoffre($_SESSION["id"]);
+
+        $listoffre = $siteC->getoffre($_GET['id']);
         $smarty->assign("listeoffre", $listoffre);
     }
     if($_GET["page"] == "connexion" && isset($_COOKIE["user_id"])){
@@ -89,6 +90,7 @@ if(isset($_SESSION['prenom'])){
 
     $smarty->assign("pseudo", $_SESSION["prenom"]. " " . $_SESSION["nom"]);
     $smarty->assign("statut", $_SESSION["statut"]);
+    $smarty->assign("userid", $_SESSION["id"]);
 
 }else{
     $smarty->assign("fieldconnexion", "Connexion");
@@ -112,7 +114,6 @@ $entreprisedetails = $siteC->showentreprisebydetails();
 $competence = $siteC->showcompetence($entreprise);
 $competences = $siteC->showcompetences();
 $topsecteur = $siteC->showtopsecteur();
-
 
 
 

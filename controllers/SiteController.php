@@ -324,5 +324,12 @@ class SiteController{
         return $posts;
     }
 
+    public function updatepersonne($prenom, $nom, $mail, $centre, $role, $iduser){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('UPDATE `personne` SET 
+            `prenom`= ?,`nom`= ?,`mail`= ?,`centre`= ?,`id_statut`= ? 
+            WHERE `id_personne` = ?');
+        $req->execute([$prenom, $nom, $mail, $centre, $role, $iduser]);
+    }
 
 }
