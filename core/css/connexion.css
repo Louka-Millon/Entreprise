@@ -4,7 +4,6 @@ body {
 
 }
 
-
 /*
 div{
     align-content: center;
@@ -17,7 +16,6 @@ input[type=submit] {
     /*border: none;*/
     cursor: pointer;
 }
-
 
 .header h2{
     color: white;
@@ -51,8 +49,7 @@ label{
     text-align: center;
 }*/
 
-/*tablette*/
-
+/*Tablette*/
 @media screen and (max-width: 770px) and (min-width: 420px)
 {
     /*
@@ -60,8 +57,8 @@ label{
         width: 70%;
     }*/
 }
-/*Smartphone*/
 
+/*Smartphone*/
 @media screen and (max-width: 420px)
 {
     /*

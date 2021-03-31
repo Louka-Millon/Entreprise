@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-31 18:26:26
+/* Smarty version 3.1.39, created on 2021-03-31 23:53:53
   from 'C:\xampp\htdocs\Entreprise\tpl\pages\gestion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6064a2b2bc4785_96115052',
+  'unifunc' => 'content_6064ef7127c5e4_37359761',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53dbe8f7b024456143f268dd887868a3abca5a38' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\pages\\gestion.tpl',
-      1 => 1617197639,
+      1 => 1617227611,
       2 => 'file',
     ),
   ),
@@ -21,24 +21,24 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header_other.tpl' => 1,
   ),
 ),false)) {
-function content_6064a2b2bc4785_96115052 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6064ef7127c5e4_37359761 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <section>
     <article>
         <div class="container-gestion">
             <div class="row-gestion">
-                <h3>Gestion des informations</h3>
+                <h3>Information management</h3>
                 <table id="table-gestion">
                      <!-- Tuteur -->
                     <?php if ($_smarty_tpl->tpl_vars['statut']->value == "company" || $_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor" || $_smarty_tpl->tpl_vars['statut']->value == "Representative" || $_smarty_tpl->tpl_vars['statut']->value == "Student") {?>
                     <tr>
-                        <th>Nom complet</th>
+                        <th>Name</th>
                         <th>E-mail</th>
-                        <th>Centre</th>
-                        <th>Statut</th>
-                        <th>Gestion</th>
-                        <th>Voir</th>
+                        <th>Academy</th>
+                        <th>Status</th>
+                        <th>Management</th>
+                        <th>Consult</th>
                     </tr>
                     <?php }?>
                     <?php
@@ -69,11 +69,11 @@ $_smarty_tpl->tpl_vars['student']->do_else = false;
 
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" id="btn_gestion">Save</button>
                         </td>
                         <td>
                             <button id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['student']->value['id_personne'];?>
-">Allez</a></button>
+">Go to</a></button>
                         </td>
                     
                     </tr>
@@ -107,18 +107,18 @@ $_smarty_tpl->tpl_vars['student']->do_else = false;
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="Student">Etudiant</option>
-                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor" || $_smarty_tpl->tpl_vars['statut']->value == "Representative") {?><option value="Representative">Délégué</option><?php }?>
-                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor") {?><option value="Tutor">Tuteur</option><?php }?>
-                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?><option value="administrator">Administrateur</option><?php }?>
+                                <option value="Student">Student</option>
+                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor" || $_smarty_tpl->tpl_vars['statut']->value == "Representative") {?><option value="Representative">Representative</option><?php }?>
+                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor") {?><option value="Tutor">Tutor</option><?php }?>
+                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?><option value="administrator">Administrator</option><?php }?>
                             </select>
                         </td>
                         <td>
-                            <button type="submit" name="student" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" name="student" id="btn_gestion">Save</button>
                         </td>
                         <td>
                             <button id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['student']->value['id_personne'];?>
-">Allez</a></button>
+">Go to</a></button>
                         </td>
                         </form>
                     </tr>
@@ -164,11 +164,11 @@ $_smarty_tpl->tpl_vars['repre']->do_else = false;
 
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" id="btn_gestion">Save</button>
                         </td>
                         <td>
                             <button  id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['repre']->value['id_personne'];?>
-">Allez</a></button>
+">Go to</a></button>
                         </td>
                     
                     </tr>
@@ -202,17 +202,17 @@ $_smarty_tpl->tpl_vars['repre']->do_else = false;
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="Representative">Délégué</option>
-                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor") {?><option value="Tutor">Tuteur</option><?php }?>
-                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?><option value="administrator">Administrateur</option><?php }?>
+                                <option value="Representative">Representative</option>
+                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor") {?><option value="Tutor">Tutor</option><?php }?>
+                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?><option value="administrator">Administrator</option><?php }?>
                             </select>
                         </td>
                         <td>
-                            <button type="submit" name="repre" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" name="repre" id="btn_gestion">Save</button>
                         </td>
                         <td>
                             <button  id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['repre']->value['id_personne'];?>
-">Allez</a></button>
+">Go to</a></button>
                         </td>
                         </form>
                     </tr>
@@ -231,12 +231,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <!-- Tuteur -->
                     <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor") {?>
                     <tr>
-                        <th>Nom complet</th>
+                        <th>Name</th>
                         <th>E-mail</th>
-                        <th>Centre</th>
-                        <th>Statut</th>
-                        <th>Gestion</th>
-                        <th>Voir</th>
+                        <th>Academy</th>
+                        <th>Status</th>
+                        <th>Management</th>
+                        <th>Consult</th>
                     </tr>
                     <?php }?>
                     <?php
@@ -267,11 +267,11 @@ $_smarty_tpl->tpl_vars['tutor']->do_else = false;
 
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" id="btn_gestion">Save</button>
                         </td>
                         <td>
                             <button id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['tutor']->value['id_personne'];?>
-">Allez</a></button>
+">Go to</a></button>
                         </td>
                     
                     </tr>
@@ -305,16 +305,16 @@ $_smarty_tpl->tpl_vars['tutor']->do_else = false;
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="Tutor">Tuteur</option>
-                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?><option value="administrator">Administrateur</option><?php }?>
+                                <option value="Tutor">Tutor</option>
+                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?><option value="administrator">Administrator</option><?php }?>
                             </select>
                         </td>
                         <td>
-                            <button type="submit" name="tutor" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" name="tutor" id="btn_gestion">Save</button>
                         </td>
                         <td>
                             <button id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['tutor']->value['id_personne'];?>
-">Allez</a></button>
+">Go to</a></button>
                         </td>
                         </form>
                     </tr>
@@ -337,12 +337,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <!-- vue entreprise -->
                     <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "company") {?>
                     <tr>
-                        <th>Nom complet</th>
+                        <th>Name</th>
                         <th>E-mail</th>
-                        <th>Centre</th>
-                        <th>Statut</th>
-                        <th>Gestion</th>
-                        <th>Voir<th>
+                        <th>Academy</th>
+                        <th>Status</th>
+                        <th>Management</th>
+                        <th>Consult<th>
                     </tr>
                     <?php }?>
                     <?php
@@ -373,11 +373,11 @@ $_smarty_tpl->tpl_vars['company']->do_else = false;
 
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" id="btn_gestion">Save</button>
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['company']->value['id_personne'];?>
-">Allez</a></button>
+">Go to</a></button>
                         </td>
                     
                     </tr>
@@ -411,16 +411,16 @@ $_smarty_tpl->tpl_vars['company']->do_else = false;
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="company">Entreprise</option>
-                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?><option value="administrator">Administrateur</option><?php }?>
+                                <option value="company">Company</option>
+                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?><option value="administrator">Administrator</option><?php }?>
                             </select>
                         </td>
                         <td>
-                            <button type="submit" name="company" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" name="company" id="btn_gestion">Save</button>
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['company']->value['id_personne'];?>
-">Allez</a></button>
+">Go to</a></button>
                         </td>
                         </form>
                     </tr>
@@ -434,12 +434,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     
                     <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?>
                     <tr>
-                        <th>Nom complet</th>
+                        <th>Name</th>
                         <th>E-mail</th>
-                        <th>Centre</th>
-                        <th>Statut</th>
-                        <th>Gestion</th>
-                        <th>Voir</th>
+                        <th>Academy</th>
+                        <th>Status</th>
+                        <th>Management</th>
+                        <th>Consult</th>
                     </tr>
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['admindisp']->value, 'admin');
@@ -471,15 +471,15 @@ $_smarty_tpl->tpl_vars['admin']->do_else = false;
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="administrator">Administrateur</option>
+                                <option value="administrator">Administrator</option>
                             </select>
                         </td>
                         <td>
-                            <button type="submit" name="admin" name="admin" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" name="admin" name="admin" id="btn_gestion">Save</button>
                         </td>
                         <td>
                             <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id=<?php echo $_smarty_tpl->tpl_vars['admin']->value['id_personne'];?>
-">Allez</a></button>
+">Go to</a></button>
                         </td>
                         </form>
                     </tr>

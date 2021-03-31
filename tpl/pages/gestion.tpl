@@ -3,17 +3,17 @@
     <article>
         <div class="container-gestion">
             <div class="row-gestion">
-                <h3>Gestion des informations</h3>
+                <h3>Information management</h3>
                 <table id="table-gestion">
                      <!-- Tuteur -->
                     {if $statut == "company" || $statut == "Administrator" || $statut == "Tutor" || $statut == "Representative" || $statut == "Student"}
                     <tr>
-                        <th>Nom complet</th>
+                        <th>Name</th>
                         <th>E-mail</th>
-                        <th>Centre</th>
-                        <th>Statut</th>
-                        <th>Gestion</th>
-                        <th>Voir</th>
+                        <th>Academy</th>
+                        <th>Status</th>
+                        <th>Management</th>
+                        <th>Consult</th>
                     </tr>
                     {/if}
                     {foreach from=$studentdisp item=student}
@@ -34,10 +34,10 @@
                             {$student.statut}
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" id="btn_gestion">Save</button>
                         </td>
                         <td>
-                            <button id="btn_gestion"><a href="index.php?page=profil&id={$student.id_personne}">Allez</a></button>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id={$student.id_personne}">Go to</a></button>
                         </td>
                     
                     </tr>
@@ -65,17 +65,17 @@
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="Student">Etudiant</option>
-                                {if $statut == "Administrator" || $statut == "Tutor" || $statut == "Representative"}<option value="Representative">Délégué</option>{/if}
-                                {if $statut == "Administrator" || $statut == "Tutor"}<option value="Tutor">Tuteur</option>{/if}
-                                {if $statut == "Administrator"}<option value="administrator">Administrateur</option>{/if}
+                                <option value="Student">Student</option>
+                                {if $statut == "Administrator" || $statut == "Tutor" || $statut == "Representative"}<option value="Representative">Representative</option>{/if}
+                                {if $statut == "Administrator" || $statut == "Tutor"}<option value="Tutor">Tutor</option>{/if}
+                                {if $statut == "Administrator"}<option value="administrator">Administrator</option>{/if}
                             </select>
                         </td>
                         <td>
-                            <button type="submit" name="student" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" name="student" id="btn_gestion">Save</button>
                         </td>
                         <td>
-                            <button id="btn_gestion"><a href="index.php?page=profil&id={$student.id_personne}">Allez</a></button>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id={$student.id_personne}">Go to</a></button>
                         </td>
                         </form>
                     </tr>
@@ -109,10 +109,10 @@
                             {$repre.statut}
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" id="btn_gestion">Save</button>
                         </td>
                         <td>
-                            <button  id="btn_gestion"><a href="index.php?page=profil&id={$repre.id_personne}">Allez</a></button>
+                            <button  id="btn_gestion"><a href="index.php?page=profil&id={$repre.id_personne}">Go to</a></button>
                         </td>
                     
                     </tr>
@@ -140,16 +140,16 @@
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="Representative">Délégué</option>
-                                {if $statut == "Administrator" || $statut == "Tutor"}<option value="Tutor">Tuteur</option>{/if}
-                                {if $statut == "Administrator"}<option value="administrator">Administrateur</option>{/if}
+                                <option value="Representative">Representative</option>
+                                {if $statut == "Administrator" || $statut == "Tutor"}<option value="Tutor">Tutor</option>{/if}
+                                {if $statut == "Administrator"}<option value="administrator">Administrator</option>{/if}
                             </select>
                         </td>
                         <td>
-                            <button type="submit" name="repre" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" name="repre" id="btn_gestion">Save</button>
                         </td>
                         <td>
-                            <button  id="btn_gestion"><a href="index.php?page=profil&id={$repre.id_personne}">Allez</a></button>
+                            <button  id="btn_gestion"><a href="index.php?page=profil&id={$repre.id_personne}">Go to</a></button>
                         </td>
                         </form>
                     </tr>
@@ -166,12 +166,12 @@
                     <!-- Tuteur -->
                     {if $statut == "Administrator" || $statut == "Tutor"}
                     <tr>
-                        <th>Nom complet</th>
+                        <th>Name</th>
                         <th>E-mail</th>
-                        <th>Centre</th>
-                        <th>Statut</th>
-                        <th>Gestion</th>
-                        <th>Voir</th>
+                        <th>Academy</th>
+                        <th>Status</th>
+                        <th>Management</th>
+                        <th>Consult</th>
                     </tr>
                     {/if}
                     {foreach from=$tutordisp item=tutor}
@@ -192,10 +192,10 @@
                             {$tutor.statut}
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" id="btn_gestion">Save</button>
                         </td>
                         <td>
-                            <button id="btn_gestion"><a href="index.php?page=profil&id={$tutor.id_personne}">Allez</a></button>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id={$tutor.id_personne}">Go to</a></button>
                         </td>
                     
                     </tr>
@@ -223,15 +223,15 @@
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="Tutor">Tuteur</option>
-                                {if $statut == "Administrator"}<option value="administrator">Administrateur</option>{/if}
+                                <option value="Tutor">Tutor</option>
+                                {if $statut == "Administrator"}<option value="administrator">Administrator</option>{/if}
                             </select>
                         </td>
                         <td>
-                            <button type="submit" name="tutor" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" name="tutor" id="btn_gestion">Save</button>
                         </td>
                         <td>
-                            <button id="btn_gestion"><a href="index.php?page=profil&id={$tutor.id_personne}">Allez</a></button>
+                            <button id="btn_gestion"><a href="index.php?page=profil&id={$tutor.id_personne}">Go to</a></button>
                         </td>
                         </form>
                     </tr>
@@ -252,12 +252,12 @@
                     <!-- vue entreprise -->
                     {if $statut == "Administrator" || $statut == "company"}
                     <tr>
-                        <th>Nom complet</th>
+                        <th>Name</th>
                         <th>E-mail</th>
-                        <th>Centre</th>
-                        <th>Statut</th>
-                        <th>Gestion</th>
-                        <th>Voir<th>
+                        <th>Academy</th>
+                        <th>Status</th>
+                        <th>Management</th>
+                        <th>Consult<th>
                     </tr>
                     {/if}
                     {foreach from=$companydisp item=company}
@@ -278,10 +278,10 @@
                             {$company.statut}
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" id="btn_gestion">Save</button>
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id={$company.id_personne}">Allez</a></button>
+                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id={$company.id_personne}">Go to</a></button>
                         </td>
                     
                     </tr>
@@ -309,15 +309,15 @@
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="company">Entreprise</option>
-                                {if $statut == "Administrator"}<option value="administrator">Administrateur</option>{/if}
+                                <option value="company">Company</option>
+                                {if $statut == "Administrator"}<option value="administrator">Administrator</option>{/if}
                             </select>
                         </td>
                         <td>
-                            <button type="submit" name="company" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" name="company" id="btn_gestion">Save</button>
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id={$company.id_personne}">Allez</a></button>
+                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id={$company.id_personne}">Go to</a></button>
                         </td>
                         </form>
                     </tr>
@@ -329,12 +329,12 @@
                     
                     {if $statut == "Administrator"}
                     <tr>
-                        <th>Nom complet</th>
+                        <th>Name</th>
                         <th>E-mail</th>
-                        <th>Centre</th>
-                        <th>Statut</th>
-                        <th>Gestion</th>
-                        <th>Voir</th>
+                        <th>Academy</th>
+                        <th>Status</th>
+                        <th>Management</th>
+                        <th>Consult</th>
                     </tr>
                     {foreach from=$admindisp item=admin}
                     <tr>
@@ -355,14 +355,14 @@
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="administrator">Administrateur</option>
+                                <option value="administrator">Administrator</option>
                             </select>
                         </td>
                         <td>
-                            <button type="submit" name="admin" name="admin" id="btn_gestion">Enregistrer</button>
+                            <button type="submit" name="admin" name="admin" id="btn_gestion">Save</button>
                         </td>
                         <td>
-                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id={$admin.id_personne}">Allez</a></button>
+                            <button type="submit" id="btn_gestion"><a href="index.php?page=profil&id={$admin.id_personne}">Go to</a></button>
                         </td>
                         </form>
                     </tr>
