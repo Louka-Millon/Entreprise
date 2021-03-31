@@ -43,10 +43,10 @@
                 <div class="row-search">
                         <form action="index.php?page=recherche" method="get">
                                 <input type="hidden" name="page" value="recherche">
-                                <input type="text" name="offre" id="premier" placeholder="Offre...">
-                                <input type="text" name="competence"  placeholder="Compétence...">
-                                <input type="text" name="lieu" id="last_input"  placeholder="Lieu...">
-                                <input type="submit" name="rechercher" value="Rechercher">
+                                <input type="text" name="offre" id="premier" placeholder="Offer...">
+                                <input type="text" name="competence"  placeholder="Skill...">
+                                <input type="text" name="lieu" id="last_input"  placeholder="Location...">
+                                <input type="submit" name="rechercher" value="Search">
                         </form>
                 </div>
 
