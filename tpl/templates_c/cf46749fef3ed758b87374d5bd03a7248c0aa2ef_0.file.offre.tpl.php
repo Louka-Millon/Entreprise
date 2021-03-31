@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-30 15:35:40
+/* Smarty version 3.1.39, created on 2021-03-31 10:01:25
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6063292cdcaf76_55301244',
+  'unifunc' => 'content_60642c5531d8f9_47923511',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cf46749fef3ed758b87374d5bd03a7248c0aa2ef' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\offre.tpl',
-      1 => 1617111312,
+      1 => 1617177677,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_6063292cdcaf76_55301244 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60642c5531d8f9_47923511 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <section>
@@ -30,8 +30,7 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
             <!--Barre de droite avec les informations propres de l'entreprise-->
             <div class="offre-row infos">
                 <div class="offre-avatar">
-                    <img src="<?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['pathimage'];?>
-" alt="IMAGE">
+                    
                     <h3><?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['nom_entreprise'];?>
 </h3>
                 </div>
@@ -81,9 +80,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <!--Détails de l'offre et description des attendus-->
             <div class="offre-row details">
                 <div class="details-texte">
-                    <h2>TITRE DE L'OFFRE</h2>
-                    <p><?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['description'];?>
+                    <h2><?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['titre_offre'];?>
+</h2>
+                    <p><?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['desc_offre'];?>
 </p>
+                    <p>Début de l'offre : <?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['date_offre'];?>
+</p>
+                    <p>Durée de l'offre : <?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['duree_offre'];?>
+ semaines</p>
+                    <p>Rémunération : <?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['remuneration'];?>
+ €</p>
                 </div>
                 <div class="details-boutons">
                     <a href="../controllers/favori.php?offre=<?php echo $_smarty_tpl->tpl_vars['entreprisebyname']->value['id_offre'];?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-30 17:13:46
+/* Smarty version 3.1.39, created on 2021-03-31 10:20:27
   from 'C:\xamp\htdocs\Entreprise\tpl\header_other.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6063402a05c8a3_63444509',
+  'unifunc' => 'content_606430cb026930_55861976',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd9398173ea6592d41c15da1c4bfc5a2ea27e86be' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\header_other.tpl',
-      1 => 1617117192,
+      1 => 1617178816,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6063402a05c8a3_63444509 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606430cb026930_55861976 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -31,7 +31,7 @@ function content_6063402a05c8a3_63444509 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="../core/css/footer.css" media="screen" />
         <link rel="stylesheet" href="../core/css/inscription.css" media="screen" />
         <link rel="stylesheet" href="../core/css/parametre.css" media="screen" />
-        
+        <link rel="stylesheet" href="../core/css/gestion.css" media="screen" />
         <link rel="stylesheet" href="../core/css/profil.css" media="screen" />
         <link rel="shortcut icon" href="images/favicon.ico" />
         <!-- On importe jQuery -->
@@ -62,9 +62,11 @@ function content_6063402a05c8a3_63444509 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="items"><a href="<?php echo $_smarty_tpl->tpl_vars['fieldconnexionlink']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['fieldconnexion']->value;?>
 </a></div>
+                        <?php if ($_smarty_tpl->tpl_vars['fieldinscription']->value == "Déconnexion") {?><div class="items"><a href="index.php?page=gestion">Gestion</a></div><?php }?>
                         <div class="items"><a href="<?php echo $_smarty_tpl->tpl_vars['fieldinscriptionlink']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['fieldinscription']->value;?>
 </a></div>
+                        
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">

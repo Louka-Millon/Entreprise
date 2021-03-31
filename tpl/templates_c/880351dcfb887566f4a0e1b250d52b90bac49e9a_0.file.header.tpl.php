@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-30 17:14:07
+/* Smarty version 3.1.39, created on 2021-03-31 11:55:27
   from 'C:\xamp\htdocs\Entreprise\tpl\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6063403f84f887_76444841',
+  'unifunc' => 'content_6064470f4ca454_63745134',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '880351dcfb887566f4a0e1b250d52b90bac49e9a' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\header.tpl',
-      1 => 1617117182,
+      1 => 1617178825,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6063403f84f887_76444841 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6064470f4ca454_63745134 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -62,6 +62,7 @@ function content_6063403f84f887_76444841 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="items"><a href="<?php echo $_smarty_tpl->tpl_vars['fieldconnexionlink']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['fieldconnexion']->value;?>
 </a></div>
+                        <?php if ($_smarty_tpl->tpl_vars['fieldinscription']->value == "Déconnexion") {?><div class="items"><a href="index.php?page=gestion">Gestion</a></div><?php }?>
                         <div class="items"><a href="<?php echo $_smarty_tpl->tpl_vars['fieldinscriptionlink']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['fieldinscription']->value;?>
 </a></div>

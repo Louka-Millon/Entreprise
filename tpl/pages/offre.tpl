@@ -5,7 +5,7 @@
             <!--Barre de droite avec les informations propres de l'entreprise-->
             <div class="offre-row infos">
                 <div class="offre-avatar">
-                    <img src="{$entreprisebyname.pathimage}" alt="IMAGE">
+                    
                     <h3>{$entreprisebyname.nom_entreprise}</h3>
                 </div>
                 <p>{$entreprisebyname.localisation}</p>
@@ -37,8 +37,11 @@
             <!--Détails de l'offre et description des attendus-->
             <div class="offre-row details">
                 <div class="details-texte">
-                    <h2>TITRE DE L'OFFRE</h2>
-                    <p>{$entreprisebyname.description}</p>
+                    <h2>{$entreprisebyname.titre_offre}</h2>
+                    <p>{$entreprisebyname.desc_offre}</p>
+                    <p>Début de l'offre : {$entreprisebyname.date_offre}</p>
+                    <p>Durée de l'offre : {$entreprisebyname.duree_offre} semaines</p>
+                    <p>Rémunération : {$entreprisebyname.remuneration} €</p>
                 </div>
                 <div class="details-boutons">
                     <a href="../controllers/favori.php?offre={$entreprisebyname.id_offre}"><button id="btn_wishlist">Ajouter à la wishlist</button></a>

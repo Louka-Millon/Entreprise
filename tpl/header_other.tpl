@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../core/css/footer.css" media="screen" />
         <link rel="stylesheet" href="../core/css/inscription.css" media="screen" />
         <link rel="stylesheet" href="../core/css/parametre.css" media="screen" />
-        
+        <link rel="stylesheet" href="../core/css/gestion.css" media="screen" />
         <link rel="stylesheet" href="../core/css/profil.css" media="screen" />
         <link rel="shortcut icon" href="images/favicon.ico" />
         <!-- On importe jQuery -->
@@ -33,7 +33,9 @@
                         <div class="items"><a href="?page=home">Home</a></div>
                         <div class="items"><a href="?page=recherche">Recherche d'emplois</a></div>
                         <div class="items"><a href="{$fieldconnexionlink}">{$fieldconnexion}</a></div>
+                        {if $fieldinscription == "Déconnexion"}<div class="items"><a href="index.php?page=gestion">Gestion</a></div>{/if}
                         <div class="items"><a href="{$fieldinscriptionlink}">{$fieldinscription}</a></div>
+                        
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">

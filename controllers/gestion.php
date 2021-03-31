@@ -1,5 +1,6 @@
-<?php 
+<?php
 require "SiteController.php";
+session_start();
 
 $siteC = new siteController();
 
@@ -23,11 +24,9 @@ if(isset($_SESSION['prenom'])){
     $smarty->assign("fieldconnexionlink", "index.php?page=profil");
     $smarty->assign("fieldinscription", "Déconnexion");
     $smarty->assign("fieldinscriptionlink", "../controllers/disconnect.php");
-    $smarty->assign("favori", $siteC->showfavori($_SESSION["id"]));
-
     $smarty->assign("pseudo", $_SESSION["prenom"]. " " . $_SESSION["nom"]);
     $smarty->assign("statut", $_SESSION["statut"]);
-
+    $smarty->assign("userid", $_SESSION['id']);
 }else{
     $smarty->assign("fieldconnexion", "Connexion");
     $smarty->assign("fieldconnexionlink", "index.php?page=connexion");
@@ -35,7 +34,17 @@ if(isset($_SESSION['prenom'])){
     $smarty->assign("fieldinscriptionlink", "index.php?page=inscription");
 }
 
+$student = $siteC->afficheuserbyaccess("Student");
+$representative = $siteC->afficheuserbyaccess("Representative");
+$tutor = $siteC->afficheuserbyaccess("Tutor");
+$company = $siteC->afficheuserbyaccess("company");
+$admin = $siteC->afficheuserbyaccess("Administrator");
+
+$smarty->assign("studentdisp", $student);
+$smarty->assign("representativedisp", $representative);
+$smarty->assign("tutordisp", $tutor);
+$smarty->assign("companydisp", $company);
+$smarty->assign("admindisp", $admin);
 
 $smarty->assign("title", "Injob");
 $smarty->assign("page_name", $page_n);
-$smarty->assign("entreprise", $entreprise);

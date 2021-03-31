@@ -9,8 +9,7 @@ if (isset( $_POST['mail']) && isset( $_POST['pass']))
     $pass = crypt(htmlspecialchars($_POST['pass']), '$6$453654$securitedemotdepasse$');
 
     $val = $siteC->login($mail);
-    var_dump($val);
-    echo $pass. "<br>" . $val["password"];
+     
     if($val)
     {
         if(filter_var(  $mail, FILTER_VALIDATE_EMAIL))
@@ -37,13 +36,13 @@ if (isset( $_POST['mail']) && isset( $_POST['pass']))
             }
         }else 
         {
-            header('Location:index.php?login_err=email');
+            header('Location:../tpl/index.php?page=connexion&erreur=Email incorrect');
         }
     }
     else 
     {
-        //header('Location:index.php?login_err=already');
+        header('Location:../tpl/index.php?page=connexion&erreur=Mot de passe ou identifiant incorrect');
     }
 
 }
-else header ('Location:index.php');
+else header ('Location:../tpl/index.php?page=connexion&erreur=Mot de passe ou identifiant incorrect');

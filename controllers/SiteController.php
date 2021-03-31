@@ -39,7 +39,6 @@ class SiteController{
         WHERE `mail`= ?');
         $req->execute([$email]);
         $posts = $req->fetch();
-        var_dump($posts);
         return $posts;
     }
 
@@ -312,5 +311,18 @@ class SiteController{
         $req = $bdd->getPDO()->prepare('DELETE FROM `offre` WHERE `id_offre` = ?');
         $req->execute([$id]);
     }
+
+    /* login part */
+    public function afficheuserbyaccess($access){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT * FROM `personne` 
+        INNER JOIN `promotion` ON `personne`.`id_promo` = `promotion`.`id_promo`
+        INNER JOIN `acces` ON `acces`.`id_statut` = `personne`.`id_statut`
+        WHERE `acces`.`statut` = ?');
+        $req->execute([$access]);
+        $posts = $req->fetchAll();
+        return $posts;
+    }
+
 
 }
