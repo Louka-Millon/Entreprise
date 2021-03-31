@@ -66,7 +66,7 @@
                         <td>
                             <select name="select-role" id="select-role">
                                 <option value="Student">Student</option>
-                                {if $statut == "Administrator" || $statut == "Tutor" || $statut == "Representative"}<option value="Representative">Representative</option>{/if}
+                                {if $statut == "Administrator" || $statut == "Tutor" || $statut == "Representative"}<option value="Student">Student</option>{/if}
                                 {if $statut == "Administrator" || $statut == "Tutor"}<option value="Tutor">Tutor</option>{/if}
                                 {if $statut == "Administrator"}<option value="administrator">Administrator</option>{/if}
                             </select>
@@ -92,7 +92,7 @@
                 <!-- Délégué -->
                    
                     {foreach from=$representativedisp item=repre}
-                    {if $statut == "company" || ($statut == "Representative" && $userid != $repre.id_personne)}
+                    {if $statut == "company" || $statut == "Student" || ($statut == "Representative" && $userid != $repre.id_personne)}
                     
                     
                     <tr>
@@ -140,6 +140,7 @@
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
+                                {if $statut == "Administrator" || $statut == "Tutor"}<option value="Student">Student</option>{/if}
                                 <option value="Representative">Representative</option>
                                 {if $statut == "Administrator" || $statut == "Tutor"}<option value="Tutor">Tutor</option>{/if}
                                 {if $statut == "Administrator"}<option value="administrator">Administrator</option>{/if}
@@ -257,7 +258,7 @@
                         <th>Academy</th>
                         <th>Status</th>
                         <th>Management</th>
-                        <th>Consult<th>
+                        <th>Consult</th>
                     </tr>
                     {/if}
                     {foreach from=$companydisp item=company}
@@ -309,7 +310,7 @@
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
-                                <option value="company">Company</option>
+                                <option value="company">company</option>
                                 {if $statut == "Administrator"}<option value="administrator">Administrator</option>{/if}
                             </select>
                         </td>
@@ -350,7 +351,7 @@
                                 <option value="nanterre">Nanterre</option>
                                 <option value="rouens">Rouens</option>
                                 <option value="saint-nazaire">Saint-Nazaire</option>
-                                <option value="aucun">aucun</option>
+                                <option value="aucun">None</option>
                             </select>
                         </td>
                         <td>
