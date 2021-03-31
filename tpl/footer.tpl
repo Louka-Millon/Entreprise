@@ -19,6 +19,6 @@
 </footer>
 
 <script src="../core/js/footer.js"></script>
-
+<script src = "../service-worker.js"> </script>
 </body>
 </html>

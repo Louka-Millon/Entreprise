@@ -1,0 +1,26 @@
+{
+    "name": "Exia Boite à Idée",
+    "short_name": "Exia BI",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background-color": "#FFFF",
+    "theme_color" : "#03a9f4",
+    "orientation": "portrait-primary", 
+    "icons": [
+        {
+            "src": "./core/image/pwa/logo64.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        },
+        {
+            "src": "./core/image/pwa/logo128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "./core/image/pwa/logo256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        }
+    ]
+}

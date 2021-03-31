@@ -9,7 +9,7 @@
                   </div>
                   <div class="row-home">
                         {foreach from=$secteur item=top}
-                        <div class="items-home" style="background:url('../core/image/secteur/{$top.secteur_activite}.jpg');background-position: 50% 50%;background-size: cover;"><div class="centered">{$top.secteur_activite}</div></div>
+                        <div class="items-home" style="background:#E8EBF5;background-position: 50% 50%;background-size: cover;"><div class="centered">{$top.secteur_activite}</div></div>
                         {/foreach}
                   </div>
             </div>

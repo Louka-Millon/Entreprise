@@ -1,9 +1,10 @@
 <?php 
 require "SiteController.php";
+require_once "../libs/Smarty.class.php";
 session_start();
 
 $siteC = new siteController();
-
+$smarty = new Smarty();
 $entreprise = "";
 if(isset($_GET['page'])){
     $page_n = $_GET["page"];
@@ -82,7 +83,7 @@ if(!isset($val)){
 }
 
 if($index+1 > $nbpage){
-    //header("location:index.php?page=recherche&index=".$nbpage);
+    header("location:index.php?page=recherche&index=".$nbpage);
 }
 $smarty->assign("currentpage",$index);
 $smarty->assign("pagesuivant", $index+2);
@@ -97,4 +98,6 @@ $smarty->assign("entreprise", $entreprise);
 /*use function */
 
 $smarty->assign("enliste", $val);
+$output = $smarty->fetch("../tpl/pages/search.tpl");
+echo $output;
 ?>
