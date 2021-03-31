@@ -51,6 +51,10 @@ if(isset($_GET['page'])){
     if($_GET["page"] == "profil" && !isset($_SESSION["prenom"])){
         header("Location:index.php?page=connexion");
     }
+    if($_GET["page"] == "profil"){
+        $listoffre = $siteC->getoffre($_SESSION["id"]);
+        $smarty->assign("listeoffre", $listoffre);
+    }
     if($_GET["page"] == "connexion" && isset($_COOKIE["user_id"])){
         $cookies = $siteC->checkcookies();
         foreach($cookies as $value){

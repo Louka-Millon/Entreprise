@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-29 22:22:42
+/* Smarty version 3.1.39, created on 2021-03-30 17:13:46
   from 'C:\xamp\htdocs\Entreprise\tpl\header_other.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60623712ea24d5_41727189',
+  'unifunc' => 'content_6063402a05c8a3_63444509',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd9398173ea6592d41c15da1c4bfc5a2ea27e86be' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\header_other.tpl',
-      1 => 1617049358,
+      1 => 1617117192,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60623712ea24d5_41727189 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6063402a05c8a3_63444509 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -59,7 +59,6 @@ function content_60623712ea24d5_41727189 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
                         <div class="items"><a href="?page=home">Home</a></div>
                         <div class="items"><a href="?page=recherche">Recherche d'emplois</a></div>
-                        <div class="items"><a href="?page=contact">Contact</a></div>
                         <div class="items"><a href="<?php echo $_smarty_tpl->tpl_vars['fieldconnexionlink']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['fieldconnexion']->value;?>
 </a></div>

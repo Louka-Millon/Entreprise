@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-30 16:34:11
+/* Smarty version 3.1.39, created on 2021-03-31 08:49:29
   from 'C:\xamp\htdocs\Entreprise\tpl\pages\profil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_606336e39f3e19_54863843',
+  'unifunc' => 'content_60641b79a57da6_66978471',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ae323fe5a4d9d151b01b1aaab40502a9c2e80572' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\pages\\profil.tpl',
-      1 => 1617114815,
+      1 => 1617173276,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header_other.tpl' => 1,
   ),
 ),false)) {
-function content_606336e39f3e19_54863843 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60641b79a57da6_66978471 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <section>
@@ -40,8 +40,60 @@ $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id
                 
                 <?php if ($_smarty_tpl->tpl_vars['statut']->value == "company") {?>
                 <button id="btn_creation_offre" onclick="document.getElementById('modal').style.display='block'">Ajouter une offre</button>
+                <table id="customers">
+                    <tr>
+                        <th>Nom de l'offre</th>
+                        <th>description de l'offre</th>
+                        <th>date de l'offre</th>
+                        <th>Durée de l'offre</th>
+                        <th>Nombre de places</th>
+                        <th>rémunération</th>
+                        <th>Type d'offre</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
+                    </tr>
+                      <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeoffre']->value, 'offre');
+$_smarty_tpl->tpl_vars['offre']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['offre']->value) {
+$_smarty_tpl->tpl_vars['offre']->do_else = false;
+?>
+                    <tr>
+                        <form action="../controllers/updateoffre.php?id=<?php echo $_smarty_tpl->tpl_vars['offre']->value['id_offre'];?>
+" method="POST">
+                        <td><input name="titre-offre" type="text" value="<?php echo $_smarty_tpl->tpl_vars['offre']->value['titre_offre'];?>
+"></td>
+                        <td><input name="desc-offre" type="text" value="<?php echo $_smarty_tpl->tpl_vars['offre']->value['desc_offre'];?>
+"></td>
+                        <td><input name="debut-offre" type="date" value="<?php echo $_smarty_tpl->tpl_vars['offre']->value['date_offre'];?>
+"></td>
+                        <td><input name="duree-offre" min="1" type="number" value="<?php echo $_smarty_tpl->tpl_vars['offre']->value['duree_offre'];?>
+"></td>
+                        <td><input name="nbplace" type="number" value="<?php echo $_smarty_tpl->tpl_vars['offre']->value['nombre_places'];?>
+"></td>
+                        <td><input name="salaire-offre" type="number" value="<?php echo $_smarty_tpl->tpl_vars['offre']->value['remuneration'];?>
+"></td>
+                        <td>
+                            <select style="width:100px;" id="selectedcom" name="select-offre" class="select">
+                                    <option value="<?php echo $_smarty_tpl->tpl_vars['offre']->value['type_offre'];?>
+" selected><?php echo $_smarty_tpl->tpl_vars['offre']->value['type_offre'];?>
+</option>
+                                    <option value="CDI">CDI</option>
+                                    <option value="CDD">CDD</option>
+                                    <option value="Alternance">Alternance</option>
+                                    <option value="Stage">Stage</option>
+                            </select>
+                        </td>
+                        <td><input type="submit" value="Modifier" name="modifier"></td>
+                        <td><input type="submit" value="Supprimer" name="supprimer"></td>
+                        </form>
+                    </tr>
+                      <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </table>
                 <div id="modal" class="modal">
-                    <form class="modal-content animate" action="" method="POST">
+                    <form class="modal-content animate" action="../controllers/addoffre.php" method="POST">
                         <div class="modal-header">
                             <h3>Création d'une offre</h3>
                             <span onclick="document.getElementById('modal').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -54,6 +106,16 @@ $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id
                                 <input type="number" placeholder="Durée de l'offre..." name="duree-offre" id="duree-offre" required>
                                 <p>Rémunération (par mois)</p>
                                 <input type="number" placeholder="Salaire..." name="salaire-offre" id="salaire-offre" required>
+                                <p>Nombre de place</p>
+                                <input type="number" placeholder="Nombre de place..." name="nbplace" id="nbplace" required>
+                                <p>Type d'offre</p>
+                                <select id="selectedcom" name="select-offre" class="select">
+                                    <option value="" selected>-- Sélectionnez une offre --</option>
+                                    <option value="CDI">CDI</option>
+                                    <option value="CDD">CDD</option>
+                                    <option value="Alternance">Alternance</option>
+                                    <option value="Stage">Stage</option>
+                                </select>
                             </div>
                             <div class="element-modal">
                                 <p>Titre</p>

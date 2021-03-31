@@ -18,6 +18,7 @@
 h3{
   text-align: center;
 }
+
 /*Fin éléments principaux*/
 /*- - - - - -*/
 /*Modal*/
@@ -34,10 +35,18 @@ h3{
   border-radius: 10px;
 }
 
-#debut-offre, #duree-offre, #salaire-offre, .element-modal>p{
+#debut-offre, #duree-offre ,#nbplace , #salaire-offre, .element-modal>p{
   width: 200px;
 }
 
+.select{
+  width: 100%;
+  border:1px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  height: 30px;
+  margin-bottom: 20px;
+}
 .modal-bottom{
   background-color: #E8EBF5;
 }
@@ -150,28 +159,32 @@ h3{
   }
 }
 
-/*Tableau*/
-#customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #customers tr:hover {background-color: #ddd;}
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
-  }
+/*Tableau des favoris*/
+#customers{
+  width: 80%;
+  margin: auto;
+}
 
+#customers td, #customers th{
+  padding: 8px;
+}
 
+#customers tr:nth-child(even){
+  background-color: white;
+}
+
+#customers tr:nth-child(odd){
+  background-color: #fafafa;
+}
+
+#customers tr:hover{
+  background-color: #eaeaea;
+}
+
+#customers th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3eb2e4;
+  color: white;
+}

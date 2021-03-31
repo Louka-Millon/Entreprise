@@ -30,6 +30,25 @@ if(isset($_GET["prenom"]) && isset($_GET["nom"]) && isset($_GET["mail"]) &&
         if(!$verif){
             $pass = crypt($pass, '$6$453654$securitedemotdepasse$');
             $send = $siteCtrl->inscriptioncompte($prenom,$nom,$mail,$pass,$idstatut);
+            if($idstatut == 9){
+                if(!empty($_GET["nom_entreprise"]) && !empty($_GET["localisation"]) && !empty($_GET["nombre_stagiaire"]) && !empty($_GET["description"]) && !empty($_GET["telephone"]) && !empty($_GET["maile"])){
+                    $nom_entreprise = $_GET["nom_entreprise"];
+                    $localisation = $_GET["localisation"];
+                    $nombre_stagiaire = $_GET["nombre_stagiaire"];
+                    $description = $_GET["description"];
+                    $telephone = $_GET["telephone"];
+                    $email = $_GET["maile"];
+                    $nom_entreprise = htmlspecialchars($nom_entreprise);
+                    $localisation = htmlspecialchars($localisation);
+                    $nombre_stagiaire = htmlspecialchars($nombre_stagiaire);
+                    $description = htmlspecialchars($description);
+                    $telephone = htmlspecialchars($telephone);
+                    $email = htmlspecialchars($email);
+                    $siteCtrl->addentreprise($nom_entreprise, $localisation, $nombre_stagiaire, $description, $telephone, $email, $send["id_personne"]);
+                    echo "hello";
+                }
+                echo "hello";
+            }
             //$_SESSION["pseudo"] = $user;
             $erreur = "?page=connexion";
         }else{

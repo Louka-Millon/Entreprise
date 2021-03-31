@@ -25,7 +25,8 @@ if (isset( $_POST['mail']) && isset( $_POST['pass']))
                 $_SESSION["promotion"] = $val["promo"];
                 $_SESSION["statut"] = $val["statut"];
                 $_SESSION["email"] = $val["mail"];
-                setcookie('user_id', $pass, time()+3600*24*30, "/", "", "0");
+                setcookie('user_pass', $pass, time()+3600*24*30, "/", "", "0");
+                setcookie('user_user', $mail, time()+3600*24*30, "/", "", "0");
                 header("Location:../tpl/index.php");
                 exit;
 

@@ -18,6 +18,16 @@ class SiteController{
             `personne`(`prenom`,`nom`,`mail`,`password`,`id_statut`, `id_promo`) 
             VALUES (?, ?, ?, ?, ?, 3);');
         $req->execute([$prenom,$nom,$mail,$pass,$statut]);
+        $requ =$bdd->getPDO()->prepare('SELECT `id_personne` FROM `personne` ORDER BY `id_personne` DESC LIMIT 1');
+        $requ->execute([]);
+        $posts = $requ->fetch();
+        return $posts;
+    }
+
+    public function addentreprise($nom, $localisation, $nombre_sta, $desc, $telephone, $email,$idpersonne){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('INSERT INTO `entreprise`(`nom_entreprise`, `localisation`, `nombre_stagiaires`, `description`, `telephone`, `email`, `id_personne`) VALUES (?,?,?,?,?,?,?)');
+        $req->execute([$nom, $localisation, $nombre_sta, $desc, $telephone, $email,$idpersonne]);
     }
     
     /* login part */
@@ -263,6 +273,44 @@ class SiteController{
         $req->execute([$idoffre, $idpersonne]);
         $posts = $req->fetch();
         return $posts;
+    }
+
+    public function addoffre($titreoffre, $descoffre, $debutoffre, $dureeoffre, $nbplace, $salaireoffre, $typeoffre, $identreprise){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('INSERT INTO 
+            `offre`(`titre_offre`, `desc_offre`, `date_offre`, `duree_offre`, `nombre_places`, `remuneration`, `type_offre`, `id_entreprise`) 
+            VALUES (?,?,?,?,?,?,?,?)');
+        $req->execute([$titreoffre, $descoffre, $debutoffre, $dureeoffre, $nbplace, $salaireoffre, $typeoffre, $identreprise]);
+    }
+
+    public function updateoffre($titreoffre, $descoffre, $debutoffre, $dureeoffre, $nbplace, $salaireoffre, $typeoffre, $identreprise){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('UPDATE `offre` SET `titre_offre`= ?,`desc_offre`= ?,`date_offre`= ?,`duree_offre`= ?,`nombre_places`= ?,`remuneration`= ?,`type_offre`= ? WHERE `id_offre` = ?');
+        $req->execute([$titreoffre, $descoffre, $debutoffre, $dureeoffre, $nbplace, $salaireoffre, $typeoffre, $identreprise]);
+    }
+
+    public function getEntreprisebyId($id){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT `id_entreprise` FROM `entreprise` WHERE `entreprise`.`id_personne` = ?');
+        $req->execute([$id]);
+        $posts = $req->fetch();
+        return $posts;
+    }
+
+    public function getoffre($id){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('SELECT * FROM `entreprise` 
+            INNER JOIN `offre` ON `offre`.`id_entreprise` = `entreprise`.`id_entreprise` 
+            WHERE `entreprise`.`id_personne` = ? ');
+        $req->execute([$id]);
+        $posts = $req->fetchAll();
+        return $posts;
+    }
+
+    public function deloffre($id){
+        $bdd = new DBConnection('entreprise', 'localhost', "root", "");
+        $req = $bdd->getPDO()->prepare('DELETE FROM `offre` WHERE `id_offre` = ?');
+        $req->execute([$id]);
     }
 
 }

@@ -7,6 +7,7 @@ $_SESSION["promotion"] = "";
 $_SESSION["email"] = "";
 if(isset($_COOKIE["user_id"])){
     var_dump($_COOKIE);
+    setcookie('user_pass', null, time()+3600*24*30, "/", "", "0");
     setcookie('user_id', null, time()+3600*24*30, "/", "", "0");
 }
 
