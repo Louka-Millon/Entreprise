@@ -5,26 +5,25 @@
             <div class="row-profil">
                 <!--<img src="../core/images/background-header.png" alt="Profil">-->
                 <h3>{$profile.prenom} {$profile.nom}</h3>
-                <p>{$profile.statut}</p>
+                <p>Status : {$profile.statut}</p>
 
-                <p>Voici ci-joint mon CV</p>
-                <p>Voici ci-joint ma Lettre de motivation</p>
-                <p>Voici nos offres d'emplois</p>
+                <p>Here is my resume.</p>
+                <p>Here is my cover letter.</p>
                 
                 {if $profile.statut == "company"}
                 {if $profile.id_personne == $userid}
-                <button id="btn_creation_offre" onclick="document.getElementById('modal').style.display='block'">Ajouter une offre</button>
+                <button id="btn_creation_offre" onclick="document.getElementById('modal').style.display='block'">Add an offer</button>
                 <table id="customers">
                     <tr>
-                        <th>Nom de l'offre</th>
-                        <th>description de l'offre</th>
-                        <th>date de l'offre</th>
-                        <th>Durée de l'offre</th>
-                        <th>Nombre de places</th>
-                        <th>rémunération</th>
-                        <th>Type d'offre</th>
-                        <th>Modifier</th>
-                        <th>Supprimer</th>
+                        <th>Name of the offer</th>
+                        <th>Description</th>
+                        <th>Beginning</th>
+                        <th>Duration</th>
+                        <th>Number of places</th>
+                        <th>Remuneration</th>
+                        <th>Type of the offer</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                       {foreach from=$listeoffre item=offre}
                     <tr>
@@ -44,8 +43,8 @@
                                     <option value="Stage">Stage</option>
                             </select>
                         </td>
-                        <td><input type="submit" value="Modifier" name="modifier"></td>
-                        <td><input type="submit" value="Supprimer" name="supprimer"></td>
+                        <td><input type="submit" value="Edit" name="modifier"></td>
+                        <td><input type="submit" value="Delete" name="supprimer"></td>
                         </form>
                     </tr>
                       {/foreach}
@@ -53,51 +52,51 @@
                 <div id="modal" class="modal">
                     <form class="modal-content animate" action="../controllers/addoffre.php" method="POST">
                         <div class="modal-header">
-                            <h3>Création d'une offre</h3>
+                            <h3>Create an offer</h3>
                             <span onclick="document.getElementById('modal').style.display='none'" class="close" title="Close Modal">&times;</span>
                         </div>
                         <div class="container-modal">
                             <div class="element-modal">
-                                <p>Date de début</p>
+                                <p>Beginning</p>
                                 <input type="date" name="debut-offre" id="debut-offre" required>
-                                <p>Durée (en semaines)</p>
-                                <input type="number" placeholder="Durée de l'offre..." name="duree-offre" id="duree-offre" required>
-                                <p>Rémunération (par mois)</p>
-                                <input type="number" placeholder="Salaire..." name="salaire-offre" id="salaire-offre" required>
-                                <p>Nombre de place</p>
-                                <input type="number" placeholder="Nombre de place..." name="nbplace" id="nbplace" required>
-                                <p>Type d'offre</p>
+                                <p>Duration (weeks)</p>
+                                <input type="number" placeholder="Duration of the offer..." name="duree-offre" id="duree-offre" required>
+                                <p>Remuneration (per month)</p>
+                                <input type="number" placeholder="Remuneration..." name="salaire-offre" id="salaire-offre" required>
+                                <p>Number of places</p>
+                                <input type="number" placeholder="Number of places..." name="nbplace" id="nbplace" required>
+                                <p>Type of the offer</p>
                                 <select id="selectedcom" name="select-offre" class="select">
-                                    <option value="" selected>-- Sélectionnez une offre --</option>
-                                    <option value="CDI">CDI</option>
-                                    <option value="CDD">CDD</option>
-                                    <option value="Alternance">Alternance</option>
-                                    <option value="Stage">Stage</option>
+                                    <option value="" selected>-- Select an offer --</option>
+                                    <option value="CDI">Permanent contract</option>
+                                    <option value="CDD">Fixed-term contract</option>
+                                    <option value="Alternance">Alternation</option>
+                                    <option value="Stage">Internship</option>
                                 </select>
                             </div>
                             <div class="element-modal">
-                                <p>Titre</p>
-                                <input type="text" placeholder="Titre de l'offre..." name="titre-offre" id="titre-offre" required>
+                                <p>Title</p>
+                                <input type="text" placeholder="Title of the offer..." name="titre-offre" id="titre-offre" required>
                                 <p>Description</p>
-                                <input type="text" placeholder="Description de l'offre..." name="desc-offre" id="desc-offre" required>
+                                <input type="text" placeholder="Description of the offer..." name="desc-offre" id="desc-offre" required>
                             </div>
                         </div>
                         <div class="container-modal modal-bottom">
-                            <button type="submit" id="btn_creer">Publier l'offre</button>
-                            <button type="button" onclick="document.getElementById('modal').style.display='none'" id="btn_annuler">Annuler</button>
+                            <button type="submit" id="btn_creer">Post</button>
+                            <button type="button" onclick="document.getElementById('modal').style.display='none'" id="btn_annuler">Cancel</button>
                         </div>
                     </form>
                 </div>
                 {else}
                 <table id="customers">
                     <tr>
-                        <th>Nom de l'offre</th>
-                        <th>description de l'offre</th>
-                        <th>date de l'offre</th>
-                        <th>Durée de l'offre</th>
-                        <th>Nombre de places</th>
-                        <th>rémunération</th>
-                        <th>Type d'offre</th>
+                        <th>Name of the offer</th>
+                        <th>Description</th>
+                        <th>Beginning</th>
+                        <th>Duration</th>
+                        <th>Number of places</th>
+                        <th>Remuneration</th>
+                        <th>Type of the offer</th>
                     </tr>
                       {foreach from=$listeoffre item=offre}
                     <tr>
@@ -117,20 +116,20 @@
                 {if $profile.id_personne == $userid}
                 <table id="customers">
                     <tr>
-                        <th>Nom de l'offre</th>
-                        <th>Suppression</th>
+                        <th>Name of the offer</th>
+                        <th>Options</th>
                       </tr>
                       {foreach from=$favori item=favorie}
                     <tr>
                         <td><a style="color:black;" href="index.php?page=offre&offre={$favorie.id_offre}">{$favorie.titre_offre}</a></td>
-                        <td><a style="color:black;" href="../Controllers/delfavori.php?offre={$favorie.id_offre}">supprimer</a></td>
+                        <td><a style="color:black;" href="../Controllers/delfavori.php?offre={$favorie.id_offre}">Remove from wishlist</a></td>
                     </tr>
                       {/foreach}
                 </table>
                 {else}
                 <table id="customers">
                     <tr>
-                        <th>Nom de l'offre</th>
+                        <th>Name of the offer</th>
                       </tr>
                       {foreach from=$favori item=favorie}
                     <tr>
