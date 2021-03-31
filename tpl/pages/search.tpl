@@ -6,7 +6,7 @@
                         <h5 style="font-size:15px">{$entreprise.titre_offre}</h5>
                         
                         <p class="description">{$entreprise.desc_offre}</p>
-                        <a href="../controllers/favori.php?offre={$entreprise.id_offre}" class="bot"><button>Favori</button></a><a href="index.php?page=offre&offre={$entreprise.id_offre}" class="bot"><button>Voir l'offre</button></a>
+                        <a href="../controllers/favori.php?offre={$entreprise.id_offre}" class="bot"><button>Add to wishlist</button></a><a href="index.php?page=offre&offre={$entreprise.id_offre}" class="bot"><button>Consult</button></a>
 
                     </div>
                 {/foreach}   

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-31 22:53:05
+/* Smarty version 3.1.39, created on 2021-04-01 00:56:21
   from 'C:\xampp\htdocs\Entreprise\tpl\pages\recherche.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6064e131eebe60_20032993',
+  'unifunc' => 'content_6064fe15e35b56_70642249',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '18f1b0ae3389457c8075ee706870e428f8b0feb6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\pages\\recherche.tpl',
-      1 => 1617223984,
+      1 => 1617231375,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_6064e131eebe60_20032993 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6064fe15e35b56_70642249 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <section>
@@ -44,8 +44,8 @@ $_smarty_tpl->tpl_vars['entreprise']->do_else = false;
                         <p class="description"><?php echo $_smarty_tpl->tpl_vars['entreprise']->value['desc_offre'];?>
 </p>
                         <a href="../controllers/favori.php?offre=<?php echo $_smarty_tpl->tpl_vars['entreprise']->value['id_offre'];?>
-" class="bot"><button>Favori</button></a><a href="index.php?page=offre&offre=<?php echo $_smarty_tpl->tpl_vars['entreprise']->value['id_offre'];?>
-" class="bot"><button>Voir l'offre</button></a>
+" class="bot"><button>Add to wishlist</button></a><a href="index.php?page=offre&offre=<?php echo $_smarty_tpl->tpl_vars['entreprise']->value['id_offre'];?>
+" class="bot"><button>Consult</button></a>
 
                     </div>
                 <?php
@@ -57,11 +57,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <?php if ($_smarty_tpl->tpl_vars['disppage']->value == "yes") {?>
         <div class="pagination">
             <button id="btn_previous"><a style="color:#000;" href="index.php?page=recherche&index=<?php echo $_smarty_tpl->tpl_vars['pageprecedent']->value;?>
-">Précédent</a></button>
-            <p id="pages">1/<?php echo $_smarty_tpl->tpl_vars['nbpage']->value;?>
+">Previous</a></button>
+            <p id="pages"><?php echo $_smarty_tpl->tpl_vars['currentpage']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['nbpage']->value;?>
 </p>
             <button id="btn_next"><a style="color:#000;" href="index.php?page=recherche&index=<?php echo $_smarty_tpl->tpl_vars['pagesuivant']->value;?>
-">Suivant</a></button>
+">Next</a></button>
         </div>
         <?php }?>
     </article>

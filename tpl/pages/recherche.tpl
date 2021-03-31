@@ -10,7 +10,7 @@
                         <h5 style="font-size:15px">{$entreprise.titre_offre}</h5>
                         
                         <p class="description">{$entreprise.desc_offre}</p>
-                        <a href="../controllers/favori.php?offre={$entreprise.id_offre}" class="bot"><button>Favori</button></a><a href="index.php?page=offre&offre={$entreprise.id_offre}" class="bot"><button>Voir l'offre</button></a>
+                        <a href="../controllers/favori.php?offre={$entreprise.id_offre}" class="bot"><button>Add to wishlist</button></a><a href="index.php?page=offre&offre={$entreprise.id_offre}" class="bot"><button>Consult</button></a>
 
                     </div>
                 {/foreach}   
@@ -19,9 +19,9 @@
         </div>
         {if $disppage == "yes"}
         <div class="pagination">
-            <button id="btn_previous"><a style="color:#000;" href="index.php?page=recherche&index={$pageprecedent}">Précédent</a></button>
-            <p id="pages">1/{$nbpage}</p>
-            <button id="btn_next"><a style="color:#000;" href="index.php?page=recherche&index={$pagesuivant}">Suivant</a></button>
+            <button id="btn_previous"><a style="color:#000;" href="index.php?page=recherche&index={$pageprecedent}">Previous</a></button>
+            <p id="pages">{$currentpage}/{$nbpage}</p>
+            <button id="btn_next"><a style="color:#000;" href="index.php?page=recherche&index={$pagesuivant}">Next</a></button>
         </div>
         {/if}
     </article>

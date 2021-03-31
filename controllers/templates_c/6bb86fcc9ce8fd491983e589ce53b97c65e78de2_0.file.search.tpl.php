@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-31 22:52:52
+/* Smarty version 3.1.39, created on 2021-04-01 01:00:59
   from 'C:\xampp\htdocs\Entreprise\tpl\pages\search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6064e1249bd388_33741217',
+  'unifunc' => 'content_6064ff2b51fdf6_61693193',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6bb86fcc9ce8fd491983e589ce53b97c65e78de2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\pages\\search.tpl',
-      1 => 1617223969,
+      1 => 1617231640,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6064e1249bd388_33741217 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6064ff2b51fdf6_61693193 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-recherche" >
                 <div class="row-recherche">
                 <?php
@@ -38,8 +38,8 @@ $_smarty_tpl->tpl_vars['entreprise']->do_else = false;
                         <p class="description"><?php echo $_smarty_tpl->tpl_vars['entreprise']->value['desc_offre'];?>
 </p>
                         <a href="../controllers/favori.php?offre=<?php echo $_smarty_tpl->tpl_vars['entreprise']->value['id_offre'];?>
-" class="bot"><button>Favori</button></a><a href="index.php?page=offre&offre=<?php echo $_smarty_tpl->tpl_vars['entreprise']->value['id_offre'];?>
-" class="bot"><button>Voir l'offre</button></a>
+" class="bot"><button>Add to wishlist</button></a><a href="index.php?page=offre&offre=<?php echo $_smarty_tpl->tpl_vars['entreprise']->value['id_offre'];?>
+" class="bot"><button>Consult</button></a>
 
                     </div>
                 <?php

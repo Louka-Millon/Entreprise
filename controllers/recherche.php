@@ -85,7 +85,7 @@ if(!isset($val)){
 if($index+1 > $nbpage){
     header("location:index.php?page=recherche&index=".$nbpage);
 }
-$smarty->assign("currentpage",$index);
+$smarty->assign("currentpage",$index+1);
 $smarty->assign("pagesuivant", $index+2);
 $smarty->assign("pageprecedent", $index);
 $smarty->assign("disppage", $disppage);
