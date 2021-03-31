@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-31 11:55:27
+/* Smarty version 3.1.39, created on 2021-03-31 17:26:13
   from 'C:\xamp\htdocs\Entreprise\tpl\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6064470f4ca454_63745134',
+  'unifunc' => 'content_606494957a8a13_27456177',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '880351dcfb887566f4a0e1b250d52b90bac49e9a' => 
     array (
       0 => 'C:\\xamp\\htdocs\\Entreprise\\tpl\\header.tpl',
-      1 => 1617178825,
+      1 => 1617204372,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6064470f4ca454_63745134 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606494957a8a13_27456177 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -69,7 +69,7 @@ function content_6064470f4ca454_63745134 (Smarty_Internal_Template $_smarty_tpl)
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">
-                        <form action="index.php" method="get">
+                        <form action="index.php?page=recherche" method="get">
                                 <input type="hidden" name="page" value="recherche">
                                 <input type="text" name="offre" id="premier" placeholder="Offre...">
                                 <input type="text" name="competence"  placeholder="Compétence...">

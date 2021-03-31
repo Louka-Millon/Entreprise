@@ -38,7 +38,7 @@
                         <a href="#" id="close" onclick="hide();">X</a>
                 </div>
                 <div class="row-search">
-                        <form action="index.php" method="get">
+                        <form action="index.php?page=recherche" method="get">
                                 <input type="hidden" name="page" value="recherche">
                                 <input type="text" name="offre" id="premier" placeholder="Offre...">
                                 <input type="text" name="competence"  placeholder="Compétence...">

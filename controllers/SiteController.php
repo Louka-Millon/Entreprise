@@ -55,13 +55,23 @@ class SiteController{
         $posts = $req->fetch();
         return $posts;
     }
-    public function showentreprise(){
+    public function showentreprise($premier, $dernier){
+
+        $bdd = new DBConnection('entreprise', 'localhost', 'root', '');
+        $req = $bdd->getPDO()->prepare('SELECT * from offre
+        INNER JOIN `entreprise` ON `offre`.`id_entreprise` = `entreprise`.`id_entreprise` LIMIT '.$premier.' ,'.$dernier);
+        $req->execute();
+        $posts = $req->fetchAll();
+        return $posts;
+    }
+
+    public function shownbligneentreprise(){
 
         $bdd = new DBConnection('entreprise', 'localhost', 'root', '');
         $req = $bdd->getPDO()->prepare('SELECT * from offre
         INNER JOIN `entreprise` ON `offre`.`id_entreprise` = `entreprise`.`id_entreprise`');
-        $req->execute();
-        $posts = $req->fetchAll();
+        $req->execute([]);
+        $posts = $req->rowCount();
         return $posts;
     }
 
@@ -117,6 +127,8 @@ class SiteController{
         $posts = $req->fetchAll();
         return $posts;
     }
+
+    
 
     public function showtopsecteur(){
         $bdd = new DBConnection('entreprise', 'localhost', 'root', '');

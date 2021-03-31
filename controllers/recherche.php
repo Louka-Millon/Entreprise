@@ -30,10 +30,14 @@ if(isset($_SESSION['prenom'])){
     $smarty->assign("fieldinscription", "S'inscrire");
     $smarty->assign("fieldinscriptionlink", "index.php?page=inscription");
 }
+$range = 10;
+$index = 1;
+$nbpage = 1;
+$disppage = "yes";
+/*call function */
 
 
-
-if(isset($_GET["rechercher"])){
+if(isset($_GET["offre"]) || isset($_GET["competence"]) || isset($_GET["lieu"])){
     if(!isset($_GET["offre"])){
         $_GET["offre"] = "";
     }
@@ -51,14 +55,39 @@ if(isset($_GET["rechercher"])){
     $competence = "%".$competence."%";
     $lieu = "%".$lieu."%";
     $val = $siteC->showrecherche($offre,$competence,$lieu);
+    $disppage = "no";
+    
+}else{
+    if(isset($_GET["index"])){
+        $index = htmlspecialchars($_GET["index"]);
+        $index = $index - 1;
+        if($index < 0){
+            header("location:index.php?page=recherche&index=1");
+        }
+        
+    }else{
+        header("location:index.php?page=recherche&index=1");
+    }
+    
 }
-/*call function */
+
+
 
 if(!isset($val)){
-    $val = $siteC->showentreprise();
+    $nb = $siteC->shownbligneentreprise();
+    $nbpage = ceil($nb / 10);
+    $val = $siteC->showentreprise($index*$range, $index*$range+$range);
+    $smarty->assign("nbpage",$nbpage);
+    
 }
 
-
+if($index+1 > $nbpage){
+    //header("location:index.php?page=recherche&index=".$nbpage);
+}
+$smarty->assign("currentpage",$index);
+$smarty->assign("pagesuivant", $index+2);
+$smarty->assign("pageprecedent", $index);
+$smarty->assign("disppage", $disppage);
 
 
 $smarty->assign("title", "Injob");

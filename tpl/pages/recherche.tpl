@@ -20,6 +20,13 @@
                 
             </div>
         </div>
+        {if $disppage == "yes"}
+        <div class="pagination">
+            <button id="btn_previous"><a style="color:#000;" href="index.php?page=recherche&index={$pageprecedent}">Précédent</a></button>
+            <p id="pages">1/{$nbpage}</p>
+            <button id="btn_next"><a style="color:#000;" href="index.php?page=recherche&index={$pagesuivant}">Suivant</a></button>
+        </div>
+        {/if}
     </article>
 </section>
 <script>
