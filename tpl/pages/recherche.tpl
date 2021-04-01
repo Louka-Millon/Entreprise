@@ -49,16 +49,5 @@
         $("#recherche").load(url);
 
     },100);
-/*
-    function update() {
-    $.ajax({
-      type: 'POST',
-      url: "../controllers/recherche.php",
-      dataType: 'text',
-      success: function(data) {
-        $('#recherche').html(data);
-      }
-    })
-  } 
-*/
+
 </script>

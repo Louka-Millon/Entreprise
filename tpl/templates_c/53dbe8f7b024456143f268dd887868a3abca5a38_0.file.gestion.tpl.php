@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-31 18:26:26
+/* Smarty version 3.1.39, created on 2021-04-01 00:01:32
   from 'C:\xampp\htdocs\Entreprise\tpl\pages\gestion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6064a2b2bc4785_96115052',
+  'unifunc' => 'content_6064f13c94e0e8_12990793',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53dbe8f7b024456143f268dd887868a3abca5a38' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Entreprise\\tpl\\pages\\gestion.tpl',
-      1 => 1617197639,
+      1 => 1617228088,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header_other.tpl' => 1,
   ),
 ),false)) {
-function content_6064a2b2bc4785_96115052 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6064f13c94e0e8_12990793 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header_other.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <section>
@@ -108,7 +108,7 @@ $_smarty_tpl->tpl_vars['student']->do_else = false;
                         <td>
                             <select name="select-role" id="select-role">
                                 <option value="Student">Etudiant</option>
-                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor" || $_smarty_tpl->tpl_vars['statut']->value == "Representative") {?><option value="Representative">Délégué</option><?php }?>
+                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor" || $_smarty_tpl->tpl_vars['statut']->value == "Representative") {?><option value="Student">Etudiant</option><?php }?>
                                 <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor") {?><option value="Tutor">Tuteur</option><?php }?>
                                 <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?><option value="administrator">Administrateur</option><?php }?>
                             </select>
@@ -142,7 +142,7 @@ $_smarty_tpl->tpl_vars['repre']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['repre']->value) {
 $_smarty_tpl->tpl_vars['repre']->do_else = false;
 ?>
-                    <?php if ($_smarty_tpl->tpl_vars['statut']->value == "company" || ($_smarty_tpl->tpl_vars['statut']->value == "Representative" && $_smarty_tpl->tpl_vars['userid']->value != $_smarty_tpl->tpl_vars['repre']->value['id_personne'])) {?>
+                    <?php if ($_smarty_tpl->tpl_vars['statut']->value == "company" || $_smarty_tpl->tpl_vars['statut']->value == "Student" || ($_smarty_tpl->tpl_vars['statut']->value == "Representative" && $_smarty_tpl->tpl_vars['userid']->value != $_smarty_tpl->tpl_vars['repre']->value['id_personne'])) {?>
                     
                     
                     <tr>
@@ -202,6 +202,7 @@ $_smarty_tpl->tpl_vars['repre']->do_else = false;
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
+                                <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor") {?><option value="Student">Student</option><?php }?>
                                 <option value="Representative">Délégué</option>
                                 <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator" || $_smarty_tpl->tpl_vars['statut']->value == "Tutor") {?><option value="Tutor">Tuteur</option><?php }?>
                                 <?php if ($_smarty_tpl->tpl_vars['statut']->value == "Administrator") {?><option value="administrator">Administrateur</option><?php }?>

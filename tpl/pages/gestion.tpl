@@ -66,7 +66,7 @@
                         <td>
                             <select name="select-role" id="select-role">
                                 <option value="Student">Etudiant</option>
-                                {if $statut == "Administrator" || $statut == "Tutor" || $statut == "Representative"}<option value="Representative">Délégué</option>{/if}
+                                {if $statut == "Administrator" || $statut == "Tutor" || $statut == "Representative"}<option value="Student">Etudiant</option>{/if}
                                 {if $statut == "Administrator" || $statut == "Tutor"}<option value="Tutor">Tuteur</option>{/if}
                                 {if $statut == "Administrator"}<option value="administrator">Administrateur</option>{/if}
                             </select>
@@ -92,7 +92,7 @@
                 <!-- Délégué -->
                    
                     {foreach from=$representativedisp item=repre}
-                    {if $statut == "company" || ($statut == "Representative" && $userid != $repre.id_personne)}
+                    {if $statut == "company" || $statut == "Student" || ($statut == "Representative" && $userid != $repre.id_personne)}
                     
                     
                     <tr>
@@ -140,6 +140,7 @@
                         </td>
                         <td>
                             <select name="select-role" id="select-role">
+                                {if $statut == "Administrator" || $statut == "Tutor"}<option value="Student">Student</option>{/if}
                                 <option value="Representative">Délégué</option>
                                 {if $statut == "Administrator" || $statut == "Tutor"}<option value="Tutor">Tuteur</option>{/if}
                                 {if $statut == "Administrator"}<option value="administrator">Administrateur</option>{/if}

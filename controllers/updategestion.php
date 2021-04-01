@@ -3,7 +3,7 @@ session_start();
 require "SiteController.php";
 $siteC = new SiteController();
 $iduser = $_GET["id"];
-$dictionnary = array("student" => 5, "Representative" => 6, "Tutor" => 7, "Administrator" => 9, "company" => 9);
+$dictionnary = array("Student" => 5, "Representative" => 6, "Tutor" => 7, "Administrator" => 9, "company" => 9);
 
 
 
